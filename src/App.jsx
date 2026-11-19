@@ -1,1 +1,90 @@
+const categories = [
+  { icon: "🌭", title: "انواع سوسیس", subtitle: "طعم‌های خوشمزه و متنوع" },
+  { icon: "🥩", title: "انواع کالباس", subtitle: "تازه و باکیفیت" },
+  { icon: "🍔", title: "همبرگر", subtitle: "لذیذ و آماده طبخ" },
+  { icon: "🌮", title: "هات‌داگ", subtitle: "انتخابی خوشمزه" },
+];
 
+const products = [
+  { name: "سوسیس آلمانی", price: "۱۸۵,۰۰۰", icon: "🌭", tag: "پرفروش" },
+  { name: "کالباس گوشت", price: "۲۲۰,۰۰۰", icon: "🥩", tag: "محبوب" },
+  { name: "همبرگر مخصوص", price: "۱۹۵,۰۰۰", icon: "🍔", tag: "پیشنهاد ویژه" },
+  { name: "هات‌داگ ویژه", price: "۱۶۵,۰۰۰", icon: "🌭", tag: "جدید" },
+];
+
+export default function App() {
+  return (
+    <div className="paprika" dir="rtl">
+      <header className="header">
+        <h2>🌶️ PAPRIKA</h2>
+        <nav>
+          <a href="#">صفحه اصلی</a>
+          <a href="#categories">دسته‌بندی محصولات</a>
+          <a href="#products">فروشگاه</a>
+          <a href="#about">درباره ما</a>
+        </nav>
+        <button className="cart">🛒 سبد خرید</button>
+      </header>
+
+      <main>
+        <section className="hero">
+          <div className="hero-content">
+            <span className="eyebrow">طعم متفاوت، انتخاب خوشمزه</span>
+            <h1>خوشمزه‌تر از همیشه با <span>پاپریکا!</span></h1>
+            <p>دنیایی از طعم‌های خوشمزه سوسیس، کالباس، همبرگر و هات‌داگ در فروشگاه پاپریکا.</p>
+            <a href="#products" className="hero-button">مشاهده محصولات ←</a>
+          </div>
+          <div className="hero-art">
+            <span>🍔</span><span>🌭</span><span>🌶️</span>
+          </div>
+        </section>
+
+        <section className="categories" id="categories">
+          <div className="section-heading">
+            <span>انتخاب خوشمزه تو</span>
+            <h2>دسته‌بندی محصولات</h2>
+          </div>
+          <div className="category-grid">
+            {categories.map((item) => (
+              <div className="category-card" key={item.title}>
+                <span className="category-icon">{item.icon}</span>
+                <h3>{item.title}</h3>
+                <p>{item.subtitle}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="products" id="products">
+          <div className="section-heading">
+            <span>پیشنهادهای پاپریکا</span>
+            <h2>محصولات محبوب</h2>
+          </div>
+          <div className="product-grid">
+            {products.map((product) => (
+              <div className="product-card" key={product.name}>
+                <span className="product-tag">{product.tag}</span>
+                <div className="product-image">{product.icon}</div>
+                <h3>{product.name}</h3>
+                <p>قیمت هر بسته</p>
+                <strong>{product.price} تومان</strong>
+                <button>افزودن به سبد خرید</button>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="about" id="about">
+          <h2>پاپریکا؛ انتخاب خوشمزه شما</h2>
+          <p>تجربه خرید آسان و لذت‌بخش انواع فرآورده‌های گوشتی در یک فروشگاه آنلاین.</p>
+        </section>
+      </main>
+
+      <footer>
+        <h2>🌶️ PAPRIKA</h2>
+        <p>طعم خوب، انتخاب خوب!</p>
+        <small>تمام حقوق برای فروشگاه پاپریکا محفوظ است.</small>
+      </footer>
+    </div>
+  );
+}
