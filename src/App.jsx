@@ -16,7 +16,9 @@ export default function App() {
   return (
     <div className="paprika" dir="rtl">
       <header className="header">
-        <h2>🌶️ PAPRIKA</h2>
+        <a className="logo" href="#">
+  <img src="/paprika-store/paprika-logo.jpeg" alt="PAPRIKA" />
+</a>
         <nav>
           <a href="#">صفحه اصلی</a>
           <a href="#categories">دسته‌بندی محصولات</a>
