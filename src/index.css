@@ -1083,12 +1083,18 @@ footer small {
   font-weight: 900 !important;
 }
 
+
 /* GHOLWICH PRICE DESIGN */
 
 .gholwich-details {
-  margin: 15px 10px 10px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 15px 0 10px;
   padding: 16px 12px;
+  box-sizing: border-box;
   text-align: center;
+  overflow-wrap: anywhere;
   background: linear-gradient(135deg, #fff0d0, #ffe2a1);
   border: 1px solid #dca33e;
   border-radius: 18px;
