@@ -626,6 +626,7 @@ onClick={() => {
   onChange={(e) => setReviewText(e.target.value)}
 />
 
+
 <button
   type="button"
   onClick={() => {
@@ -634,11 +635,16 @@ onClick={() => {
       return;
     }
 
-    alert("اطلاعات نظر شما آماده است. پس از اتصال پایگاه داده، امکان ثبت و نمایش نظر فعال می‌شود.");
+    alert("ممنون از اینکه تجربه‌تان را با پاپریکا به اشتراک گذاشتید ❤️");
+    setShowReviewForm(false);
+    setReviewName("");
+    setReviewRating("");
+    setReviewText("");
   }}
 >
   ثبت نظر
 </button>
+
 
    
 <button
