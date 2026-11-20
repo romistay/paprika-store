@@ -4,6 +4,7 @@ const categories = [
   { icon: "🥩", title: "انواع کالباس", subtitle: "تازه و باکیفیت" },
   { icon: "🍔", title: "همبرگر", subtitle: "لذیذ و آماده طبخ" },
   { icon: "🌮", title: "هات‌داگ", subtitle: "انتخابی خوشمزه" },
+  { icon: "🥪", title: "ساندویچ سرد", subtitle: "ساندویچ‌های تازه و خوشمزه" },
 ];
 
 
