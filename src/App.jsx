@@ -574,6 +574,17 @@ onClick={() => {
 </div>
 </section>
 
+<div className="review-submit-area">
+  <h3>نظر شما برای ما ارزشمنده ❤️</h3>
+  <p>تجربه خریدتان را با دیگر مشتریان پاپریکا به اشتراک بگذارید.</p>
+  <button
+    className="review-submit-button"
+    onClick={() => setShowReviewForm(true)}
+  >
+    ✍️ ثبت نظر شما
+  </button>
+</div>
+
 
            <section className="about" id="about">
   <h2>پاپریکا؛ انتخاب خوشمزه شما</h2>
