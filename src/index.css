@@ -747,3 +747,117 @@ footer small {
   border-color: #d94b19;
   box-shadow: 0 0 0 3px rgba(217, 75, 25, 0.1);
 }
+/* PAPRIKA CART DRAWER */
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(35, 20, 12, 0.55);
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-start;
+  direction: rtl;
+}
+
+.cart-drawer {
+  width: 420px;
+  max-width: 90%;
+  height: 100%;
+  background: #fffaf5;
+  padding: 25px;
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  animation: cartSlideIn 0.35s ease;
+}
+
+@keyframes cartSlideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0dfd1;
+}
+
+.cart-header h2 {
+  color: #d94b19;
+  font-size: 23px;
+}
+
+.cart-header button {
+  border: none;
+  background: #fff0e6;
+  color: #d94b19;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 70px 10px;
+  color: #765c4b;
+}
+
+.empty-cart span {
+  font-size: 65px;
+}
+
+.empty-cart h3 {
+  color: #3b2419;
+  margin-top: 20px;
+}
+
+.cart-items {
+  padding-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0dfd1;
+}
+
+.cart-item img {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h3 {
+  color: #3b2419;
+  font-size: 16px;
+}
+
+.cart-item-info p {
+  color: #806653;
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.remove-cart-item {
+  border: none;
+  background: #fff0e9;
+  color: #d94b19;
+  padding: 8px 12px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-family: inherit;
+}
