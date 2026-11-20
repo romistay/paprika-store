@@ -470,11 +470,7 @@ const addToCart = () => {
             <a href="#products" className="hero-button">مشاهده محصولات ←</a>
           </div>
          <div className="hero-art">
-  <img
-    src="/paprika-store/products.jpeg"
-    alt="محصولات پاپریکا"
-  />
-</div>
+ 
         </section>
 
         <section className="categories" id="categories">
