@@ -547,10 +547,10 @@ setShowColdCutMenu(false);
     alt="Persian Kebab Loghmeh Feast"
   />
 ) : showColdCutMenu ? (
-  <>
-    <h2>انواع کالباس پاپریکا</h2>
-    <p>محصولات باکیفیت و خوش‌طعم پاپریکا</p>
-  </>
+  <img
+   src="/paprika-store/paprika-coldcut-banner.png.png"
+    alt="پاپریکا؛ طعم تازه و باکیفیت"
+  />
 ) : (
   <>
     <h2>محصولات فریزری پاپریکا</h2>
