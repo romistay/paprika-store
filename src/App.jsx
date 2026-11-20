@@ -107,9 +107,12 @@ const addToCart = () => {
           <a href="#products">فروشگاه</a>
           <a href="#about">درباره ما</a>
         </nav>
-        <button
+       <button
   className="cart"
-  onClick={() => setIsCartOpen(true)}
+  onClick={() => {
+    setSelectedProduct(null);
+    setIsCartOpen(true);
+  }}
 >
   🛒 سبد خرید
   <span className="cart-count">
