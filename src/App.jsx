@@ -263,15 +263,35 @@ const addToCart = () => {
             {item.flavor && <p>طعم: {item.flavor}</p>}
             {item.weight && <p>وزن: {item.weight}</p>}
 
-            <p>تعداد: {item.quantity}</p>
+            
+<div className="cart-quantity">
+  <label>تعداد:</label>
+  <input
+    type="number"
+    min="1"
+    value={item.quantity}
+    onChange={(e) => {
+      const newQuantity = Math.max(1, Number(e.target.value) || 1);
 
-            <p>
-              قیمت واحد: {item.price.toLocaleString("fa-IR")} تومان
-            </p>
+      setCart((prev) =>
+        prev.map((product, i) =>
+          i === index
+            ? { ...product, quantity: newQuantity }
+            : product
+        )
+      );
+    }}
+  />
+</div>
 
-            <p>
-              جمع این محصول: {(item.price * item.quantity).toLocaleString("fa-IR")} تومان
-            </p>
+<p>
+  قیمت واحد: {item.price.toLocaleString("fa-IR")} تومان
+</p>
+
+<p>
+  جمع این محصول: {(item.price * item.quantity).toLocaleString("fa-IR")} تومان
+</p>
+
           </div>
 
           <button
