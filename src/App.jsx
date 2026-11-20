@@ -535,7 +535,7 @@ onClick={() => {
 <footer className="site-footer">
   <h2>🌶️ PAPRIKA</h2>
   <p>طعم خوب، انتخاب خوب!</p>
-
+<p>دارای مدرک بین‌المللی فنی‌وحرفه‌ای و بیش از ۱۱ سال سابقه کار حرفه‌ای</p>
   <div className="footer-contact">
     <h3>ارتباط با ما</h3>
 
