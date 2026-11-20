@@ -586,6 +586,25 @@ onClick={() => {
 </section>
 
 
+{submittedReviews.length > 0 && (
+  <div className="submitted-reviews">
+    {submittedReviews.map((review, index) => (
+      <div className="review-card" key={index}>
+        <div className="review-stars">
+          {"★".repeat(review.rating)}
+          {"☆".repeat(5 - review.rating)}
+        </div>
+
+        <p>{review.text}</p>
+
+        <h3>{review.name}</h3>
+
+        <span>نظر مشتری پاپریکا</span>
+      </div>
+    ))}
+  </div>
+)}
+
 {!showReviewForm && (
   <div className="review-submit-area">
     <h3>نظر شما برای ما ارزشمنده ❤️</h3>
