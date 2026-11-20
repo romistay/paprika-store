@@ -1,3 +1,4 @@
+import React from "react";
 const categories = [
   { icon: "🌭", title: "انواع سوسیس", subtitle: "طعم‌های خوشمزه و متنوع" },
   { icon: "🥩", title: "انواع کالباس", subtitle: "تازه و باکیفیت" },
@@ -38,6 +39,7 @@ const products = [
 
 
 export default function App() {
+  const [selectedProduct, setSelectedProduct] = React.useState(null);
   return (
     <div className="paprika" dir="rtl">
       <header className="header">
@@ -92,7 +94,12 @@ export default function App() {
           </div>
           <div className="product-grid">
             {products.map((product) => (
-              <div className="product-card" key={product.name}>
+             <div
+  className="product-card"
+  key={product.id}
+  onClick={() => setSelectedProduct(product)}
+  style={{ cursor: "pointer" }}
+>
                
                <div className="product-image">
   <img src={product.image} alt={product.name} />
