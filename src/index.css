@@ -273,10 +273,10 @@ button {
 
 .product-image {
   width: 100%;
-  height: 190px;
-  margin: 20px 0 12px;
+  height: 230px;
+  margin: 0 0 20px;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 20px;
   background: #fff7ef;
 }
 
@@ -285,11 +285,11 @@ button {
   height: 100%;
   display: block;
   object-fit: cover;
-  transition: transform 0.35s ease;
+  transition: transform .4s ease;
 }
 
 .product-card:hover .product-image img {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 .product-card strong {
