@@ -92,17 +92,7 @@ button {
 }
 
 /* Hero */
-.hero {
-  min-height: 440px;
-  padding: 75px 10%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 35px;
-  background: linear-gradient(120deg, #fff0df, #ffe1c5);
-  position: relative;
-}
-
+background: url("/paprika-store/paprika-banner.png") center center / cover no-repeat;
 .hero-content {
   max-width: 570px;
 }
@@ -1485,7 +1475,7 @@ footer small {
   gap: 45px;
   min-height: 480px;
   padding: 55px 7%;
-  background: linear-gradient(120deg, #fff8ec, #f9e4c5, #fff3df);
+ background: url("/paprika-store/paprika-banner.png") center center / cover no-repeat;
   overflow: hidden;
 }
 
