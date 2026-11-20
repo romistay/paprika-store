@@ -402,7 +402,7 @@ const addToCart = () => {
           <div className="product-grid">
             {products.map((product) => (
              <div
-  className="product-card"
+  className={`product-card ${product.id === 6 ? "gholwich-card" : ""}`}
   key={product.id}
   onClick={() => setSelectedProduct(product)}
   style={{ cursor: "pointer" }}
