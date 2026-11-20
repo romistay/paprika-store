@@ -44,6 +44,48 @@ const products = [
   },
 ];
 
+const products = [
+  {
+    id: 1,
+    name: "سوسیس",
+    image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.06%281%29.jpeg",
+    description: "سوسیس خوش‌طعم و باکیفیت پاپریکا",
+  },
+  {
+    id: 2,
+    name: "سوسیس مخصوص کودکان",
+    image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.07%281%29.jpeg",
+    description: "محصولی خوش‌طعم برای سلیقه کودکان",
+  },
+  {
+    id: 3,
+    name: "کالباس",
+    image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.08%281%29.jpeg",
+    description: "کالباس خوش‌طعم پاپریکا",
+  },
+  {
+    id: 4,
+    name: "همبرگر",
+    image: "/paprika-store/topimage-classic-hamburger-2019m04-800x534-curiosa-min.jpg",
+    description: "همبرگر خوش‌طعم پاپریکا",
+  },
+  {
+    id: 5,
+    name: "ساندویچ سرد",
+    image: "/paprika-store/images.jpg",
+    description: "ساندویچ سرد خوشمزه و تازه پاپریکا",
+  },
+  {
+    id: 6,
+    name: "ساندویچ مخصوص پاپریکا (غول‌ویچ)",
+    image: "/paprika-store/images.jpg",
+    description: "ساندویچ ویژه دو نفره با ترکیب بره، مارتادلا، کرات و مرغ ۹۰٪",
+    price: 1100000,
+    weight: "۵۰۰ گرم",
+    tag: "ویژه پاپریکا",
+  },
+];
+
 
 const sandwichFlavors = [
   "مارتادلا",
@@ -308,6 +350,13 @@ const addToCart = () => {
       </select>
     </div>
   )}
+  {selectedFlavor && selectedWeight && (
+  <p className="selected-price">
+    قیمت:{" "}
+    {sandwichPrices[selectedFlavor][selectedWeight].toLocaleString("fa-IR")}
+    {" "}تومان
+  </p>
+)}
 </div>
   </div>
 </section>
