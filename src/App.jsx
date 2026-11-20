@@ -107,7 +107,15 @@ const addToCart = () => {
           <a href="#products">فروشگاه</a>
           <a href="#about">درباره ما</a>
         </nav>
-        <button className="cart">🛒 سبد خرید</button>
+        <button
+  className="cart"
+  onClick={() => setIsCartOpen(true)}
+>
+  🛒 سبد خرید
+  <span className="cart-count">
+    {cart.reduce((total, item) => total + item.quantity, 0)}
+  </span>
+</button>
       </header>
 
       <main>
