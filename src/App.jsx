@@ -61,12 +61,14 @@ const products = [
     description: "انواع کباب لقمه باکیفیت پاپریکا",
   },
   {
+     {
     id: 8,
     name: "محصولات فریزری",
     image: "/paprika-store/images.jpg",
     description: "انواع محصولات فریزری پاپریکا",
   },
-  
+];
+
 const kebabProducts = [
   {
     id: 1,
