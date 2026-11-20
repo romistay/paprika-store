@@ -543,3 +543,78 @@ footer small {
     font-size: 12px;
   }
 }
+/* Paprika Product Cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 26px;
+  margin-top: 35px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #f1e5da;
+  border-radius: 24px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(70, 40, 20, 0.07);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(70, 40, 20, 0.13);
+}
+
+.product-image {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff7ef;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.07);
+}
+
+.product-card h3 {
+  color: #3b2419;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 18px 0 10px;
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .product-grid {
+    gap: 12px;
+  }
+
+  .product-card {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .product-image {
+    height: 150px;
+  }
+
+  .product-card h3 {
+    font-size: 16px;
+  }
+}
