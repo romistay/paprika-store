@@ -281,17 +281,15 @@ const productPrice =
   const newItem = {
     ...selectedProduct,
     flavor: selectedProduct.id === 5 ? selectedFlavor : "",
-   weight:
-  selectedProduct.category === "kebab"
+  weight:
+  selectedProduct.category === "kebab" ||
+  selectedProduct.category === "coldcut"
     ? selectedProduct.weight
     : selectedProduct.id === 5
     ? selectedWeight
     : selectedProduct.id === 6
     ? selectedProduct.weight
     : "",
-    price: productPrice,
-    quantity: quantity,
-  };
 
   setCart((prevCart) => [...prevCart, newItem]);
   setIsCartOpen(true);
