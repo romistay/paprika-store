@@ -2264,23 +2264,83 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   }
 }
 
+
 .sandwich-flavor-grid button {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  min-height: 145px;
-  padding: 20px 14px;
+  gap: 12px;
+  min-height: 155px;
+  padding: 24px 18px;
   text-align: center;
-  border: 1px solid #ead8c5;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #fffdf8, #f7eee2);
+  border: 1px solid #d9b879;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(217, 164, 65, 0.13), transparent 55%),
+    linear-gradient(145deg, #fffdf8, #f6ead8);
   color: #641d20;
   font-family: inherit;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(80, 30, 20, 0.07);
+  box-shadow:
+    0 8px 20px rgba(80, 30, 20, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
   transition: all 0.3s ease;
+}
+
+.sandwich-flavor-grid button::after {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  width: 35px;
+  height: 3px;
+  border-radius: 10px;
+  background: #c69b50;
+  transition: width 0.3s ease;
+}
+
+.sandwich-flavor-grid button:hover {
+  transform: translateY(-7px);
+  border-color: #a87935;
+  background: linear-gradient(145deg, #7d2518, #4a160f);
+  box-shadow: 0 16px 30px rgba(80, 25, 15, 0.2);
+}
+
+.sandwich-flavor-grid button:hover::after {
+  width: 65px;
+}
+
+.sandwich-flavor-grid .flavor-title {
+  font-size: 19px;
+  font-weight: 900;
+  color: #641d20;
+}
+
+.sandwich-flavor-grid .flavor-description {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #76675c;
+}
+
+.sandwich-flavor-grid button:hover .flavor-title,
+.sandwich-flavor-grid button:hover .flavor-description {
+  color: #fff8e9;
+}
+
+@media (max-width: 600px) {
+  .sandwich-flavor-grid button {
+    min-height: 145px;
+    padding: 18px 10px;
+  }
+
+  .sandwich-flavor-grid .flavor-title {
+    font-size: 16px;
+  }
+
+  .sandwich-flavor-grid .flavor-description {
+    font-size: 11px;
+  }
 }
 
 .sandwich-flavor-grid .flavor-title {
