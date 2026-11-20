@@ -318,12 +318,14 @@ const addToCart = () => {
     </div>
     
 <div className="cart-actions">
-  <button
-    className="continue-shopping"
-    onClick={() => setIsCartOpen(false)}
-  >
-    ← ادامه خرید
-  </button>
+ <button
+  className="continue-shopping"
+  onClick={() => {
+    setIsCartOpen(false);
+  }}
+>
+  ✏️ ویرایش سبد خرید
+</button>
 
   <button
     className="checkout-button"
