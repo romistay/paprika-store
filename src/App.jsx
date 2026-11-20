@@ -62,7 +62,14 @@ const products = [
     description: "انواع کباب لقمه باکیفیت پاپریکا",
   },
   {
-  image: "/paprika-store/Ax2YdFZYNXVK4U9DnN1Wmx4Iw4wGmRUavR1hNGnhXAiqovr3yt.jpg",
+  {
+    id: 8,
+    name: "محصولات فریزری",
+    image: "/paprika-store/Ax2YdFZYNXVK4U9DnN1Wmx4Iw4wGmRUavR1hNGnhXAiqovr3yt.jpg",
+    description: "انواع محصولات فریزری پاپریکا",
+  },
+];
+
 const kebabProducts = [
   {
     id: 1,
