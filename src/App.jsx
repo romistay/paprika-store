@@ -127,7 +127,19 @@ const addToCart = () => {
 <div>
   <h2>{selectedProduct.name}</h2>
   <p>{selectedProduct.description}</p>
+<div className="purchase-options">
+  <label>تعداد:</label>
+  <input
+    type="number"
+    min="1"
+    value={quantity}
+    onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))}
+  />
 
+  <button onClick={addToCart}>
+    🛒 افزودن به سبد خرید
+  </button>
+</div>
   {selectedProduct.id === 5 && (
     <div className="sandwich-options">
       <h3>انتخاب طعم ساندویچ</h3>
