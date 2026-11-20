@@ -472,7 +472,7 @@ const addToCart = () => {
 </div>
 </section>
 )}
-(
+{selectedProduct && (
   <section className="product-detail">
     <button onClick={() => setSelectedProduct(null)}>
       ← بازگشت به محصولات
