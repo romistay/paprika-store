@@ -556,15 +556,36 @@ const addToCart = () => {
              <div
   className="category-card"
   key={item.title}
+
 onClick={() => {
   if (item.title === "ساندویچ سرد") {
     setShowSandwichMenu(true);
+    setShowKebabMenu(false);
+    setShowFrozenMenu(false);
     setSelectedProduct(null);
     setSelectedFlavor("");
     setSelectedWeight("");
     setQuantity(1);
+  } else if (item.title === "کباب لقمه") {
+    setShowKebabMenu(true);
+    setShowSandwichMenu(false);
+    setShowFrozenMenu(false);
+    setSelectedProduct(null);
+    setQuantity(1);
+  } else if (item.title === "محصولات فریزری") {
+    setShowFrozenMenu(true);
+    setShowSandwichMenu(false);
+    setShowKebabMenu(false);
+    setSelectedProduct(null);
+    setQuantity(1);
   }
 }}
+style={{
+  cursor: ["ساندویچ سرد", "کباب لقمه", "محصولات فریزری"].includes(item.title)
+    ? "pointer"
+    : "default",
+}}
+
   style={{
     cursor: item.title === "ساندویچ سرد" ? "pointer" : "default",
   }}
