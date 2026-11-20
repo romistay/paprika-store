@@ -75,6 +75,8 @@ export default function App() {
     </div>
   </section>
 )}
+        {!selectedProduct && (
+  <>
         <section className="hero">
           <div className="hero-content">
             <span className="eyebrow">طعم متفاوت، انتخاب خوشمزه</span>
