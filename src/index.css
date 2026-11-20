@@ -1055,3 +1055,44 @@ footer small {
 .back-to-store {
   align-self: flex-start;
 }
+
+/* PAPRIKA GHOLWICH SPECIAL CARD */
+
+.gholwich-card {
+  position: relative;
+  border: 2px solid #d99b35 !important;
+  background: linear-gradient(145deg, #fff8e9, #ffffff, #fff0d2) !important;
+  border-radius: 25px !important;
+  box-shadow: 0 12px 35px rgba(160, 85, 15, 0.18) !important;
+  overflow: hidden;
+  transform: translateY(-4px);
+}
+
+.gholwich-card::before {
+  content: "⭐ ویژه پاپریکا";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  background: linear-gradient(135deg, #b52c16, #ed7b25);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(130, 35, 10, 0.2);
+}
+
+.gholwich-card:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 18px 40px rgba(160, 85, 15, 0.25) !important;
+}
+
+.gholwich-card img {
+  border: 3px solid #e5b65d;
+}
+
+.gholwich-card h3 {
+  color: #9f2e17 !important;
+  font-weight: 900 !important;
+}
