@@ -1776,3 +1776,96 @@ background: url("/paprika-store/Paprika%20Deli%20Feast%20Advertisement%281%29.pn
     font-size: 13px;
   }
 }
+
+/* Customer Reviews */
+.reviews {
+  padding: 65px 5%;
+  background: #fffaf2;
+}
+
+.reviews .section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.reviews .section-heading span {
+  color: #b5361c;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.reviews .section-heading h2 {
+  color: #512016;
+  font-size: 28px;
+  font-weight: 900;
+  margin: 12px 0;
+}
+
+.reviews .section-heading p {
+  color: #80634d;
+  font-size: 14px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.review-card {
+  padding: 28px 22px;
+  text-align: center;
+  background: linear-gradient(145deg, #ffffff, #fff1d9);
+  border: 1px solid #ead2a5;
+  border-radius: 22px;
+  box-shadow: 0 8px 22px rgba(100, 50, 20, 0.08);
+  transition: 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  border-color: #d9a441;
+  box-shadow: 0 14px 28px rgba(100, 50, 20, 0.13);
+}
+
+.review-stars {
+  color: #d9a441;
+  font-size: 25px;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.review-card p {
+  color: #6d5140;
+  font-size: 14px;
+  line-height: 2.2;
+  min-height: 65px;
+}
+
+.review-card h3 {
+  color: #812b1b;
+  font-size: 16px;
+  font-weight: 900;
+  margin: 15px 0 5px;
+}
+
+.review-card span {
+  color: #a66b16;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 750px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .reviews {
+    padding: 45px 15px;
+  }
+
+  .reviews .section-heading h2 {
+    font-size: 23px;
+  }
+}
