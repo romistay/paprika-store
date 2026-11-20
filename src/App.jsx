@@ -563,7 +563,7 @@ const addToCart = () => {
   </div>
 </section>
 )}
-      {!selectedProduct && !showSandwichMenu && (
+   {!selectedProduct && !showSandwichMenu && !showKebabMenu && !showFrozenMenu && (
   <>
         <section className="hero">
               <div className="hero-art"></div>
