@@ -428,23 +428,27 @@ const addToCart = () => {
   />
 </div>
 
-    <div className="sandwich-flavor-grid">
-      {sandwichFlavors.map((flavor) => (
-        <button
-          key={flavor}
-          onClick={() => {
-            const sandwich = products.find((product) => product.id === 5);
-            setSelectedProduct(sandwich);
-            setSelectedFlavor(flavor);
-            setSelectedWeight("");
-            setQuantity(1);
-            setShowSandwichMenu(false);
-          }}
-        >
-          🥪 {flavor}
-        </button>
-      ))}
-    </div>
+
+<div className="sandwich-flavor-grid">
+  {sandwichFlavorDetails.map((item) => (
+    <button
+      key={item.value}
+      onClick={() => {
+        const sandwich = products.find((product) => product.id === 5);
+        setSelectedProduct(sandwich);
+        setSelectedFlavor(item.value);
+        setSelectedWeight("");
+        setQuantity(1);
+        setShowSandwichMenu(false);
+      }}
+    >
+      <span className="flavor-title">{item.title}</span>
+      <span className="flavor-original">{item.value}</span>
+      <span className="flavor-description">{item.description}</span>
+    </button>
+  ))}
+</div>
+
   </section>
 )}
         {selectedProduct && (
