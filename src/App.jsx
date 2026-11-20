@@ -554,7 +554,11 @@ onClick={() => {
         "تجربه خرید خوبی داشتم و از کیفیت محصولات راضی بودم."
       ].map((review, index) => (
         <div className="review-card" key={`${group}-${index}`}>
-          <div className="review-stars">★★★★★</div>
+         
+<div className="review-stars" title="امتیاز مشتری">
+  ★★★★★
+</div>
+
           <p>{review}</p>
           
 <h3>
