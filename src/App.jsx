@@ -66,6 +66,38 @@ const products = [
     image: "/paprika-store/images.jpg",
     description: "انواع محصولات فریزری پاپریکا",
   },
+  
+const kebabProducts = [
+  {
+    id: 1,
+    name: "کباب لقمه مرغ زعفرانی",
+    weight: "۵۰۰ گرم",
+    price: 740000,
+  },
+  {
+    id: 2,
+    name: "کباب لقمه گوشت ۹۰٪",
+    weight: "۵۰۰ گرم",
+    price: 1450000,
+  },
+  {
+    id: 3,
+    name: "کباب لقمه گوشت ۶۰٪",
+    weight: "۵۰۰ گرم",
+    price: 780000,
+  },
+  {
+    id: 4,
+    name: "کباب لقمه میکس",
+    weight: "۵۰۰ گرم",
+    price: 860000,
+  },
+  {
+    id: 5,
+    name: "کباب لقمه فسنجونی",
+    weight: "۵۰۰ گرم",
+    price: 890000,
+  },
 ];
 
 
@@ -220,22 +252,26 @@ const addToCart = () => {
     return;
   }
 
-  const productPrice =
-    selectedProduct.id === 6
-      ? selectedProduct.price
-      : selectedProduct.id === 5
-      ? sandwichPrices[selectedFlavor][selectedWeight]
-      : 0;
+const productPrice =
+  selectedProduct.category === "kebab"
+    ? selectedProduct.price
+    : selectedProduct.id === 6
+    ? selectedProduct.price
+    : selectedProduct.id === 5
+    ? sandwichPrices[selectedFlavor][selectedWeight]
+    : 0;
 
   const newItem = {
     ...selectedProduct,
     flavor: selectedProduct.id === 5 ? selectedFlavor : "",
-    weight:
-      selectedProduct.id === 5
-        ? selectedWeight
-        : selectedProduct.id === 6
-        ? selectedProduct.weight
-        : "",
+   weight:
+  selectedProduct.category === "kebab"
+    ? selectedProduct.weight
+    : selectedProduct.id === 5
+    ? selectedWeight
+    : selectedProduct.id === 6
+    ? selectedProduct.weight
+    : "",
     price: productPrice,
     quantity: quantity,
   };
@@ -491,6 +527,34 @@ const addToCart = () => {
       </h2>
       <p>محصولات باکیفیت پاپریکا</p>
     </div>
+    
+{showKebabMenu && (
+  <div className="sandwich-flavor-grid">
+    {kebabProducts.map((item) => (
+      <button
+        key={item.id}
+        onClick={() => {
+          setSelectedProduct({
+            ...item,
+            id: 100 + item.id,
+            category: "kebab",
+            image: "/paprika-store/topimage-classic-hamburger-2019m04-800x534-curiosa-min.jpg",
+            description: "کباب لقمه باکیفیت پاپریکا",
+          });
+          setQuantity(1);
+          setShowKebabMenu(false);
+        }}
+      >
+        <span className="flavor-title">{item.name}</span>
+        <span className="flavor-description">{item.weight}</span>
+        <span>
+          {item.price.toLocaleString("fa-IR")} تومان
+        </span>
+      </button>
+    ))}
+  </div>
+)}
+
   </section>
 )}
 
