@@ -1268,3 +1268,104 @@ footer small {
   margin-top: 25px;
   font-size: 12px;
 }
+
+/* PAPRIKA CUSTOMER INFO DESIGN */
+.customer-info {
+  max-width: 650px;
+  margin: 35px auto;
+  padding: 28px;
+  background: linear-gradient(145deg, #fffaf0, #fff0d8);
+  border: 2px solid #e1b45b;
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(120, 60, 20, 0.12);
+  direction: rtl;
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+}
+
+.customer-info h2 {
+  color: #a52e17;
+  font-size: 23px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.customer-info > input,
+.customer-info textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 14px 0;
+  padding: 15px;
+  border: 1.5px solid #dfbd7c;
+  border-radius: 13px;
+  background: #fff;
+  color: #563020;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.customer-info > input:focus,
+.customer-info textarea:focus {
+  border-color: #a52e17;
+  box-shadow: 0 0 0 3px rgba(165, 46, 23, 0.1);
+}
+
+.customer-info textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+.address-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+  color: #713719;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.pickup-option {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 13px;
+  border-radius: 12px;
+  background: #fff0d0;
+  border: 1px solid #e1b45b;
+  cursor: pointer;
+}
+
+.pickup-option input {
+  accent-color: #a52e17;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.delivery-note {
+  margin-top: 20px;
+  padding: 13px;
+  border-radius: 12px;
+  background: #fff0d0;
+  color: #963719;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .customer-info {
+    margin: 25px 12px;
+    padding: 20px 15px;
+  }
+
+  .customer-info h2 {
+    font-size: 20px;
+  }
+}
