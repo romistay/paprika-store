@@ -399,6 +399,37 @@ const addToCart = () => {
 
       {!isCartOpen && (
   <main>
+    {showSandwichMenu && !selectedProduct && (
+  <section className="sandwich-menu-panel">
+    <button onClick={() => setShowSandwichMenu(false)}>
+      ← بازگشت به محصولات
+    </button>
+
+    <div className="sandwich-menu-banner">
+      <span>طعم‌های خوشمزه پاپریکا</span>
+      <h2>ساندویچ سرد مورد علاقه‌ات رو انتخاب کن</h2>
+      <p>از میان طعم‌های متنوع پاپریکا، انتخاب کن!</p>
+    </div>
+
+    <div className="sandwich-flavor-grid">
+      {sandwichFlavors.map((flavor) => (
+        <button
+          key={flavor}
+          onClick={() => {
+            const sandwich = products.find((product) => product.id === 5);
+            setSelectedProduct(sandwich);
+            setSelectedFlavor(flavor);
+            setSelectedWeight("");
+            setQuantity(1);
+            setShowSandwichMenu(false);
+          }}
+        >
+          🥪 {flavor}
+        </button>
+      ))}
+    </div>
+  </section>
+)}
         {selectedProduct && (
   <section className="product-detail">
     <button onClick={() => setSelectedProduct(null)}>
