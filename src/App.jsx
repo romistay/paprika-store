@@ -405,11 +405,12 @@ const addToCart = () => {
       ← بازگشت به محصولات
     </button>
 
-    <div className="sandwich-menu-banner">
-      <span>طعم‌های خوشمزه پاپریکا</span>
-      <h2>ساندویچ سرد مورد علاقه‌ات رو انتخاب کن</h2>
-      <p>از میان طعم‌های متنوع پاپریکا، انتخاب کن!</p>
-    </div>
+   <div className="sandwich-menu-banner">
+  <img
+    src="/paprika-store/paprika-sandwich-banner.png.png"
+    alt="بنر تبلیغاتی ساندویچ‌های سرد پاپریکا"
+  />
+</div>
 
     <div className="sandwich-flavor-grid">
       {sandwichFlavors.map((flavor) => (
