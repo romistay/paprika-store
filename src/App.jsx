@@ -167,16 +167,32 @@ const [selectedWeight, setSelectedWeight] = React.useState("");
   const [cart, setCart] = React.useState([]);
 const [isCartOpen, setIsCartOpen] = React.useState(false);
 const [quantity, setQuantity] = React.useState(1);
+
 const addToCart = () => {
+  if (!selectedProduct) return;
+
   if (selectedProduct.id === 5 && (!selectedFlavor || !selectedWeight)) {
     alert("لطفاً طعم و وزن ساندویچ را انتخاب کنید.");
     return;
   }
 
+  const productPrice =
+    selectedProduct.id === 6
+      ? selectedProduct.price
+      : selectedProduct.id === 5
+      ? sandwichPrices[selectedFlavor][selectedWeight]
+      : 0;
+
   const newItem = {
     ...selectedProduct,
     flavor: selectedProduct.id === 5 ? selectedFlavor : "",
-    weight: selectedProduct.id === 5 ? selectedWeight : "",
+    weight:
+      selectedProduct.id === 5
+        ? selectedWeight
+        : selectedProduct.id === 6
+        ? selectedProduct.weight
+        : "",
+    price: productPrice,
     quantity: quantity,
   };
 
@@ -187,6 +203,7 @@ const addToCart = () => {
   setSelectedWeight("");
   setQuantity(1);
 };
+
   return (
     <div className="paprika" dir="rtl">
       <header className="header">
