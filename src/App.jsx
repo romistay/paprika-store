@@ -338,6 +338,30 @@ const addToCart = () => {
   </button>
 </div>
 
+<div className="customer-info">
+  <h2>اطلاعات تحویل سفارش</h2>
+
+  <input
+    type="text"
+    placeholder="نام و نام خانوادگی"
+    value={customerName}
+    onChange={(e) => setCustomerName(e.target.value)}
+  />
+
+  <input
+    type="tel"
+    placeholder="شماره موبایل"
+    value={customerPhone}
+    onChange={(e) => setCustomerPhone(e.target.value)}
+  />
+
+  <textarea
+    placeholder="آدرس کامل محل تحویل"
+    value={customerAddress}
+    onChange={(e) => setCustomerAddress(e.target.value)}
+  />
+</div>
+
   </>
 )}
   </main>
