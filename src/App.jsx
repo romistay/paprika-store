@@ -129,10 +129,12 @@ export default function App() {
           </div>
         </section>
 
-        <section className="about" id="about">
+               <section className="about" id="about">
           <h2>پاپریکا؛ انتخاب خوشمزه شما</h2>
           <p>تجربه خرید آسان و لذت‌بخش انواع فرآورده‌های گوشتی در یک فروشگاه آنلاین.</p>
         </section>
+        </>)
+        }
       </main>
 
       <footer>
