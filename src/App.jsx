@@ -524,7 +524,7 @@ const productPrice =
 </section>
 )}
     
-{(showKebabMenu || showFrozenMenu) && (
+{(showKebabMenu || showFrozenMenu || showColdCutMenu) && (
   <section className="sandwich-menu-panel">
     <button
       className="sandwich-back-button"
