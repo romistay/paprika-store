@@ -169,6 +169,7 @@ const [isCartOpen, setIsCartOpen] = React.useState(false);
   const [customerName, setCustomerName] = React.useState("");
 const [customerPhone, setCustomerPhone] = React.useState("");
 const [customerAddress, setCustomerAddress] = React.useState("");
+  const [isInPersonDelivery, setIsInPersonDelivery] = React.useState(false);
 const [quantity, setQuantity] = React.useState(1);
 
 const addToCart = () => {
