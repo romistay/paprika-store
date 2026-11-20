@@ -618,3 +618,84 @@ footer small {
     font-size: 16px;
   }
 }
+
+/* Product Detail - Paprika */
+.product-detail {
+  max-width: 900px;
+  margin: 55px auto;
+  padding: 35px 25px;
+  background: #fff;
+  border: 1px solid #f1e5da;
+  border-radius: 28px;
+  box-shadow: 0 12px 35px rgba(70, 40, 20, 0.09);
+  text-align: center;
+}
+
+.product-detail > button {
+  display: block;
+  margin: 0 auto 30px;
+  padding: 13px 28px;
+  background: linear-gradient(135deg, #e85b25, #bd3515);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(189, 53, 21, 0.2);
+  transition: 0.3s ease;
+}
+
+.product-detail > button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(189, 53, 21, 0.3);
+}
+
+.product-detail-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-detail-content img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: 350px;
+  object-fit: contain;
+  border-radius: 22px;
+  background: #fff8f2;
+  padding: 12px;
+}
+
+.product-detail-content h2 {
+  color: #3b2419;
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  margin: 5px 0;
+}
+
+.product-detail-content p {
+  color: #765849;
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 2;
+}
+
+@media (max-width: 600px) {
+  .product-detail {
+    margin: 25px 12px;
+    padding: 22px 15px;
+  }
+
+  .product-detail-content img {
+    height: 260px;
+  }
+
+  .product-detail-content h2 {
+    font-size: 23px;
+  }
+}
