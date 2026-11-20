@@ -418,9 +418,15 @@ const addToCart = () => {
   <main>
    {showSandwichMenu && (
   <section className="sandwich-menu-panel">
-    <button onClick={() => setShowSandwichMenu(false)}>
-      ← بازگشت به محصولات
-    </button>
+   
+<button
+  className="sandwich-back-button"
+  onClick={() => setShowSandwichMenu(false)}
+>
+  <span>←</span>
+  بازگشت به محصولات
+</button>
+>
 
    <div className="sandwich-menu-banner">
   <img
