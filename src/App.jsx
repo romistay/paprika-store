@@ -463,14 +463,7 @@ const addToCart = () => {
         {!selectedProduct && (
   <>
         <section className="hero">
-          <div className="hero-content">
-            <span className="eyebrow">طعم متفاوت، انتخاب خوشمزه</span>
-            <h1>خوشمزه‌تر از همیشه با <span>پاپریکا!</span></h1>
-            <p>دنیایی از طعم‌های خوشمزه سوسیس، کالباس، همبرگر و هات‌داگ در فروشگاه پاپریکا.</p>
-            <a href="#products" className="hero-button">مشاهده محصولات ←</a>
-          </div>
-       <div className="hero-art">
-</div>
+              <div className="hero-art"></div>
 </section>
         <section className="categories" id="categories">
           <div className="section-heading">
