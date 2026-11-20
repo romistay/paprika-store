@@ -167,7 +167,7 @@ export default function App() {
   const [reviewName, setReviewName] = React.useState("");
   const [reviewRating, setReviewRating] = React.useState("");
   const [reviewText, setReviewText] = React.useState("");
-
+const [submittedReviews, setSubmittedReviews] = React.useState([]);
   const [selectedProduct, setSelectedProduct] = React.useState(null);
   const [selectedFlavor, setSelectedFlavor] = React.useState("");
   const [selectedWeight, setSelectedWeight] = React.useState("");
