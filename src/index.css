@@ -670,11 +670,49 @@ footer small {
   line-height: 2;
 }
 
+
 @media (max-width: 600px) {
   .product-detail {
-    margin: 25px 12px;
-    padding: 22px 15px;
+    width: calc(100% - 24px);
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px 14px;
+    box-sizing: border-box;
+    border-radius: 22px;
+    overflow: hidden;
   }
+
+  .product-detail > button {
+    max-width: 100%;
+    margin: 0 auto 22px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .product-detail-content {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .product-detail-content img {
+    width: 100%;
+    max-width: 100%;
+    height: 240px;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  .product-detail-content h2 {
+    font-size: 21px;
+    line-height: 1.8;
+  }
+
+  .product-detail-content p {
+    font-size: 14px;
+    line-height: 2;
+  }
+}
+
 
   .product-detail-content img {
     height: 260px;
