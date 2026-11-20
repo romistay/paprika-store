@@ -1205,3 +1205,66 @@ footer small {
   transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(165, 46, 23, 0.3);
 }
+
+/* PAPRIKA CONTACT FOOTER */
+.site-footer {
+  background: linear-gradient(135deg, #4a1d12, #8d3218, #5c2115);
+  color: #fff8ed;
+  text-align: center;
+  padding: 45px 20px 25px;
+  margin-top: 50px;
+  border-top: 4px solid #d9a441;
+}
+
+.site-footer h2 {
+  color: #ffd27a;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.site-footer > p {
+  color: #ffe5c2;
+  margin-bottom: 25px;
+}
+
+.footer-contact {
+  max-width: 550px;
+  margin: 25px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 210, 122, 0.4);
+  border-radius: 22px;
+}
+
+.footer-contact h3 {
+  color: #ffd27a;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.footer-contact p,
+.footer-contact a {
+  display: block;
+  color: #fff8ed;
+  font-size: 15px;
+  margin: 14px 0;
+  text-decoration: none;
+  line-height: 2;
+}
+
+.footer-contact a {
+  transition: 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #ffd27a;
+  transform: translateY(-2px);
+}
+
+.site-footer small {
+  display: block;
+  color: #f5d8bd;
+  margin-top: 25px;
+  font-size: 12px;
+}
