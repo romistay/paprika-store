@@ -91,11 +91,7 @@ button {
   box-shadow: 0 7px 18px rgba(227, 38, 32, .18);
 }
 
-/* Hero */
-background: url("/paprika-store/Paprika%20Deli%20Feast%20Advertisement%281%29.png") center center / cover no-repeat;
-.hero-content {
-  max-width: 570px;
-}
+
 
 .eyebrow,
 .section-heading > span {
@@ -1475,7 +1471,7 @@ footer small {
   gap: 45px;
   min-height: 480px;
   padding: 55px 7%;
-background: url("/paprika-store/Paprika%20Deli%20Feast%20Advertisement%281%29.png") center center / cover no-repeat;
+background: url("/paprika-store/Paprika%20Deli%20Feast%20Advertisement%281%29.png") center top / 100% auto no-repeat;
   overflow: hidden;
 }
 
