@@ -633,6 +633,14 @@ const productPrice =
 )}
 </div>
   </div>
+    {selectedProduct.category === "kebab" && (
+  <p className="selected-price">
+    وزن: {selectedProduct.weight}
+    {" "} | قیمت:{" "}
+    {selectedProduct.price.toLocaleString("fa-IR")}
+    {" "}تومان
+  </p>
+)}
 </section>
 )}
    {!selectedProduct && !showSandwichMenu && !showKebabMenu && !showFrozenMenu && (
