@@ -38,7 +38,7 @@ export default function App() {
           </div>
          <div className="hero-art">
   <img
-    src="/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.09%281%29.jpeg"
+    src="/paprika-store/products.jpeg"
     alt="محصولات پاپریکا"
   />
 </div>
