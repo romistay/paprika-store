@@ -628,6 +628,7 @@ onClick={() => {
 
 
 
+
 <button
   type="button"
   onClick={() => {
@@ -635,6 +636,8 @@ onClick={() => {
       alert("لطفاً نام، امتیاز و متن نظر خود را وارد کنید.");
       return;
     }
+
+    alert("از اینکه تجربه‌تان را با پاپریکا به اشتراک گذاشتید، سپاسگزاریم ❤️");
 
     setShowReviewForm(false);
     setReviewName("");
