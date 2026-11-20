@@ -117,7 +117,48 @@ const addToCart = () => {
   </span>
 </button>
       </header>
+{isCartOpen && (
+  <div className="cart-overlay" onClick={() => setIsCartOpen(false)}>
+    <div className="cart-drawer" onClick={(e) => e.stopPropagation()}>
+      <div className="cart-header">
+        <h2>🛒 سبد خرید من</h2>
+        <button onClick={() => setIsCartOpen(false)}>✕</button>
+      </div>
 
+      {cart.length === 0 ? (
+        <div className="empty-cart">
+          <span>🛍️</span>
+          <h3>سبد خرید شما خالی است</h3>
+          <p>محصولات خوشمزه پاپریکا منتظر شما هستند!</p>
+        </div>
+      ) : (
+        <div className="cart-items">
+          {cart.map((item, index) => (
+            <div className="cart-item" key={index}>
+              <img src={item.image} alt={item.name} />
+
+              <div className="cart-item-info">
+                <h3>{item.name}</h3>
+                {item.flavor && <p>طعم: {item.flavor}</p>}
+                {item.weight && <p>وزن: {item.weight}</p>}
+                <p>تعداد: {item.quantity}</p>
+              </div>
+
+              <button
+                className="remove-cart-item"
+                onClick={() =>
+                  setCart((prev) => prev.filter((_, i) => i !== index))
+                }
+              >
+                حذف
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+)}
       <main>
         {selectedProduct && (
   <section className="product-detail">
