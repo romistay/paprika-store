@@ -469,10 +469,9 @@ const addToCart = () => {
             <p>دنیایی از طعم‌های خوشمزه سوسیس، کالباس، همبرگر و هات‌داگ در فروشگاه پاپریکا.</p>
             <a href="#products" className="hero-button">مشاهده محصولات ←</a>
           </div>
-         <div className="hero-art">
- 
-        </section>
-
+       <div className="hero-art">
+</div>
+</section>
         <section className="categories" id="categories">
           <div className="section-heading">
             <span>انتخاب خوشمزه تو</span>
