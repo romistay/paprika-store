@@ -643,6 +643,15 @@ onClick={() => {
 
     alert("از اینکه تجربه‌تان را با پاپریکا به اشتراک گذاشتید، سپاسگزاریم ❤️");
 
+setSubmittedReviews((prev) => [
+  ...prev,
+  {
+    name: reviewName.trim(),
+    rating: Number(reviewRating),
+    text: reviewText.trim(),
+  },
+]);
+
     setShowReviewForm(false);
     setReviewName("");
     setReviewRating("");
