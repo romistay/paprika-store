@@ -35,6 +35,12 @@ const products = [
     image: "/paprika-store/topimage-classic-hamburger-2019m04-800x534-curiosa-min.jpg",
     description: "همبرگر خوش‌طعم پاپریکا",
   },
+    {
+    id: 5,
+    name: "ساندویچ سرد",
+    image: "/paprika-store/images.jpg",
+    description: "ساندویچ سرد خوشمزه و تازه پاپریکا",
+  },
 ];
 
 
