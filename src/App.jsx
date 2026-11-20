@@ -160,18 +160,24 @@ const sandwichPrices = {
   },
 };
 
+
 export default function App() {
   const [showReviewForm, setShowReviewForm] = React.useState(false);
+
+  const [reviewName, setReviewName] = React.useState("");
+  const [reviewRating, setReviewRating] = React.useState("");
+  const [reviewText, setReviewText] = React.useState("");
+
   const [selectedProduct, setSelectedProduct] = React.useState(null);
   const [selectedFlavor, setSelectedFlavor] = React.useState("");
-const [selectedWeight, setSelectedWeight] = React.useState("");
+  const [selectedWeight, setSelectedWeight] = React.useState("");
   const [cart, setCart] = React.useState([]);
-const [isCartOpen, setIsCartOpen] = React.useState(false);
+  const [isCartOpen, setIsCartOpen] = React.useState(false);
   const [customerName, setCustomerName] = React.useState("");
-const [customerPhone, setCustomerPhone] = React.useState("");
-const [customerAddress, setCustomerAddress] = React.useState("");
+  const [customerPhone, setCustomerPhone] = React.useState("");
+  const [customerAddress, setCustomerAddress] = React.useState("");
   const [isInPersonDelivery, setIsInPersonDelivery] = React.useState(false);
-const [quantity, setQuantity] = React.useState(1);
+  const [quantity, setQuantity] = React.useState(1);
 
 const addToCart = () => {
   if (!selectedProduct) return;
