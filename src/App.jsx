@@ -636,14 +636,19 @@ onClick={() => {
   ثبت نظر
 </button>
 
-    <button
-      type="button"
-      onClick={() => setShowReviewForm(false)}
-    >
-      بستن فرم
-    </button>
-  </div>
-)}
+   
+<button
+  type="button"
+  onClick={() => {
+    setShowReviewForm(false);
+    setReviewName("");
+    setReviewRating("");
+    setReviewText("");
+  }}
+>
+  بستن فرم
+</button>
+
 
 
            <section className="about" id="about">
