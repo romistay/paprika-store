@@ -316,6 +316,23 @@ const addToCart = () => {
       </h3>
  
     </div>
+    
+<div className="cart-actions">
+  <button
+    className="continue-shopping"
+    onClick={() => setIsCartOpen(false)}
+  >
+    ← ادامه خرید
+  </button>
+
+  <button
+    className="checkout-button"
+    onClick={() => alert("به‌زودی امکان ثبت سفارش فعال می‌شود.")}
+  >
+    ثبت سفارش ←
+  </button>
+</div>
+
   </>
 )}
   </main>
