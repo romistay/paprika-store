@@ -278,25 +278,28 @@ const productPrice =
     ? sandwichPrices[selectedFlavor][selectedWeight]
     : 0;
 
-  const newItem = {
-    ...selectedProduct,
-    flavor: selectedProduct.id === 5 ? selectedFlavor : "",
+ const newItem = {
+  ...selectedProduct,
+  flavor: selectedProduct.id === 5 ? selectedFlavor : "",
   weight:
-  selectedProduct.category === "kebab" ||
-  selectedProduct.category === "coldcut"
-    ? selectedProduct.weight
-    : selectedProduct.id === 5
-    ? selectedWeight
-    : selectedProduct.id === 6
-    ? selectedProduct.weight
-    : "",
+    selectedProduct.category === "kebab" ||
+    selectedProduct.category === "coldcut"
+      ? selectedProduct.weight
+      : selectedProduct.id === 5
+      ? selectedWeight
+      : selectedProduct.id === 6
+      ? selectedProduct.weight
+      : "",
+  price: productPrice,
+  quantity: quantity,
+};
 
-  setCart((prevCart) => [...prevCart, newItem]);
-  setIsCartOpen(true);
-  setSelectedProduct(null);
-  setSelectedFlavor("");
-  setSelectedWeight("");
-  setQuantity(1);
+setCart((prevCart) => [...prevCart, newItem]);
+setIsCartOpen(true);
+setSelectedProduct(null);
+setSelectedFlavor("");
+setSelectedWeight("");
+setQuantity(1);
 };
 
   return (
