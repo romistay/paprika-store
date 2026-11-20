@@ -2178,49 +2178,21 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
 }
 
 .sandwich-menu-banner {
-  padding: 55px 25px;
+  width: 100%;
   margin: 25px 0 35px;
-  text-align: center;
-  border-radius: 28px;
-  background: linear-gradient(135deg, #641d20, #9b352d);
-  color: #fff8e9;
-  box-shadow: 0 12px 30px rgba(80, 20, 20, 0.18);
+  padding: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #641d20;
+  box-shadow: 0 15px 35px rgba(80, 20, 20, 0.18);
 }
 
-.sandwich-menu-banner span {
-  color: #f4cf83;
-  font-size: 16px;
-  font-weight: 800;
-}
-
-.sandwich-menu-banner h2 {
-  margin: 15px 0;
-  font-size: 30px;
-  font-weight: 900;
-}
-
-.sandwich-menu-banner p {
-  color: #f8e7d0;
-  font-size: 16px;
-}
-
-.sandwich-flavor-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.sandwich-flavor-grid button {
-  padding: 20px 12px;
-  border: 1px solid #e4c98f;
-  border-radius: 18px;
-  background: linear-gradient(145deg, #fffdf8, #fff3df);
-  color: #76272a;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: 0.3s ease;
+.sandwich-menu-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 24px;
 }
 
 .sandwich-flavor-grid button:hover {
