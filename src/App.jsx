@@ -538,18 +538,22 @@ const productPrice =
     </button>
 
  <div className="sandwich-menu-banner">
-  {showKebabMenu ? (
-    <img
-      src="/paprika-store/Persian%20Kebab%20Loghmeh%20Feast.png"
-      alt="Persian Kebab Loghmeh Feast"
-    />
-  ) : (
-    <>
-      <h2>محصولات فریزری پاپریکا</h2>
-      <p>محصولات باکیفیت پاپریکا</p>
-    </>
-  )}
-</div>
+{showKebabMenu ? (
+  <img
+    src="/paprika-store/Persian%20Kebab%20Loghmeh%20Feast.png"
+    alt="Persian Kebab Loghmeh Feast"
+  />
+) : showColdCutMenu ? (
+  <>
+    <h2>انواع کالباس پاپریکا</h2>
+    <p>محصولات باکیفیت و خوش‌طعم پاپریکا</p>
+  </>
+) : (
+  <>
+    <h2>محصولات فریزری پاپریکا</h2>
+    <p>محصولات باکیفیت پاپریکا</p>
+  </>
+)}
     
 {showKebabMenu && (
   <div className="sandwich-flavor-grid">
