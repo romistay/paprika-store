@@ -1475,3 +1475,105 @@ footer small {
     font-size: 12px;
   }
 }
+
+/* PAPRIKA PREMIUM HERO */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+  min-height: 480px;
+  padding: 55px 7%;
+  background: linear-gradient(120deg, #fff8ec, #f9e4c5, #fff3df);
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 570px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content .eyebrow {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 30px;
+  background: #f6dfb4;
+  color: #92351c;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.hero-content h1 {
+  color: #512016;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.8;
+  font-weight: 900;
+  margin: 20px 0;
+}
+
+.hero-content h1 span {
+  color: #b5361c;
+}
+
+.hero-content p {
+  color: #72513e;
+  font-size: 16px;
+  line-height: 2.2;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #a52e17, #e66b25);
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+  box-shadow: 0 8px 20px rgba(165, 46, 23, 0.22);
+  transition: 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(165, 46, 23, 0.3);
+}
+
+.hero-art {
+  flex: 1;
+  max-width: 540px;
+}
+
+.hero-art img {
+  display: block;
+  width: 100%;
+  max-height: 390px;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 5px solid white;
+  box-shadow: 0 18px 40px rgba(90, 40, 15, 0.2);
+}
+
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .hero-art {
+    width: 100%;
+  }
+
+  .hero-art img {
+    max-height: 280px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}
