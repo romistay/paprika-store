@@ -339,6 +339,7 @@ const addToCart = () => {
   </button>
 </div>
 
+
 <div className="customer-info">
   <h2>اطلاعات تحویل سفارش</h2>
 
@@ -356,12 +357,32 @@ const addToCart = () => {
     onChange={(e) => setCustomerPhone(e.target.value)}
   />
 
-  <textarea
-    placeholder="آدرس کامل محل تحویل"
-    value={customerAddress}
-    onChange={(e) => setCustomerAddress(e.target.value)}
-  />
+  <div className="address-heading">
+    <label>آدرس کامل محل تحویل</label>
+
+    <label className="pickup-option">
+      <input
+        type="checkbox"
+        checked={isInPersonDelivery}
+        onChange={(e) => setIsInPersonDelivery(e.target.checked)}
+      />
+      تحویل حضوری
+    </label>
+  </div>
+
+  {!isInPersonDelivery && (
+    <textarea
+      placeholder="آدرس کامل محل تحویل را وارد کنید"
+      value={customerAddress}
+      onChange={(e) => setCustomerAddress(e.target.value)}
+    />
+  )}
+
+  <p className="delivery-note">
+    🚚 هزینه ارسال سفارش بر عهده مشتری می‌باشد.
+  </p>
 </div>
+
 
   </>
 )}
