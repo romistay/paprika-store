@@ -412,6 +412,17 @@ const addToCart = () => {
   <img src={product.image} alt={product.name} />
 </div>
                 <h3>{product.name}</h3>
+               
+{product.id === 6 && (
+  <div className="gholwich-details">
+    <span>🥪 ویژه دو نفره</span>
+    <p>وزن: ۵۰۰ گرم</p>
+    <strong>
+      ۱٬۱۰۰٬۰۰۰ تومان
+    </strong>
+  </div>
+)}
+
               </div>
             ))}
           </div>
