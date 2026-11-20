@@ -721,12 +721,14 @@ onClick={() => {
   setShowFrozenMenu(false);
   setSelectedProduct(null);
   setQuantity(1);
-  } else if (item.title === "کباب لقمه") {
-    setShowKebabMenu(true);
-    setShowSandwichMenu(false);
-    setShowFrozenMenu(false);
-    setSelectedProduct(null);
-    setQuantity(1);
+ } else if (item.title === "هات‌داگ") {
+  setShowHotDogMenu(true);
+  setShowKebabMenu(false);
+  setShowColdCutMenu(false);
+  setShowSandwichMenu(false);
+  setShowFrozenMenu(false);
+  setSelectedProduct(null);
+  setQuantity(1);
   } else if (item.title === "محصولات فریزری") {
     setShowFrozenMenu(true);
     setShowSandwichMenu(false);
