@@ -5,10 +5,11 @@ const categories = [
   { icon: "🌮", title: "هات‌داگ", subtitle: "انتخابی خوشمزه" },
 ];
 
+
 const products = [
   {
     name: "کالباس",
-    image: "/paprika-store/kalaas.jpeg",
+    image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.08%281%29.jpeg",
   },
   {
     name: "سوسیس مخصوص کودکان",
@@ -23,6 +24,7 @@ const products = [
     image: "/paprika-store/hamburger.jpeg",
   },
 ];
+
 
 export default function App() {
   return (
