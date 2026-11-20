@@ -250,6 +250,7 @@ const [submittedReviews, setSubmittedReviews] = React.useState([]);
   const [selectedWeight, setSelectedWeight] = React.useState("");
   const [showSandwichMenu, setShowSandwichMenu] = React.useState(false);
   const [showKebabMenu, setShowKebabMenu] = React.useState(false);
+  const [showColdCutMenu, setShowColdCutMenu] = React.useState(false);
 const [showFrozenMenu, setShowFrozenMenu] = React.useState(false);
   const [cart, setCart] = React.useState([]);
   const [isCartOpen, setIsCartOpen] = React.useState(false);
