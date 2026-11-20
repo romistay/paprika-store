@@ -1162,3 +1162,46 @@ footer small {
   border-color: #a52e17;
   box-shadow: 0 0 0 3px rgba(217, 164, 65, 0.2);
 }
+
+/* PAPRIKA CART ACTIONS */
+.cart-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 25px auto;
+}
+
+.cart-actions button {
+  min-width: 180px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.continue-shopping {
+  background: #fff4df;
+  color: #8d3218;
+  border: 2px solid #d9a441 !important;
+}
+
+.continue-shopping:hover {
+  background: #ffe5b5;
+  transform: translateY(-3px);
+}
+
+.checkout-button {
+  background: linear-gradient(135deg, #a52e17, #e66b25);
+  color: white;
+  box-shadow: 0 7px 18px rgba(165, 46, 23, 0.2);
+}
+
+.checkout-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(165, 46, 23, 0.3);
+}
