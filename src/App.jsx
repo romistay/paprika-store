@@ -243,39 +243,64 @@ const addToCart = () => {
       ← بازگشت به فروشگاه
     </button>
 
-    {cart.length === 0 ? (
-      <div className="empty-cart">
-        <span>🛍️</span>
-        <h3>سبد خرید شما خالی است</h3>
-        <p>محصولات خوشمزه پاپریکا منتظر شما هستند!</p>
-      </div>
-    ) : (
-      <div className="cart-items">
-        {cart.map((item, index) => (
-          <div className="cart-item" key={index}>
-            <img src={item.image} alt={item.name} />
+  
+{cart.length === 0 ? (
+  <div className="empty-cart">
+    <span>🛍️</span>
+    <h3>سبد خرید شما خالی است</h3>
+    <p>محصولات خوشمزه پاپریکا منتظر شما هستند!</p>
+  </div>
+) : (
+  <>
+    <div className="cart-items">
+      {cart.map((item, index) => (
+        <div className="cart-item" key={index}>
+          <img src={item.image} alt={item.name} />
 
-            <div className="cart-item-info">
-              <h3>{item.name}</h3>
-              {item.flavor && <p>طعم: {item.flavor}</p>}
-              {item.weight && <p>وزن: {item.weight}</p>}
-              <p>تعداد: {item.quantity}</p>
-            </div>
+          <div className="cart-item-info">
+            <h3>{item.name}</h3>
 
-            <button
-              className="remove-cart-item"
-              onClick={() =>
-                setCart((prev) => prev.filter((_, i) => i !== index))
-              }
-            >
-              حذف
-            </button>
+            {item.flavor && <p>طعم: {item.flavor}</p>}
+            {item.weight && <p>وزن: {item.weight}</p>}
+
+            <p>تعداد: {item.quantity}</p>
+
+            <p>
+              قیمت واحد: {item.price.toLocaleString("fa-IR")} تومان
+            </p>
+
+            <p>
+              جمع این محصول: {(item.price * item.quantity).toLocaleString("fa-IR")} تومان
+            </p>
           </div>
-        ))}
-      </div>
-    )}
+
+          <button
+            className="remove-cart-item"
+            onClick={() =>
+              setCart((prev) => prev.filter((_, i) => i !== index))
+            }
+          >
+            حذف
+          </button>
+        </div>
+      ))}
+    </div>
+
+    <div className="cart-total">
+      <h3>
+        مبلغ کل سفارش:{" "}
+        {cart.reduce(
+          (total, item) => total + item.price * item.quantity,
+          0
+        ).toLocaleString("fa-IR")} تومان
+      </h3>
+ 
+    </div>
+  </>
+)}
   </main>
 )}
+
       {!isCartOpen && (
   <main>
         {selectedProduct && (
