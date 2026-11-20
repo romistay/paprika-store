@@ -441,8 +441,7 @@ const addToCart = () => {
   <span>←</span>
   بازگشت به محصولات
 </button>
->
-
+    
    <div className="sandwich-menu-banner">
   <img
     src="/paprika-store/paprika-sandwich-banner.png.png"
