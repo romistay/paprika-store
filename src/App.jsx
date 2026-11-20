@@ -622,6 +622,20 @@ onClick={() => {
   onChange={(e) => setReviewText(e.target.value)}
 />
 
+<button
+  type="button"
+  onClick={() => {
+    if (!reviewName.trim() || !reviewRating || !reviewText.trim()) {
+      alert("لطفاً نام، امتیاز و متن نظر خود را وارد کنید.");
+      return;
+    }
+
+    alert("اطلاعات نظر شما آماده است. پس از اتصال پایگاه داده، امکان ثبت و نمایش نظر فعال می‌شود.");
+  }}
+>
+  ثبت نظر
+</button>
+
     <button
       type="button"
       onClick={() => setShowReviewForm(false)}
