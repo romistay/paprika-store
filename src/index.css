@@ -737,40 +737,50 @@ footer small {
 }
 
 /* Paprika Sandwich Options */
+
 .sandwich-options {
+  width: 100%;
+  max-width: 100%;
   margin-top: 28px;
   padding: 22px;
-  background: #fff8f2;
-  border: 1px solid #f1e0d2;
+  box-sizing: border-box;
+  background: linear-gradient(145deg, #fffdf8, #fff5e8);
+  border: 1px solid #e5c58c;
   border-radius: 20px;
   text-align: right;
+  box-shadow: 0 8px 22px rgba(80, 30, 20, 0.06);
 }
 
 .sandwich-options h3 {
-  color: #3b2419;
+  color: #641d20;
   font-family: 'Vazirmatn', Tahoma, sans-serif;
   font-size: 17px;
+  font-weight: 800;
   margin: 18px 0 10px;
 }
 
 .sandwich-options select {
+  display: block;
   width: 100%;
   max-width: 380px;
   padding: 14px;
-  border: 1px solid #e8cbbb;
+  box-sizing: border-box;
+  border: 1px solid #d9b879;
   border-radius: 12px;
-  background: white;
-  color: #3b2419;
+  background: #fff;
+  color: #641d20;
   font-family: 'Vazirmatn', Tahoma, sans-serif;
   font-size: 15px;
   outline: none;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .sandwich-options select:focus {
-  border-color: #d94b19;
-  box-shadow: 0 0 0 3px rgba(217, 75, 25, 0.1);
+  border-color: #a87935;
+  box-shadow: 0 0 0 3px rgba(198, 155, 80, 0.15);
 }
+
 /* PAPRIKA CART DRAWER */
 
 .cart-overlay {
