@@ -62,7 +62,6 @@ const products = [
     description: "انواع کباب لقمه باکیفیت پاپریکا",
   },
   {
-  {
     id: 8,
     name: "محصولات فریزری",
     image: "/paprika-store/Ax2YdFZYNXVK4U9DnN1Wmx4Iw4wGmRUavR1hNGnhXAiqovr3yt.jpg",
