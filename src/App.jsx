@@ -198,8 +198,8 @@ const [selectedWeight, setSelectedWeight] = React.useState("");
           <h2>پاپریکا؛ انتخاب خوشمزه شما</h2>
           <p>تجربه خرید آسان و لذت‌بخش انواع فرآورده‌های گوشتی در یک فروشگاه آنلاین.</p>
         </section>
-        </>)
-        }
+        </>
+        )}
       </main>
 
       <footer>
