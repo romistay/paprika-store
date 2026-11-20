@@ -444,7 +444,6 @@ const addToCart = () => {
       }}
     >
       <span className="flavor-title">{item.title}</span>
-      <span className="flavor-original">{item.value}</span>
       <span className="flavor-description">{item.description}</span>
     </button>
   ))}
