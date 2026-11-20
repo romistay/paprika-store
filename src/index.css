@@ -1096,3 +1096,36 @@ footer small {
   color: #9f2e17 !important;
   font-weight: 900 !important;
 }
+
+/* GHOLWICH PRICE DESIGN */
+
+.gholwich-details {
+  margin: 15px 10px 10px;
+  padding: 16px 12px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff0d0, #ffe2a1);
+  border: 1px solid #dca33e;
+  border-radius: 18px;
+}
+
+.gholwich-details span {
+  display: inline-block;
+  color: #a52e17;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.gholwich-details p {
+  color: #65412a;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 5px 0 10px;
+}
+
+.gholwich-details strong {
+  display: block;
+  color: #a52e17;
+  font-size: 20px;
+  font-weight: 900;
+}
