@@ -269,7 +269,8 @@ const addToCart = () => {
   }
 
 const productPrice =
-  selectedProduct.category === "kebab"
+  selectedProduct.category === "kebab" ||
+  selectedProduct.category === "coldcut"
     ? selectedProduct.price
     : selectedProduct.id === 6
     ? selectedProduct.price
