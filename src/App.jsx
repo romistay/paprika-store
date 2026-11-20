@@ -5,8 +5,9 @@ const categories = [
   { icon: "🍔", title: "همبرگر", subtitle: "لذیذ و آماده طبخ" },
   { icon: "🌮", title: "هات‌داگ", subtitle: "انتخابی خوشمزه" },
   { icon: "🥪", title: "ساندویچ سرد", subtitle: "ساندویچ‌های تازه و خوشمزه" },
+  { icon: "🍢", title: "کباب لقمه", subtitle: "انواع کباب لقمه پاپریکا" },
+  { icon: "❄️", title: "محصولات فریزری", subtitle: "محصولات آماده و باکیفیت" },
 ];
-
 
 
 
