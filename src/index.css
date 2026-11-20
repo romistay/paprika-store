@@ -2190,11 +2190,20 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
 .sandwich-menu-banner img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
-  border-radius: 24px;
+  border-radius: 20px;
 }
 
+.sandwich-menu-panel {
+  width: 100%;
+  max-width: 1150px;
+  margin: 30px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 .sandwich-flavor-grid button:hover {
   background: #76272a;
   color: #fff8e9;
