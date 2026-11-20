@@ -522,12 +522,19 @@ const productPrice =
       بازگشت به محصولات
     </button>
 
-    <div className="sandwich-menu-banner">
-      <h2>
-        {showKebabMenu ? "کباب لقمه پاپریکا" : "محصولات فریزری پاپریکا"}
-      </h2>
+ <div className="sandwich-menu-banner">
+  {showKebabMenu ? (
+    <img
+      src="/paprika-store/Persian%20Kebab%20Loghmeh%20Feast.png"
+      alt="Persian Kebab Loghmeh Feast"
+    />
+  ) : (
+    <>
+      <h2>محصولات فریزری پاپریکا</h2>
       <p>محصولات باکیفیت پاپریکا</p>
-    </div>
+    </>
+  )}
+</div>
     
 {showKebabMenu && (
   <div className="sandwich-flavor-grid">
