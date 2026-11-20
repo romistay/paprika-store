@@ -166,6 +166,9 @@ export default function App() {
 const [selectedWeight, setSelectedWeight] = React.useState("");
   const [cart, setCart] = React.useState([]);
 const [isCartOpen, setIsCartOpen] = React.useState(false);
+  const [customerName, setCustomerName] = React.useState("");
+const [customerPhone, setCustomerPhone] = React.useState("");
+const [customerAddress, setCustomerAddress] = React.useState("");
 const [quantity, setQuantity] = React.useState(1);
 
 const addToCart = () => {
