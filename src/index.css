@@ -2132,6 +2132,7 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
 }
 
 .reviews-summary {
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
   max-width: 500px;
   margin: 30px auto;
   padding: 25px 20px;
