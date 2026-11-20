@@ -171,6 +171,7 @@ const [submittedReviews, setSubmittedReviews] = React.useState([]);
   const [selectedProduct, setSelectedProduct] = React.useState(null);
   const [selectedFlavor, setSelectedFlavor] = React.useState("");
   const [selectedWeight, setSelectedWeight] = React.useState("");
+  const [showSandwichMenu, setShowSandwichMenu] = React.useState(false);
   const [cart, setCart] = React.useState([]);
   const [isCartOpen, setIsCartOpen] = React.useState(false);
   const [customerName, setCustomerName] = React.useState("");
@@ -467,7 +468,7 @@ const addToCart = () => {
   </div>
 </section>
 )}
-        {!selectedProduct && (
+      {!selectedProduct && !showSandwichMenu && (
   <>
         <section className="hero">
               <div className="hero-art"></div>
@@ -482,15 +483,15 @@ const addToCart = () => {
              <div
   className="category-card"
   key={item.title}
-  onClick={() => {
-    if (item.title === "ساندویچ سرد") {
-      const sandwich = products.find((product) => product.id === 5);
-      setSelectedProduct(sandwich);
-      setSelectedFlavor("");
-      setSelectedWeight("");
-      setQuantity(1);
-    }
-  }}
+onClick={() => {
+  if (item.title === "ساندویچ سرد") {
+    setShowSandwichMenu(true);
+    setSelectedProduct(null);
+    setSelectedFlavor("");
+    setSelectedWeight("");
+    setQuantity(1);
+  }
+}}
   style={{
     cursor: item.title === "ساندویچ سرد" ? "pointer" : "default",
   }}
