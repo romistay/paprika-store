@@ -2418,3 +2418,19 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
 .sandwich-back-button span {
   font-size: 20px;
 }
+
+@media (max-width: 600px) {
+  .gholwich-details {
+    padding: 14px 10px;
+    border-radius: 15px;
+  }
+
+  .gholwich-details h2,
+  .gholwich-details h3,
+  .gholwich-details p,
+  .gholwich-details span {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    box-sizing: border-box;
+  }
+}
