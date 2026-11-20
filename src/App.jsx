@@ -58,7 +58,7 @@ const products = [
   {
     id: 7,
     name: "کباب لقمه",
-    image: "/paprika-store/paprika-kebab.jpg",
+   image: "/paprika-store/Besharat-Burger-06.jpg",
     description: "انواع کباب لقمه باکیفیت پاپریکا",
   },
   {
