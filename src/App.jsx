@@ -135,7 +135,9 @@ const [selectedWeight, setSelectedWeight] = React.useState("");
     </div>
   )}
 </div>
-
+  </div>
+</section>
+)}
         {!selectedProduct && (
   <>
         <section className="hero">
