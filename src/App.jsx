@@ -36,9 +36,12 @@ export default function App() {
             <p>دنیایی از طعم‌های خوشمزه سوسیس، کالباس، همبرگر و هات‌داگ در فروشگاه پاپریکا.</p>
             <a href="#products" className="hero-button">مشاهده محصولات ←</a>
           </div>
-          <div className="hero-art">
-            <span>🍔</span><span>🌭</span><span>🌶️</span>
-          </div>
+         <div className="hero-art">
+  <img
+    src="/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.09%281%29.jpeg"
+    alt="محصولات پاپریکا"
+  />
+</div>
         </section>
 
         <section className="categories" id="categories">
