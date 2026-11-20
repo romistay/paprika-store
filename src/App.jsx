@@ -595,11 +595,16 @@ onClick={() => {
     <p>
       میانگین امتیاز:
       {" "}
-      {(submittedReviews.reduce(
-        (total, review) => total + review.rating,
-        0
-      ) / submittedReviews.length).toFixed(1)}
-      {" "}از ۵ ⭐
+{(
+  submittedReviews.reduce(
+    (total, review) => total + review.rating,
+    0
+  ) / submittedReviews.length
+).toLocaleString("fa-IR", {
+  minimumFractionDigits: 1,
+  maximumFractionDigits: 1,
+})}
+{" "}از ۵ ⭐
     </p>
   </div>
 )}
