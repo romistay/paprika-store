@@ -1720,3 +1720,13 @@ background: url("/paprika-store/Paprika%20Deli%20Feast%20Advertisement%281%29.pn
     font-size: 14px;
   }
 }
+/* Professional Experience in Footer */
+.site-footer > p:nth-of-type(2) {
+  color: #f5ca70;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 2;
+  margin: 12px auto 20px;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
