@@ -89,7 +89,9 @@ export default function App() {
             {products.map((product) => (
               <div className="product-card" key={product.name}>
                 <span className="product-tag">{product.tag}</span>
-                <div className="product-image">{product.icon}</div>
+               <div className="product-image">
+  <img src={product.image} alt={product.name} />
+</div>
                 <h3>{product.name}</h3>
                 <p>قیمت هر بسته</p>
                 <strong>{product.price} تومان</strong>
