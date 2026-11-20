@@ -574,9 +574,32 @@ const productPrice =
       >
         <span className="flavor-title">{item.name}</span>
         <span className="flavor-description">{item.weight}</span>
-        <span>
-          {item.price.toLocaleString("fa-IR")} تومان
-        </span>
+        <span>{item.price.toLocaleString("fa-IR")} تومان</span>
+      </button>
+    ))}
+  </div>
+)}
+
+{showColdCutMenu && (
+  <div className="sandwich-flavor-grid">
+    {coldCutProducts.map((item) => (
+      <button
+        key={item.id}
+        onClick={() => {
+          setSelectedProduct({
+            ...item,
+            id: 200 + item.id,
+            category: "coldcut",
+            image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.08%281%29.jpeg",
+            description: "محصول باکیفیت پاپریکا",
+          });
+          setQuantity(1);
+          setShowColdCutMenu(false);
+        }}
+      >
+        <span className="flavor-title">{item.name}</span>
+        <span className="flavor-description">{item.weight}</span>
+        <span>{item.price.toLocaleString("fa-IR")} تومان</span>
       </button>
     ))}
   </div>
