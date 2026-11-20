@@ -556,7 +556,7 @@ setQuantity(1);
     <p>محصولات باکیفیت پاپریکا</p>
   </>
 )}
-    
+    </div>
 {showKebabMenu && (
   <div className="sandwich-flavor-grid">
     {kebabProducts.map((item) => (
