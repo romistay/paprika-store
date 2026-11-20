@@ -399,7 +399,7 @@ const addToCart = () => {
 
       {!isCartOpen && (
   <main>
-    {showSandwichMenu && !selectedProduct && (
+   {showSandwichMenu && (
   <section className="sandwich-menu-panel">
     <button onClick={() => setShowSandwichMenu(false)}>
       ← بازگشت به محصولات
