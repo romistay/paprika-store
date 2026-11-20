@@ -45,8 +45,33 @@ const products = [
 ];
 
 
+const sandwichFlavors = [
+  "مارتادلا",
+  "مارتادلا ویژه",
+  "مرغ ۹۰٪",
+  "گوشت ۹۰٪",
+  "بره",
+  "پیتزایی",
+  "چیکن رویال",
+  "کرات",
+  "میکس",
+  "مرغ و قارچ",
+  "سبزیجات",
+  "سوئدی",
+  "پپرونی",
+];
+
+const sandwichWeights = [
+  "۱۲۰ گرم",
+  "۱۵۰ گرم",
+  "۲۰۰ گرم",
+  "۳۰۰ گرم",
+];
+
 export default function App() {
   const [selectedProduct, setSelectedProduct] = React.useState(null);
+  const [selectedFlavor, setSelectedFlavor] = React.useState("");
+const [selectedWeight, setSelectedWeight] = React.useState("");
   return (
     <div className="paprika" dir="rtl">
       <header className="header">
@@ -75,13 +100,42 @@ export default function App() {
         alt={selectedProduct.name}
       />
 
-      <div>
-        <h2>{selectedProduct.name}</h2>
-        <p>{selectedProduct.description}</p>
-      </div>
+     
+<div>
+  <h2>{selectedProduct.name}</h2>
+  <p>{selectedProduct.description}</p>
+
+  {selectedProduct.id === 5 && (
+    <div className="sandwich-options">
+      <h3>انتخاب طعم ساندویچ</h3>
+      <select
+        value={selectedFlavor}
+        onChange={(e) => setSelectedFlavor(e.target.value)}
+      >
+        <option value="">طعم موردنظر را انتخاب کنید</option>
+        {sandwichFlavors.map((flavor) => (
+          <option key={flavor} value={flavor}>
+            {flavor}
+          </option>
+        ))}
+      </select>
+
+      <h3>انتخاب وزن</h3>
+      <select
+        value={selectedWeight}
+        onChange={(e) => setSelectedWeight(e.target.value)}
+      >
+        <option value="">وزن موردنظر را انتخاب کنید</option>
+        {sandwichWeights.map((weight) => (
+          <option key={weight} value={weight}>
+            {weight}
+          </option>
+        ))}
+      </select>
     </div>
-  </section>
-)}
+  )}
+</div>
+
         {!selectedProduct && (
   <>
         <section className="hero">
