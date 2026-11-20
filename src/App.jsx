@@ -627,6 +627,7 @@ onClick={() => {
 />
 
 
+
 <button
   type="button"
   onClick={() => {
@@ -635,7 +636,6 @@ onClick={() => {
       return;
     }
 
-    alert("ممنون از اینکه تجربه‌تان را با پاپریکا به اشتراک گذاشتید ❤️");
     setShowReviewForm(false);
     setReviewName("");
     setReviewRating("");
@@ -644,6 +644,7 @@ onClick={() => {
 >
   ثبت نظر
 </button>
+
 
 
    
