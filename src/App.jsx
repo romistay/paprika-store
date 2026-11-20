@@ -521,11 +521,32 @@ onClick={() => {
        </main>
 )}
 
-      <footer>
-        <h2>🌶️ PAPRIKA</h2>
-        <p>طعم خوب، انتخاب خوب!</p>
-        <small>تمام حقوق برای فروشگاه پاپریکا محفوظ است.</small>
-      </footer>
+     
+<footer className="site-footer">
+  <h2>🌶️ PAPRIKA</h2>
+  <p>طعم خوب، انتخاب خوب!</p>
+
+  <div className="footer-contact">
+    <h3>ارتباط با ما</h3>
+
+    <p>📍 آدرس: تربت حیدریه، خیابان کاشانی</p>
+
+    <a href="https://wa.me/989044431358" target="_blank" rel="noreferrer">
+      💬 واتساپ: 09044431358
+    </a>
+
+    <a href="https://t.me/+989044431358" target="_blank" rel="noreferrer">
+      ✈️ تلگرام: 09044431358
+    </a>
+
+    <a href="https://www.instagram.com/zahra_jomezadeh_2/" target="_blank" rel="noreferrer">
+      📸 اینستاگرام: @zahra_jomezadeh_2
+    </a>
+  </div>
+
+  <small>تمام حقوق برای فروشگاه پاپریکا محفوظ است.</small>
+</footer>
+
     </div>
   );
 }
