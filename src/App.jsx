@@ -43,7 +43,7 @@ const products = [
   {
     id: 5,
     name: "ساندویچ سرد",
-    image: "/paprika-store/images.jpg",
+   image: "/paprika-store/paprika-cold-sandwich.jpg.jpg",
     description: "ساندویچ سرد خوشمزه و تازه پاپریکا",
   },
   {
