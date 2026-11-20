@@ -471,6 +471,29 @@ const addToCart = () => {
 </div>
 </section>
 )}
+    
+{(showKebabMenu || showFrozenMenu) && (
+  <section className="sandwich-menu-panel">
+    <button
+      className="sandwich-back-button"
+      onClick={() => {
+        setShowKebabMenu(false);
+        setShowFrozenMenu(false);
+      }}
+    >
+      <span>←</span>
+      بازگشت به محصولات
+    </button>
+
+    <div className="sandwich-menu-banner">
+      <h2>
+        {showKebabMenu ? "کباب لقمه پاپریکا" : "محصولات فریزری پاپریکا"}
+      </h2>
+      <p>محصولات باکیفیت پاپریکا</p>
+    </div>
+  </section>
+)}
+
 {selectedProduct && (
   <section className="product-detail">
     <button onClick={() => setSelectedProduct(null)}>
