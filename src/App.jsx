@@ -101,7 +101,20 @@ const kebabProducts = [
     price: 890000,
   },
 ];
-
+const coldCutProducts = [
+  { id: 1, name: "ژامبون مرغ ۹۰٪", weight: "۵۰۰ گرم", price: 810000 },
+  { id: 2, name: "ژامبون گوشت ۹۰٪", weight: "۵۰۰ گرم", price: 1030000 },
+  { id: 3, name: "کالباس بره", weight: "۵۰۰ گرم", price: 1100000 },
+  { id: 4, name: "فیله استیک", weight: "۵۰۰ گرم", price: 1500000 },
+  { id: 5, name: "ژامبون مرغ و قارچ", weight: "۵۰۰ گرم", price: 790000 },
+  { id: 6, name: "ژامبون میکس", weight: "۵۰۰ گرم", price: 830000 },
+  { id: 7, name: "کالباس پیتزایی", weight: "۵۰۰ گرم", price: 740000 },
+  { id: 8, name: "کالباس سبزیجات", weight: "۵۰۰ گرم", price: 740000 },
+  { id: 9, name: "ژامبون چیکن رویال", weight: "۵۰۰ گرم", price: 760000 },
+  { id: 10, name: "کالباس مارتادلا", weight: "۵۰۰ گرم", price: 650000 },
+  { id: 11, name: "ژامبون کرات", weight: "۵۰۰ گرم", price: 950000 },
+  { id: 12, name: "پپرونی", weight: "۵۰۰ گرم", price: 920000 },
+];
 
 const sandwichFlavors = [
   "مارتادلا",
