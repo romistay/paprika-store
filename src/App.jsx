@@ -531,8 +531,9 @@ setQuantity(1);
     <button
       className="sandwich-back-button"
       onClick={() => {
-        setShowKebabMenu(false);
-        setShowFrozenMenu(false);
+setShowKebabMenu(false);
+setShowFrozenMenu(false);
+setShowColdCutMenu(false);
       }}
     >
       <span>←</span>
@@ -687,7 +688,7 @@ setQuantity(1);
 )}
 </section>
 )}
-   {!selectedProduct && !showSandwichMenu && !showKebabMenu && !showFrozenMenu && (
+ {!selectedProduct && !showSandwichMenu && !showKebabMenu && !showFrozenMenu && !showColdCutMenu && (
   <>
         <section className="hero">
               <div className="hero-art"></div>
