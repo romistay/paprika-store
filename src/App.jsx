@@ -58,7 +58,7 @@ const products = [
   {
     id: 7,
     name: "کباب لقمه",
-    image: "/paprika-store/topimage-classic-hamburger-2019m04-800x534-curiosa-min.jpg",
+    image: "/paprika-store/paprika-kebab.jpg",
     description: "انواع کباب لقمه باکیفیت پاپریکا",
   },
   {
