@@ -596,24 +596,31 @@ onClick={() => {
   <div className="review-form">
     <h3>ثبت نظر شما درباره پاپریکا 🌶️</h3>
 
-    <input
-      type="text"
-      placeholder="نام و نام خانوادگی"
-    />
+   <input
+  type="text"
+  placeholder="نام و نام خانوادگی"
+  value={reviewName}
+  onChange={(e) => setReviewName(e.target.value)}
+/>
 
-    <select defaultValue="">
-      <option value="" disabled>امتیاز خود را انتخاب کنید</option>
-      <option value="5">★★★★★ عالی</option>
-      <option value="4">★★★★☆ خیلی خوب</option>
-      <option value="3">★★★☆☆ خوب</option>
-      <option value="2">★★☆☆☆ متوسط</option>
-      <option value="1">★☆☆☆☆ ضعیف</option>
-    </select>
+   <select
+  value={reviewRating}
+  onChange={(e) => setReviewRating(e.target.value)}
+>
+  <option value="">امتیاز خود را انتخاب کنید</option>
+  <option value="5">★★★★★ عالی</option>
+  <option value="4">★★★★☆ خیلی خوب</option>
+  <option value="3">★★★☆☆ خوب</option>
+  <option value="2">★★☆☆☆ متوسط</option>
+  <option value="1">★☆☆☆☆ ضعیف</option>
+</select>
 
-    <textarea
-      placeholder="نظر خود را درباره محصولات پاپریکا بنویسید..."
-      rows="4"
-    />
+   <textarea
+  placeholder="نظر خود را درباره محصولات پاپریکا بنویسید..."
+  rows="4"
+  value={reviewText}
+  onChange={(e) => setReviewText(e.target.value)}
+/>
 
     <button
       type="button"
