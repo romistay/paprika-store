@@ -659,8 +659,8 @@ onClick={() => {
 >
   بستن فرم
 </button>
-
-
+</div>
+)}
 
            <section className="about" id="about">
   <h2>پاپریکا؛ انتخاب خوشمزه شما</h2>
