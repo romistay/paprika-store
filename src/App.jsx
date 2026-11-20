@@ -682,6 +682,13 @@ onClick={() => {
     setSelectedFlavor("");
     setSelectedWeight("");
     setQuantity(1);
+ } else if (item.title === "انواع کالباس") {
+  setShowColdCutMenu(true);
+  setShowKebabMenu(false);
+  setShowSandwichMenu(false);
+  setShowFrozenMenu(false);
+  setSelectedProduct(null);
+  setQuantity(1);
   } else if (item.title === "کباب لقمه") {
     setShowKebabMenu(true);
     setShowSandwichMenu(false);
