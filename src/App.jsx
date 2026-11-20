@@ -251,6 +251,7 @@ const [submittedReviews, setSubmittedReviews] = React.useState([]);
   const [showSandwichMenu, setShowSandwichMenu] = React.useState(false);
   const [showKebabMenu, setShowKebabMenu] = React.useState(false);
   const [showColdCutMenu, setShowColdCutMenu] = React.useState(false);
+  const [showHotDogMenu, setShowHotDogMenu] = React.useState(false);
 const [showFrozenMenu, setShowFrozenMenu] = React.useState(false);
   const [cart, setCart] = React.useState([]);
   const [isCartOpen, setIsCartOpen] = React.useState(false);
@@ -526,7 +527,7 @@ setQuantity(1);
 </section>
 )}
     
-{(showKebabMenu || showFrozenMenu || showColdCutMenu) && (
+{(showKebabMenu || showFrozenMenu || showColdCutMenu || showHotDogMenu) && (
   <section className="sandwich-menu-panel">
     <button
       className="sandwich-back-button"
@@ -534,6 +535,7 @@ setQuantity(1);
 setShowKebabMenu(false);
 setShowFrozenMenu(false);
 setShowColdCutMenu(false);
+setShowHotDogMenu(false);        
       }}
     >
       <span>←</span>
@@ -546,6 +548,11 @@ setShowColdCutMenu(false);
     src="/paprika-store/Persian%20Kebab%20Loghmeh%20Feast.png"
     alt="Persian Kebab Loghmeh Feast"
   />
+) : showHotDogMenu ? (
+  <>
+    <h2>هات‌داگ پاپریکا</h2>
+    <p>هات‌داگ‌های خوش‌طعم و باکیفیت پاپریکا</p>
+  </>
 ) : showColdCutMenu ? (
   <img
    src="/paprika-store/paprika-coldcut-banner.png.png"
@@ -689,7 +696,7 @@ setShowColdCutMenu(false);
 )}
 </section>
 )}
- {!selectedProduct && !showSandwichMenu && !showKebabMenu && !showFrozenMenu && !showColdCutMenu && (
+ {!selectedProduct && !showSandwichMenu && !showKebabMenu && !showFrozenMenu && !showColdCutMenu && !showHotDogMenu && (
   <>
         <section className="hero">
               <div className="hero-art"></div>
