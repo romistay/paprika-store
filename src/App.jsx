@@ -6,25 +6,19 @@ const categories = [
 ];
 
 
-const products = [
-  {
-    name: "کالباس",
-    image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.08%281%29.jpeg",
-  },
-  {
-   
-{
-  name: "سوسیس مخصوص کودکان",
-  image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.07%281%29.jpeg",
-},
 
+const products = [
   {
     name: "سوسیس",
     image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.06%281%29.jpeg",
   },
   {
-    name: "همبرگر",
-    image: "/paprika-store/hamburger.jpeg",
+    name: "سوسیس مخصوص کودکان",
+    image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.07%281%29.jpeg",
+  },
+  {
+    name: "کالباس",
+    image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.08.jpeg",
   },
 ];
 
