@@ -2107,3 +2107,26 @@ background: url("/paprika-store/Paprika%20Deli%20Feast%20Advertisement%281%29.pn
     max-width: 320px;
   }
 }
+
+.submitted-reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  max-width: 1200px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+.submitted-reviews .review-card {
+  width: auto;
+  min-height: 220px;
+  animation: reviewFormShow 0.45s ease both;
+}
+
+@media (max-width: 600px) {
+  .submitted-reviews {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+    gap: 16px;
+  }
+}
