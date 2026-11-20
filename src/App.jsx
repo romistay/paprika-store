@@ -72,6 +72,9 @@ export default function App() {
   const [selectedProduct, setSelectedProduct] = React.useState(null);
   const [selectedFlavor, setSelectedFlavor] = React.useState("");
 const [selectedWeight, setSelectedWeight] = React.useState("");
+  const [cart, setCart] = React.useState([]);
+const [isCartOpen, setIsCartOpen] = React.useState(false);
+const [quantity, setQuantity] = React.useState(1);
   return (
     <div className="paprika" dir="rtl">
       <header className="header">
