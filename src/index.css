@@ -225,10 +225,21 @@ button {
   font-size: 39px;
 }
 
-.category-card h3,
-.product-card h3 {
+.category-card h3 {
   font-size: 17px;
   font-weight: 800;
+}
+
+.product-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #3b2419;
+  margin: 12px 0 18px;
+  transition: color .3s ease;
+}
+
+.product-card:hover h3 {
+  color: #d94b19;
 }
 
 .category-card p,
