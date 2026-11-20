@@ -55,20 +55,19 @@ const products = [
     tag: "ویژه پاپریکا",
   },
   {
+   {
     id: 7,
     name: "کباب لقمه",
     image: "/paprika-store/topimage-classic-hamburger-2019m04-800x534-curiosa-min.jpg",
     description: "انواع کباب لقمه باکیفیت پاپریکا",
   },
   {
-     {
     id: 8,
     name: "محصولات فریزری",
     image: "/paprika-store/images.jpg",
     description: "انواع محصولات فریزری پاپریکا",
   },
 ];
-
 const kebabProducts = [
   {
     id: 1,
