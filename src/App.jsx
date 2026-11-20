@@ -6,10 +6,30 @@ const categories = [
 ];
 
 const products = [
-  { name: "سوسیس آلمانی", price: "۱۸۵,۰۰۰", icon: "🌭", tag: "پرفروش" },
-  { name: "کالباس گوشت", price: "۲۲۰,۰۰۰", icon: "🥩", tag: "محبوب" },
-  { name: "همبرگر مخصوص", price: "۱۹۵,۰۰۰", icon: "🍔", tag: "پیشنهاد ویژه" },
-  { name: "هات‌داگ ویژه", price: "۱۶۵,۰۰۰", icon: "🌭", tag: "جدید" },
+  {
+    name: "سوسیس آلمانی",
+    price: "۱۸۵,۰۰۰",
+    image: "/paprika-store/products.jpeg",
+    tag: "پرفروش",
+  },
+  {
+    name: "کالباس گوشت",
+    price: "۲۲۰,۰۰۰",
+    image: "/paprika-store/products.jpeg",
+    tag: "محبوب",
+  },
+  {
+    name: "همبرگر مخصوص",
+    price: "۱۹۵,۰۰۰",
+    image: "/paprika-store/products.jpeg",
+    tag: "پیشنهاد ویژه",
+  },
+  {
+    name: "هات‌داگ ویژه",
+    price: "۱۶۵,۰۰۰",
+    image: "/paprika-store/products.jpeg",
+    tag: "جدید",
+  },
 ];
 
 export default function App() {
