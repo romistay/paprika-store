@@ -1129,3 +1129,36 @@ footer small {
   font-size: 20px;
   font-weight: 900;
 }
+
+/* PAPRIKA CART QUANTITY */
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.cart-quantity label {
+  color: #713719;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.cart-quantity input {
+  width: 85px;
+  height: 42px;
+  border: 2px solid #d9a441;
+  border-radius: 12px;
+  background: #fffaf0;
+  color: #8d3218;
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  outline: none;
+  direction: ltr;
+}
+
+.cart-quantity input:focus {
+  border-color: #a52e17;
+  box-shadow: 0 0 0 3px rgba(217, 164, 65, 0.2);
+}
