@@ -522,6 +522,37 @@ onClick={() => {
           </div>
         </section>
 
+<section className="reviews" id="reviews">
+  <div className="section-heading">
+    <span>صدای مشتریان ما</span>
+    <h2>نظرات مشتریان پاپریکا</h2>
+    <p>خوشحالیم که طعم خوب پاپریکا را با شما به اشتراک می‌گذاریم.</p>
+  </div>
+
+  <div className="reviews-grid">
+    <div className="review-card">
+      <div className="review-stars">★★★★★</div>
+      <p>کیفیت محصولات عالی بود و طعم سوسیس‌ها واقعاً متفاوت و خوشمزه است.</p>
+      <h3>مشتری پاپریکا</h3>
+      <span>خرید محصولات</span>
+    </div>
+
+    <div className="review-card">
+      <div className="review-stars">★★★★★</div>
+      <p>بسته‌بندی مرتب و کیفیت خوب محصولات باعث شد از خریدم راضی باشم.</p>
+      <h3>مشتری پاپریکا</h3>
+      <span>خرید محصولات</span>
+    </div>
+
+    <div className="review-card">
+      <div className="review-stars">★★★★★</div>
+      <p>طعم محصولات پاپریکا عالیه. حتماً دوباره سفارش می‌دم.</p>
+      <h3>مشتری پاپریکا</h3>
+      <span>خرید محصولات</span>
+    </div>
+  </div>
+</section>
+
            <section className="about" id="about">
   <h2>پاپریکا؛ انتخاب خوشمزه شما</h2>
 
