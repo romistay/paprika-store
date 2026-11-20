@@ -451,45 +451,28 @@ const addToCart = () => {
 </div>
 
 
+
 <div className="sandwich-flavor-grid">
   {sandwichFlavorDetails.map((item) => (
     <button
       key={item.value}
-      
-onClick={() => {
-  if (item.title === "ساندویچ سرد") {
-    setShowSandwichMenu(true);
-    setShowKebabMenu(false);
-    setShowFrozenMenu(false);
-    setSelectedProduct(null);
-    setSelectedFlavor("");
-    setSelectedWeight("");
-    setQuantity(1);
-  } else if (item.title === "کباب لقمه") {
-    setShowKebabMenu(true);
-    setShowSandwichMenu(false);
-    setShowFrozenMenu(false);
-    setSelectedProduct(null);
-    setQuantity(1);
-  } else if (item.title === "محصولات فریزری") {
-    setShowFrozenMenu(true);
-    setShowSandwichMenu(false);
-    setShowKebabMenu(false);
-    setSelectedProduct(null);
-    setQuantity(1);
-  }
-}}
-style={{
-  cursor:
-    ["ساندویچ سرد", "کباب لقمه", "محصولات فریزری"].includes(item.title)
-      ? "pointer"
-      : "default",
-}}
->
-
-  </section>
+      onClick={() => {
+        const sandwich = products.find((product) => product.id === 5);
+        setSelectedProduct(sandwich);
+        setSelectedFlavor(item.value);
+        setSelectedWeight("");
+        setQuantity(1);
+        setShowSandwichMenu(false);
+      }}
+    >
+      <span className="flavor-title">{item.title}</span>
+      <span className="flavor-description">{item.description}</span>
+    </button>
+  ))}
+</div>
+</section>
 )}
-        {selectedProduct && (
+(
   <section className="product-detail">
     <button onClick={() => setSelectedProduct(null)}>
       ← بازگشت به محصولات
