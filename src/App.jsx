@@ -587,6 +587,24 @@ onClick={() => {
 
 
 {submittedReviews.length > 0 && (
+  <div className="reviews-summary">
+    <h3>🌟 رضایت مشتریان پاپریکا</h3>
+    <p>
+      تعداد نظرها: {submittedReviews.length.toLocaleString("fa-IR")}
+    </p>
+    <p>
+      میانگین امتیاز:
+      {" "}
+      {(submittedReviews.reduce(
+        (total, review) => total + review.rating,
+        0
+      ) / submittedReviews.length).toFixed(1)}
+      {" "}از ۵ ⭐
+    </p>
+  </div>
+)}
+
+{submittedReviews.length > 0 && (
   <div className="submitted-reviews">
     {submittedReviews.map((review, index) => (
       <div className="review-card" key={index}>
