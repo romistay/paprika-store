@@ -725,9 +725,7 @@ onClick={() => {
   <div className="gholwich-details">
     <span>🥪 ویژه دو نفره</span>
     <p>وزن: ۵۰۰ گرم</p>
-    <strong>
-      ۱٬۱۰۰٬۰۰۰ تومان
-    </strong>
+  
   </div>
 )}
 
