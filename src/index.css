@@ -447,18 +447,23 @@ footer small {
   }
 }
 .hero-art {
+  width: 100%;
+  max-width: 460px;
+  height: 350px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border-radius: 28px;
+  background: transparent;
+  box-shadow: none;
 }
 
 .hero-art img {
-  display: block;
   width: 100%;
-  max-width: 500px;
-  height: 350px;
+  height: 100%;
+  display: block;
   object-fit: cover;
   border-radius: 28px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
