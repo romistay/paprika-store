@@ -84,12 +84,11 @@ export default function App() {
           <div className="product-grid">
             {products.map((product) => (
               <div className="product-card" key={product.name}>
-                <span className="product-tag">{product.tag}</span>
+               
                <div className="product-image">
   <img src={product.image} alt={product.name} />
 </div>
                 <h3>{product.name}</h3>
-                <button>افزودن به سبد خرید</button>
               </div>
             ))}
           </div>
