@@ -56,6 +56,25 @@ export default function App() {
       </header>
 
       <main>
+        {selectedProduct && (
+  <section className="product-detail">
+    <button onClick={() => setSelectedProduct(null)}>
+      ← بازگشت به محصولات
+    </button>
+
+    <div className="product-detail-content">
+      <img
+        src={selectedProduct.image}
+        alt={selectedProduct.name}
+      />
+
+      <div>
+        <h2>{selectedProduct.name}</h2>
+        <p>{selectedProduct.description}</p>
+      </div>
+    </div>
+  </section>
+)}
         <section className="hero">
           <div className="hero-content">
             <span className="eyebrow">طعم متفاوت، انتخاب خوشمزه</span>
