@@ -164,7 +164,8 @@ const addToCart = () => {
     )}
   </main>
 )}
-      <main>
+      {!isCartOpen && (
+  <main>
         {selectedProduct && (
   <section className="product-detail">
     <button onClick={() => setSelectedProduct(null)}>
@@ -289,7 +290,8 @@ const addToCart = () => {
         </section>
         </>
         )}
-      </main>
+       </main>
+)}
 
       <footer>
         <h2>🌶️ PAPRIKA</h2>
