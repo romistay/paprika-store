@@ -1029,3 +1029,29 @@ footer small {
     height: 95px;
   }
 }
+/* CENTER PAPRIKA CART CONTENT */
+
+.cart-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-page-heading,
+.cart-page .cart-items {
+  width: 100%;
+}
+
+.cart-page .cart-items {
+  max-width: 750px;
+  margin: 20px auto;
+}
+
+.cart-page .cart-item {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.back-to-store {
+  align-self: flex-start;
+}
