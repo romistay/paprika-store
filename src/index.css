@@ -1577,3 +1577,93 @@ footer small {
     font-size: 14px;
   }
 }
+
+/* PAPRIKA PREMIUM CATEGORIES */
+.categories {
+  padding: 65px 5%;
+  background: #fffaf2;
+}
+
+.categories .section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.categories .section-heading span {
+  color: #b5361c;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.categories .section-heading h2 {
+  color: #512016;
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 22px;
+}
+
+.category-card {
+  padding: 28px 15px;
+  text-align: center;
+  background: linear-gradient(145deg, #fff, #fff1d9);
+  border: 1px solid #ead2a5;
+  border-radius: 22px;
+  box-shadow: 0 8px 22px rgba(100, 50, 20, 0.07);
+  transition: 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-7px);
+  border-color: #d9a441;
+  box-shadow: 0 14px 28px rgba(100, 50, 20, 0.13);
+}
+
+.category-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  margin-bottom: 15px;
+  background: #f8e4bd;
+  border-radius: 50%;
+  font-size: 32px;
+}
+
+.category-card h3 {
+  color: #9f321b;
+  font-size: 17px;
+  font-weight: 900;
+  margin: 8px 0;
+}
+
+.category-card p {
+  color: #80634d;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+@media (max-width: 600px) {
+  .categories {
+    padding: 45px 15px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  .category-card {
+    padding: 22px 10px;
+  }
+
+  .categories .section-heading h2 {
+    font-size: 24px;
+  }
+}
