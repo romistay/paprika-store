@@ -479,7 +479,22 @@ const addToCart = () => {
           </div>
           <div className="category-grid">
             {categories.map((item) => (
-              <div className="category-card" key={item.title}>
+             <div
+  className="category-card"
+  key={item.title}
+  onClick={() => {
+    if (item.title === "ساندویچ سرد") {
+      const sandwich = products.find((product) => product.id === 5);
+      setSelectedProduct(sandwich);
+      setSelectedFlavor("");
+      setSelectedWeight("");
+      setQuantity(1);
+    }
+  }}
+  style={{
+    cursor: item.title === "ساندویچ سرد" ? "pointer" : "default",
+  }}
+>
                 <span className="category-icon">{item.icon}</span>
                 <h3>{item.title}</h3>
                 <p>{item.subtitle}</p>
