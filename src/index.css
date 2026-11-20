@@ -2384,3 +2384,31 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     font-size: 11px;
   }
 }
+
+.sandwich-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 24px;
+  margin: 10px 0 20px;
+  border: 1px solid #c69b50;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #7d2518, #4a160f);
+  color: #fff8e9;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(80, 25, 15, 0.15);
+  transition: all 0.3s ease;
+}
+
+.sandwich-back-button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #a87935, #80551f);
+  box-shadow: 0 10px 22px rgba(80, 25, 15, 0.2);
+}
+
+.sandwich-back-button span {
+  font-size: 20px;
+}
