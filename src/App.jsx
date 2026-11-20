@@ -9,22 +9,18 @@ const products = [
   {
     name: "کالباس",
     image: "/paprika-store/kalaas.jpeg",
-    tag: "پرفروش",
   },
   {
     name: "سوسیس مخصوص کودکان",
     image: "/paprika-store/kids-sausage.jpeg",
-    tag: "ویژه کودکان",
   },
   {
     name: "سوسیس",
-    image: "/paprika-store/sausage.jpeg",
-    tag: "محبوب",
+    image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.06%281%29.jpeg",
   },
   {
     name: "همبرگر",
     image: "/paprika-store/hamburger.jpeg",
-    tag: "پیشنهاد ویژه",
   },
 ];
 
