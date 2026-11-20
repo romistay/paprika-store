@@ -1878,15 +1878,23 @@ background: url("/paprika-store/Paprika%20Deli%20Feast%20Advertisement%281%29.pn
   padding: 15px 0 25px;
 }
 
+
 .reviews-track {
   display: flex;
   width: max-content;
-  gap: 22px;
+  gap: 0;
   animation: reviews-scroll 45s linear infinite;
 }
 
 .reviews-track:hover {
   animation-play-state: paused;
+}
+
+.reviews-group {
+  display: flex;
+  flex: none;
+  gap: 22px;
+  padding-right: 22px;
 }
 
 .reviews-track .review-card {
@@ -1898,6 +1906,7 @@ background: url("/paprika-store/Paprika%20Deli%20Feast%20Advertisement%281%29.pn
   justify-content: center;
   direction: rtl;
 }
+
 
 
 @keyframes reviews-scroll {
