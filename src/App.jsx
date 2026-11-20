@@ -678,7 +678,8 @@ setShowColdCutMenu(false);
 )}
 </div>
   </div>
-    {selectedProduct.category === "kebab" && (
+    {(selectedProduct.category === "kebab" ||
+  selectedProduct.category === "coldcut") && (
   <p className="selected-price">
     وزن: {selectedProduct.weight}
     {" "} | قیمت:{" "}
