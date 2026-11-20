@@ -714,14 +714,7 @@ footer small {
 }
 
 
-  .product-detail-content img {
-    height: 260px;
-  }
-
-  .product-detail-content h2 {
-    font-size: 23px;
-  }
-}
+ 
 
 @media (max-width: 900px) {
   .category-grid {
