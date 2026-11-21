@@ -2986,3 +2986,654 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     gap: 14px;
   }
 }
+
+/* ===== PAPRIKA LUXURY CART - FRAME & HEADING ===== */
+
+.cart-page {
+  position: relative;
+  max-width: 1100px;
+  margin: 38px auto;
+  padding: 38px 28px;
+  background:
+    radial-gradient(circle at top right, rgba(198,155,80,.13), transparent 34%),
+    linear-gradient(145deg, #fffdf9, #f7ecdf);
+  border: 1px solid #dfc18c;
+  border-radius: 28px;
+  box-shadow:
+    0 18px 45px rgba(75,25,20,.10),
+    inset 0 0 0 5px rgba(255,255,255,.55);
+}
+
+.cart-page-heading {
+  position: relative;
+  width: 100%;
+  padding: 20px 15px 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(198,155,80,.45);
+  text-align: center;
+}
+
+.cart-page-heading h1 {
+  color: #641d20;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.cart-page-heading p {
+  color: #85654c;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .cart-page {
+    margin: 18px 10px;
+    padding: 24px 14px;
+    border-radius: 22px;
+  }
+
+  .cart-page-heading h1 {
+    font-size: 24px;
+  }
+}
+
+/* ===== PAPRIKA LUXURY CART - PRODUCT CARDS ===== */
+
+.cart-page .cart-items {
+  width: 100%;
+  max-width: 850px;
+  gap: 20px;
+}
+
+.cart-page .cart-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 22px;
+  background: linear-gradient(135deg, #ffffff, #fffaf3);
+  border: 1px solid #ead5b5;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(75, 35, 20, 0.07);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cart-page .cart-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 13px 30px rgba(75, 35, 20, 0.12);
+}
+
+.cart-page .cart-item img {
+  width: 125px;
+  height: 125px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 3px solid #f0dfc3;
+  border-radius: 18px;
+}
+
+.cart-page .cart-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-page .cart-item-info h3 {
+  color: #641d20;
+  margin-bottom: 10px;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.cart-page .cart-item-info p {
+  color: #76543e;
+  margin: 5px 0;
+  line-height: 1.9;
+}
+
+@media (max-width: 600px) {
+  .cart-page .cart-item {
+    gap: 13px;
+    padding: 14px;
+  }
+
+  .cart-page .cart-item img {
+    width: 85px;
+    height: 85px;
+  }
+
+  .cart-page .cart-item-info h3 {
+    font-size: 16px;
+  }
+}
+
+/* ===== PAPRIKA LUXURY CART - TOTAL PRICE ===== */
+
+.cart-page .cart-total {
+  width: 100%;
+  max-width: 850px;
+  box-sizing: border-box;
+  margin: 22px auto;
+  padding: 24px;
+  text-align: center;
+  background: linear-gradient(135deg, #681f22, #922f28);
+  border: 1px solid #d9ad61;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(90, 25, 25, 0.16);
+}
+
+.cart-page .cart-total h3 {
+  margin: 0;
+  color: #fff4dc;
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 2;
+}
+
+@media (max-width: 600px) {
+  .cart-page .cart-total {
+    padding: 18px 12px;
+  }
+
+  .cart-page .cart-total h3 {
+    font-size: 17px;
+  }
+}
+
+/* ===== PAPRIKA LUXURY CART - ACTION BUTTONS ===== */
+
+.cart-page .cart-actions {
+  width: 100%;
+  max-width: 850px;
+  margin: 28px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-page .cart-actions button {
+  min-width: 190px;
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.cart-page .continue-shopping {
+  background: linear-gradient(135deg, #fff9eb, #f5e4c5);
+  color: #762b20;
+  border: 2px solid #d9ad61 !important;
+}
+
+.cart-page .continue-shopping:hover {
+  background: #f0d8aa;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(120, 75, 25, .13);
+}
+
+.cart-page .checkout-button {
+  background: linear-gradient(135deg, #762027, #ad3d2c);
+  color: #fff8e9;
+  border: 2px solid #d9ad61;
+  box-shadow: 0 7px 18px rgba(120, 30, 35, .2);
+}
+
+.cart-page .checkout-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 11px 24px rgba(120, 30, 35, .3);
+}
+
+@media (max-width: 600px) {
+  .cart-page .cart-actions {
+    flex-direction: column;
+  }
+
+  .cart-page .cart-actions button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ===== PAPRIKA LUXURY CART - ACTION BUTTONS ===== */
+
+.cart-page .cart-actions {
+  width: 100%;
+  max-width: 850px;
+  margin: 28px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-page .cart-actions button {
+  min-width: 190px;
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.cart-page .continue-shopping {
+  background: linear-gradient(135deg, #fff9eb, #f5e4c5);
+  color: #762b20;
+  border: 2px solid #d9ad61 !important;
+}
+
+.cart-page .continue-shopping:hover {
+  background: #f0d8aa;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(120, 75, 25, .13);
+}
+
+.cart-page .checkout-button {
+  background: linear-gradient(135deg, #762027, #ad3d2c);
+  color: #fff8e9;
+  border: 2px solid #d9ad61;
+  box-shadow: 0 7px 18px rgba(120, 30, 35, .2);
+}
+
+.cart-page .checkout-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 11px 24px rgba(120, 30, 35, .3);
+}
+
+@media (max-width: 600px) {
+  .cart-page .cart-actions {
+    flex-direction: column;
+  }
+
+  .cart-page .cart-actions button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ===== PAPRIKA LUXURY CART - ACTION BUTTONS ===== */
+
+.cart-page .cart-actions {
+  width: 100%;
+  max-width: 850px;
+  margin: 28px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-page .cart-actions button {
+  min-width: 190px;
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.cart-page .continue-shopping {
+  background: linear-gradient(135deg, #fff9eb, #f5e4c5);
+  color: #762b20;
+  border: 2px solid #d9ad61 !important;
+}
+
+.cart-page .continue-shopping:hover {
+  background: #f0d8aa;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(120, 75, 25, .13);
+}
+
+.cart-page .checkout-button {
+  background: linear-gradient(135deg, #762027, #ad3d2c);
+  color: #fff8e9;
+  border: 2px solid #d9ad61;
+  box-shadow: 0 7px 18px rgba(120, 30, 35, .2);
+}
+
+.cart-page .checkout-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 11px 24px rgba(120, 30, 35, .3);
+}
+
+@media (max-width: 600px) {
+  .cart-page .cart-actions {
+    flex-direction: column;
+  }
+
+  .cart-page .cart-actions button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ===== PAPRIKA LUXURY CART - ACTION BUTTONS ===== */
+
+.cart-page .cart-actions {
+  width: 100%;
+  max-width: 850px;
+  margin: 28px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-page .cart-actions button {
+  min-width: 190px;
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.cart-page .continue-shopping {
+  background: linear-gradient(135deg, #fff9eb, #f5e4c5);
+  color: #762b20;
+  border: 2px solid #d9ad61 !important;
+}
+
+.cart-page .continue-shopping:hover {
+  background: #f0d8aa;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(120, 75, 25, .13);
+}
+
+.cart-page .checkout-button {
+  background: linear-gradient(135deg, #762027, #ad3d2c);
+  color: #fff8e9;
+  border: 2px solid #d9ad61;
+  box-shadow: 0 7px 18px rgba(120, 30, 35, .2);
+}
+
+.cart-page .checkout-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 11px 24px rgba(120, 30, 35, .3);
+}
+
+@media (max-width: 600px) {
+  .cart-page .cart-actions {
+    flex-direction: column;
+  }
+
+  .cart-page .cart-actions button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ===== PAPRIKA LUXURY CART - ACTION BUTTONS ===== */
+
+.cart-page .cart-actions {
+  width: 100%;
+  max-width: 850px;
+  margin: 28px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-page .cart-actions button {
+  min-width: 190px;
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.cart-page .continue-shopping {
+  background: linear-gradient(135deg, #fff9eb, #f5e4c5);
+  color: #762b20;
+  border: 2px solid #d9ad61 !important;
+}
+
+.cart-page .continue-shopping:hover {
+  background: #f0d8aa;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(120, 75, 25, .13);
+}
+
+.cart-page .checkout-button {
+  background: linear-gradient(135deg, #762027, #ad3d2c);
+  color: #fff8e9;
+  border: 2px solid #d9ad61;
+  box-shadow: 0 7px 18px rgba(120, 30, 35, .2);
+}
+
+.cart-page .checkout-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 11px 24px rgba(120, 30, 35, .3);
+}
+
+@media (max-width: 600px) {
+  .cart-page .cart-actions {
+    flex-direction: column;
+  }
+
+  .cart-page .cart-actions button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ===== PAPRIKA LUXURY CART - ACTION BUTTONS ===== */
+
+.cart-page .cart-actions {
+  width: 100%;
+  max-width: 850px;
+  margin: 28px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-page .cart-actions button {
+  min-width: 190px;
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.cart-page .continue-shopping {
+  background: linear-gradient(135deg, #fff9eb, #f5e4c5);
+  color: #762b20;
+  border: 2px solid #d9ad61 !important;
+}
+
+.cart-page .continue-shopping:hover {
+  background: #f0d8aa;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(120, 75, 25, .13);
+}
+
+.cart-page .checkout-button {
+  background: linear-gradient(135deg, #762027, #ad3d2c);
+  color: #fff8e9;
+  border: 2px solid #d9ad61;
+  box-shadow: 0 7px 18px rgba(120, 30, 35, .2);
+}
+
+.cart-page .checkout-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 11px 24px rgba(120, 30, 35, .3);
+}
+
+@media (max-width: 600px) {
+  .cart-page .cart-actions {
+    flex-direction: column;
+  }
+
+  .cart-page .cart-actions button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ===== PAPRIKA LUXURY CART - ACTION BUTTONS ===== */
+
+.cart-page .cart-actions {
+  width: 100%;
+  max-width: 850px;
+  margin: 28px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-page .cart-actions button {
+  min-width: 190px;
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.cart-page .continue-shopping {
+  background: linear-gradient(135deg, #fff9eb, #f5e4c5);
+  color: #762b20;
+  border: 2px solid #d9ad61 !important;
+}
+
+.cart-page .continue-shopping:hover {
+  background: #f0d8aa;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(120, 75, 25, .13);
+}
+
+.cart-page .checkout-button {
+  background: linear-gradient(135deg, #762027, #ad3d2c);
+  color: #fff8e9;
+  border: 2px solid #d9ad61;
+  box-shadow: 0 7px 18px rgba(120, 30, 35, .2);
+}
+
+.cart-page .checkout-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 11px 24px rgba(120, 30, 35, .3);
+}
+
+@media (max-width: 600px) {
+  .cart-page .cart-actions {
+    flex-direction: column;
+  }
+
+  .cart-page .cart-actions button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ===== PAPRIKA LUXURY CART - CUSTOMER FORM ===== */
+
+.cart-page .customer-info {
+  width: 100%;
+  max-width: 850px;
+  box-sizing: border-box;
+  margin: 30px auto 10px;
+  padding: 28px;
+  background: linear-gradient(145deg, #ffffff, #fff8ed);
+  border: 1px solid #e5c994;
+  border-radius: 22px;
+  box-shadow: 0 9px 26px rgba(75, 35, 20, 0.07);
+}
+
+.cart-page .customer-info h2 {
+  margin-bottom: 22px;
+  color: #641d20;
+  font-size: 21px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.cart-page .customer-info > input,
+.cart-page .customer-info textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 13px 0;
+  padding: 14px 16px;
+  background: #fffdf9;
+  border: 1px solid #e4cfaa;
+  border-radius: 13px;
+  color: #4b3025;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.cart-page .customer-info > input:focus,
+.cart-page .customer-info textarea:focus {
+  border-color: #bd8d3e;
+  box-shadow: 0 0 0 3px rgba(217, 164, 65, .15);
+}
+
+.cart-page .customer-info textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.cart-page .address-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 18px 0 10px;
+  color: #713719;
+  font-weight: 800;
+}
+
+.cart-page .pickup-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.cart-page .pickup-option input {
+  accent-color: #8d3218;
+  width: 17px;
+  height: 17px;
+}
+
+.cart-page .delivery-note {
+  margin-top: 18px;
+  padding: 12px 15px;
+  background: #fff2d9;
+  border-radius: 12px;
+  color: #80501f;
+  font-size: 13px;
+  line-height: 2;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .cart-page .customer-info {
+    padding: 20px 14px;
+  }
+
+  .cart-page .customer-info h2 {
+    font-size: 18px;
+  }
+}
