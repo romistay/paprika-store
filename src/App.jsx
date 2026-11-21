@@ -1190,67 +1190,72 @@ setShowHamburgerMenu(false);
     </div>
   </div>
 </section>
+
 <section className="paprika-contests" id="paprika-contests">
-  <div className="contest-decoration">🏆</div>
 
-  <span className="contest-label">یک اتفاق هیجان‌انگیز در راه است</span>
+  <div className="contest-main-heading">
+    <div className="contest-decoration">🏆</div>
 
-  <h2>مسابقات پاپریکا</h2>
+    <span className="contest-label">
+      دنیایی از هیجان و جایزه در پاپریکا
+    </span>
 
-  <div className="contest-coming-soon">
-    به‌زودی...
+    <h2>مسابقات پاپریکا</h2>
+
+    <div className="contest-coming-soon">
+      به‌زودی آغاز می‌شود...
+    </div>
+
+    <p>
+      آماده رقابت باشید! مسابقات جذاب، چالش‌های سرگرم‌کننده
+      و تجربه‌هایی متفاوت در انتظار شماست.
+    </p>
   </div>
 
-  <p>
-    خودتان را برای مسابقات جذاب، چالش‌های هیجان‌انگیز
-    و جوایز ویژه پاپریکا آماده کنید!
-  </p>
+  <div className="contest-cards">
+
+    <div className="contest-card">
+      <div className="contest-card-icon">🧠</div>
+      <span className="contest-card-number">مسابقه اول</span>
+      <h3>مسابقات سرگرمی و اطلاعات عمومی</h3>
+      <p>
+        دانسته‌های خودتان را به چالش بکشید و در رقابت‌های
+        جذاب و سرگرم‌کننده پاپریکا شرکت کنید.
+      </p>
+      <div className="contest-status">به‌زودی</div>
+    </div>
+
+    <div className="contest-card contest-customer">
+      <div className="contest-card-icon">🌶️</div>
+      <span className="contest-card-number">مسابقه دوم</span>
+      <h3>مسابقات ویژه مشتریان پاپریکا</h3>
+      <p>
+        مخصوص خانواده پاپریکا؛ رقابت‌هایی اختصاصی
+        برای مشتریان و دوستداران محصولات ما.
+      </p>
+      <div className="contest-status">به‌زودی</div>
+    </div>
+
+    <div className="contest-card">
+      <div className="contest-card-icon">🎯</div>
+      <span className="contest-card-number">مسابقه سوم</span>
+      <h3>چالش‌ها و رقابت‌های دوره‌ای</h3>
+      <p>
+        حدس طعم، شناخت محصولات و چالش‌های تازه؛
+        هر دوره با یک هیجان جدید همراه شوید.
+      </p>
+      <div className="contest-status">به‌زودی</div>
+    </div>
+
+  </div>
 
   <div className="contest-footer">
-    <span>🌶️</span>
-    منتظر سورپرایزهای پاپریکا باشید
+    <span>🎁</span>
+    <strong>هیجان، رقابت و سورپرایزهای ویژه در راه است!</strong>
     <span>❤️</span>
   </div>
+
 </section>
-<section className="products" id="products">
-  <div className="section-heading">
-    <span>پیشنهادهای پاپریکا</span>
-    <h2>محصولات محبوب</h2>
-  </div>
-  <div className="product-grid">
-    {products.map((product) => (
-      <div
-        className={`product-card ${product.id === 6 ? "gholwich-card" : ""}`}
-        key={product.id}
-
- 
-onClick={() => {
-  setSelectedProduct(product);
-  setSelectedFlavor("");
-  setSelectedWeight("");
-  setQuantity(1);
-}}
-
-  style={{ cursor: "pointer" }}
->
-               
-               <div className="product-image">
-  <img src={product.image} alt={product.name} />
-</div>
-                <h3>{product.name}</h3>
-               
-{product.id === 6 && (
-  <div className="gholwich-details">
-    <span>🥪 ویژه دو نفره</span>
-    <p>وزن: ۵۰۰ گرم</p>
-  
-  </div>
-)}
-
-              </div>
-            ))}
-          </div>
-        </section>
 
 
 <section className="reviews" id="reviews">
