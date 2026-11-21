@@ -337,7 +337,21 @@ const remainingToNextLevel = Math.max(
   0,
   nextLoyaltyTarget - demoAnnualSpend
 );
+const formatToman = (amount) => {
+  if (amount >= 1000000000) {
+    return `${(amount / 1000000000).toLocaleString("fa-IR", {
+      maximumFractionDigits: 2,
+    })} میلیارد تومان`;
+  }
 
+  if (amount >= 1000000) {
+    return `${(amount / 1000000).toLocaleString("fa-IR", {
+      maximumFractionDigits: 2,
+    })} میلیون تومان`;
+  }
+
+  return `${amount.toLocaleString("fa-IR")} تومان`;
+};
 const addToCart = () => {
   if (!selectedProduct) return;
 
@@ -1062,24 +1076,26 @@ setShowHamburgerMenu(false);
     </div>
   </div>
 
-  <div className="loyalty-demo">
-    <h3>آزمایش باشگاه مشتریان</h3>
-    <label>مجموع خرید سالانه مشتری (تومان)</label>
-    <input
-      type="number"
-      min="0"
-      value={demoAnnualSpend}
-      onChange={(e) => setDemoAnnualSpend(Math.max(0, Number(e.target.value)))}
-      placeholder="مبلغ خرید را وارد کنید"
-    />
-
+<input
+  type="text"
+  inputMode="numeric"
+  value={demoAnnualSpend.toLocaleString("en-US")}
+  onChange={(e) => {
+    const value = e.target.value.replace(/[^0-9]/g, "");
+    setDemoAnnualSpend(Number(value) || 0);
+  }}
+  placeholder="مبلغ خرید را به تومان وارد کنید"
+/>
+  <p>
+  مبلغ خرید سالانه: <strong>{formatToman(demoAnnualSpend)}</strong>
+</p>
     <p>سطح عضویت: <strong>{loyaltyLevel}</strong></p>
     <p>تخفیف فعلی: <strong>{loyaltyDiscount}٪</strong></p>
 
     {demoAnnualSpend < 200000000 && (
       <p>
         باقی‌مانده تا سطح بعدی:{" "}
-        <strong>{remainingToNextLevel.toLocaleString("fa-IR")} تومان</strong>
+       <strong>{formatToman(remainingToNextLevel)}</strong>
       </p>
     )}
   </div>
