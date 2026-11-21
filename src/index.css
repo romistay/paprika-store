@@ -3866,3 +3866,56 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     font-size: 14px;
   }
 }
+
+/* ===== PAPRIKA GOLDEN GHOLWICH ===== */
+
+.gholwich-card {
+  border: 2px solid #d9ad61 !important;
+  background: linear-gradient(145deg, #fff9eb, #ffffff, #fff0d2) !important;
+  box-shadow: 0 12px 32px rgba(145, 91, 24, .16) !important;
+}
+
+.gholwich-card::before {
+  background: linear-gradient(135deg, #641d20, #a33329, #c18b38);
+  border: 1px solid #e5c994;
+  letter-spacing: .2px;
+}
+
+.gholwich-card .gholwich-details {
+  background: linear-gradient(135deg, #fff0d0, #fff9ec);
+  border: 1px solid #d9ad61;
+  box-shadow: 0 5px 14px rgba(145, 91, 24, .08);
+}
+
+.gholwich-card .gholwich-details span {
+  color: #762027;
+  font-size: 14px;
+}
+
+.gholwich-card .gholwich-details p {
+  color: #80501f;
+  font-weight: 800;
+}
+
+/* ===== PAPRIKA PREMIUM BUY BUTTON ===== */
+
+.product-card button {
+  background: linear-gradient(135deg, #762027, #a33329);
+  color: #fff9eb;
+  border: 1px solid #d9ad61;
+  border-radius: 14px;
+  font-weight: 900;
+  box-shadow: 0 6px 16px rgba(100, 29, 32, .18);
+  transition: all .3s ease;
+}
+
+.product-card button:hover {
+  background: linear-gradient(135deg, #a33329, #641d20);
+  border-color: #e8c77e;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 23px rgba(100, 29, 32, .28);
+}
+
+.product-card button:active {
+  transform: translateY(0) scale(.98);
+}
