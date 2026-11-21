@@ -1069,51 +1069,61 @@ setShowHamburgerMenu(false);
       <p>با خرید ۱۵۰ میلیون تومان</p>
     </div>
 
-    <div className="loyalty-card gold">
-      <h3>عضویت طلایی</h3>
-      <strong>۲۰٪ تخفیف</strong>
-      <p>با خرید ۲۰۰ میلیون تومان</p>
+  
+<div className="loyalty-card gold">
+  <h3>عضویت طلایی</h3>
+  <strong>۲۰٪ تخفیف</strong>
+  <p>با خرید ۲۰۰ میلیون تومان</p>
+</div>
+</div>
+
+<div className="loyalty-benefits">
+  <div className="loyalty-benefits-heading">
+    <span>هدیه‌ای از طرف خانواده پاپریکا</span>
+    <h3>مزایای ویژه اعضای باشگاه</h3>
+    <p>ما در لحظه‌های شیرین زندگی شما همراهتان هستیم.</p>
+  </div>
+
+  <div className="loyalty-benefits-grid">
+    <div className="loyalty-benefit-card">
+      <div className="loyalty-benefit-icon">🎂</div>
+      <h4>هدیه روز تولد</h4>
+      <p>جشن تولد شما با هدیه‌ای ویژه از طرف پاپریکا شیرین‌تر می‌شود.</p>
+    </div>
+
+    <div className="loyalty-benefit-card">
+      <div className="loyalty-benefit-icon">💍</div>
+      <h4>هدیه سالگرد ازدواج</h4>
+      <p>در سالگرد عشق و همراهی‌تان، پاپریکا را کنار خود داشته باشید.</p>
+    </div>
+
+    <div className="loyalty-benefit-card">
+      <div className="loyalty-benefit-icon">🎁</div>
+      <h4>سورپرایزهای مناسبتی</h4>
+      <p>هدایا و پیشنهادهای ویژه در مناسبت‌های خاص برای اعضای باشگاه.</p>
+    </div>
+
+    <div className="loyalty-benefit-card gold-benefit">
+      <div className="loyalty-benefit-icon">✨</div>
+      <h4>امتیاز ویژه اعضای طلایی</h4>
+      <p>یک سورپرایز اختصاصی و ویژه، فقط برای اعضای طلایی پاپریکا.</p>
     </div>
   </div>
+</div>
 
-  <div className="loyalty-demo">
-    <h3>آزمایش باشگاه مشتریان</h3>
-
-    <input
-      type="text"
-  inputMode="numeric"
-  value={demoAnnualSpend.toLocaleString("en-US")}
-  onChange={(e) => {
-    const value = e.target.value.replace(/[^0-9]/g, "");
-    setDemoAnnualSpend(Number(value) || 0);
-  }}
-  placeholder="مبلغ خرید را به تومان وارد کنید"
-/>
-  <p>
-  مبلغ خرید سالانه: <strong>{formatToman(demoAnnualSpend)}</strong>
-</p>
-    <p>سطح عضویت: <strong>{loyaltyLevel}</strong></p>
-    <p>تخفیف فعلی: <strong>{loyaltyDiscount}٪</strong></p>
-
-    {demoAnnualSpend < 200000000 && (
-      <p>
-        باقی‌مانده تا سطح بعدی:{" "}
-       <strong>{formatToman(remainingToNextLevel)}</strong>
-      </p>
-    )}
-  </div>
 </section>
 
 <section className="products" id="products">
-          <div className="section-heading">
-            <span>پیشنهادهای پاپریکا</span>
-            <h2>محصولات محبوب</h2>
-          </div>
-          <div className="product-grid">
-            {products.map((product) => (
-             <div
-  className={`product-card ${product.id === 6 ? "gholwich-card" : ""}`}
-  key={product.id}
+  <div className="section-heading">
+    <span>پیشنهادهای پاپریکا</span>
+    <h2>محصولات محبوب</h2>
+  </div>
+  <div className="product-grid">
+    {products.map((product) => (
+      <div
+        className={`product-card ${product.id === 6 ? "gholwich-card" : ""}`}
+        key={product.id}
+
  
 onClick={() => {
   setSelectedProduct(product);
