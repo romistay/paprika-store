@@ -673,6 +673,30 @@ setShowHamburgerMenu(false);
     ))}
   </div>
 )}
+   {showFrozenMenu && (
+  <div className="sandwich-flavor-grid">
+    {frozenProducts.map((item) => (
+      <button
+        key={item.id}
+        onClick={() => {
+          setSelectedProduct({
+            ...item,
+            id: 400 + item.id,
+            category: "frozen",
+            image: "/paprika-store/topimage-classic-hamburger-2019m04-800x534-curiosa-min.jpg",
+            description: "محصول فریزری باکیفیت پاپریکا",
+          });
+          setQuantity(1);
+          setShowFrozenMenu(false);
+        }}
+      >
+        <span className="flavor-title">{item.name}</span>
+        <span className="flavor-description">{item.weight}</span>
+        <span>{item.price.toLocaleString("fa-IR")} تومان</span>
+      </button>
+    ))}
+  </div>
+)} 
 {showHotDogMenu && (
   <div className="sandwich-flavor-grid">
     {sausageProducts.map((item) => (
