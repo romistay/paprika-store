@@ -1249,6 +1249,45 @@ setShowHamburgerMenu(false);
 
   </div>
 
+  <div className="grand-contest-poster">
+
+    <div className="grand-poster-top">
+      <span>PAPRIKA GRAND FESTIVAL</span>
+      <span>🌶️</span>
+    </div>
+
+    <div className="grand-trophy">🏆</div>
+
+    <span className="grand-poster-label">
+      بزرگ‌ترین رقابت خانواده پاپریکا
+    </span>
+
+    <h2>جشنواره بزرگ پاپریکا</h2>
+
+    <h3>مسابقه بزرگ؛ هیجان، رقابت، جایزه!</h3>
+
+    <p>
+      آماده باشید تا در یک تجربه متفاوت شرکت کنید،
+      توانایی خودتان را به چالش بکشید و برای جوایز ویژه رقابت کنید.
+    </p>
+
+    <div className="grand-poster-prizes">
+      <span>🎁 جوایز ویژه</span>
+      <span>⭐ رقابت هیجان‌انگیز</span>
+      <span>❤️ تجربه‌ای متفاوت</span>
+    </div>
+
+    <div className="grand-poster-countdown">
+      <strong>به‌زودی آغاز می‌شود...</strong>
+      <span>تاریخ شروع مسابقه متعاقباً اعلام خواهد شد.</span>
+    </div>
+
+    <div className="grand-poster-bottom">
+      PAPRIKA • TASTE THE EXCITEMENT
+    </div>
+
+  </div>
+
   <div className="contest-footer">
     <span>🎁</span>
     <strong>هیجان، رقابت و سورپرایزهای ویژه در راه است!</strong>
