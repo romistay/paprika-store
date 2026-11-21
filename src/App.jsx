@@ -298,6 +298,7 @@ const [showFrozenMenu, setShowFrozenMenu] = React.useState(false);
   const [customerName, setCustomerName] = React.useState("");
   const [customerPhone, setCustomerPhone] = React.useState("");
   const [customerAddress, setCustomerAddress] = React.useState("");
+  const [isWhatsAppOpened, setIsWhatsAppOpened] = React.useState(false);
   const [isInPersonDelivery, setIsInPersonDelivery] = React.useState(false);
   const [quantity, setQuantity] = React.useState(1);
 
@@ -514,11 +515,34 @@ ${isInPersonDelivery ? "" : `آدرس: ${customerAddress}`}`;
       "https://wa.me/989044431358?text=" +
       encodeURIComponent(message);
 
-    window.open(whatsappUrl, "_blank");
+   const whatsappWindow = window.open(whatsappUrl, "_blank");
+
+if (whatsappWindow) {
+  setIsWhatsAppOpened(true);
+}
   }}
 >
   ثبت سفارش ←
 </button>
+
+{isWhatsAppOpened && (
+  <button
+    className="checkout-button"
+    onClick={() => {
+      if (window.confirm("آیا پیام سفارش را در واتساپ ارسال کرده‌اید؟")) {
+        setCart([]);
+        setCustomerName("");
+        setCustomerPhone("");
+        setCustomerAddress("");
+        setIsInPersonDelivery(false);
+        setIsWhatsAppOpened(false);
+        alert("سفارش شما ثبت شد. از خرید شما سپاسگزاریم ❤️");
+      }
+    }}
+  >
+    تأیید ارسال سفارش ✓
+  </button>
+)}
 
 </div>
 
