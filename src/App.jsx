@@ -790,66 +790,67 @@ setShowHamburgerMenu(false);
           </div>
           <div className="category-grid">
             {categories.map((item) => (
-             <div
+         
+<div
   className="category-card"
   key={item.title}
-
-onClick={() => {
-  if (item.title === "ساندویچ سرد") {
-    setShowSandwichMenu(true);
-    setShowKebabMenu(false);
-    setShowFrozenMenu(false);
-    setSelectedProduct(null);
-    setSelectedFlavor("");
-    setSelectedWeight("");
-    setQuantity(1);
- } else if (item.title === "انواع کالباس") {
-  setShowColdCutMenu(true);
-  setShowKebabMenu(false);
-  setShowSandwichMenu(false);
-  setShowFrozenMenu(false);
-  setSelectedProduct(null);
-  setQuantity(1);
-} else if (item.title === "انواع سوسیس") {
-  setShowHotDogMenu(true);
-  setShowKebabMenu(false);
-  setShowColdCutMenu(false);
-  setShowSandwichMenu(false);
-  setShowFrozenMenu(false);
-  setSelectedProduct(null);
-  setQuantity(1);
-  } else if (item.title === "محصولات فریزری") {
-    setShowFrozenMenu(true);
-    setShowSandwichMenu(false);
-    setShowKebabMenu(false);
-    setSelectedProduct(null);
-    setQuantity(1);
-  }
-else if (item.title === "همبرگر") {
-  setShowHamburgerMenu(true);
-  setShowKebabMenu(false);
-  setShowFrozenMenu(false);
-  setShowColdCutMenu(false);
-  setShowSandwichMenu(false);
-  setShowHotDogMenu(false);
-  setSelectedProduct(null);
-  setQuantity(1);
-}
-}}
-style={{
-  cursor: ["ساندویچ سرد", "کباب لقمه", "محصولات فریزری", "همبرگر"].includes(item.title)
-    ? "pointer"
+  onClick={() => {
+    if (item.title === "ساندویچ سرد") {
+      setShowSandwichMenu(true);
+      setShowKebabMenu(false);
+      setShowFrozenMenu(false);
+      setShowColdCutMenu(false);
+      setShowHotDogMenu(false);
+      setShowHamburgerMenu(false);
+      setSelectedProduct(null);
+      setSelectedFlavor("");
+      setSelectedWeight("");
+      setQuantity(1);
+    } else if (item.title === "همبرگر") {
+      setShowHamburgerMenu(true);
+      setShowSandwichMenu(false);
+      setShowKebabMenu(false);
+      setShowFrozenMenu(false);
+      setShowColdCutMenu(false);
+      setShowHotDogMenu(false);
+      setSelectedProduct(null);
+      setQuantity(1);
+    } else if (item.title === "انواع کالباس") {
+      setShowColdCutMenu(true);
+      setShowHamburgerMenu(false);
+      setShowSandwichMenu(false);
+      setShowKebabMenu(false);
+      setShowFrozenMenu(false);
+      setShowHotDogMenu(false);
+      setSelectedProduct(null);
+      setQuantity(1);
+    } else if (item.title === "انواع سوسیس") {
+      setShowHotDogMenu(true);
+      setShowHamburgerMenu(false);
+      setShowKebabMenu(false);
+      setShowColdCutMenu(false);
+      setShowSandwichMenu(false);
+      setShowFrozenMenu(false);
+      setSelectedProduct(null);
+      setQuantity(1);
+    } else if (item.title === "محصولات فریزری") {
+      setShowFrozenMenu(true);
+      setShowHamburgerMenu(false);
+      setShowSandwichMenu(false);
+      setShowKebabMenu(false);
+      setShowColdCutMenu(false);
+      setShowHotDogMenu(false);
+      setSelectedProduct(null);
+      setQuantity(1);
+    }
+  }}
+  style={{
+    cursor: ["ساندویچ سرد", "کباب لقمه", "محصولات فریزری", "همبرگر"].includes(item.title)
+      ? "pointer"
     : "default",
 }}
-
-  style={{
-    cursor: item.title === "ساندویچ سرد" ? "pointer" : "default",
-  }}
 >
-                <span className="category-icon">{item.icon}</span>
-                <h3>{item.title}</h3>
-                <p>{item.subtitle}</p>
-              </div>
+
             ))}
           </div>
         </section>
