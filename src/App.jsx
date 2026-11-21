@@ -791,6 +791,7 @@ setShowHamburgerMenu(false);
           <div className="category-grid">
             {categories.map((item) => (
          
+
 <div
   className="category-card"
   key={item.title}
@@ -842,20 +843,32 @@ setShowHamburgerMenu(false);
       setShowHotDogMenu(false);
       setSelectedProduct(null);
       setQuantity(1);
+    } else if (item.title === "کباب لقمه") {
+      setShowKebabMenu(true);
+      setShowHamburgerMenu(false);
+      setShowSandwichMenu(false);
+      setShowFrozenMenu(false);
+      setShowColdCutMenu(false);
+      setShowHotDogMenu(false);
+      setSelectedProduct(null);
+      setQuantity(1);
     }
   }}
   style={{
     cursor: ["ساندویچ سرد", "کباب لقمه", "محصولات فریزری", "همبرگر"].includes(item.title)
       ? "pointer"
-    : "default",
-}}
+      : "default",
+  }}
 >
+  <span className="category-icon">{item.icon}</span>
+  <h3>{item.title}</h3>
+  <p>{item.subtitle}</p>
+</div>
+))}
+</section>
 
-            ))}
-          </div>
-        </section>
 
-        <section className="products" id="products">
+<section className="products" id="products">
           <div className="section-heading">
             <span>پیشنهادهای پاپریکا</span>
             <h2>محصولات محبوب</h2>
