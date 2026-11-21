@@ -2707,3 +2707,159 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   text-align: center;
   box-shadow: 0 7px 18px rgba(80, 25, 15, 0.12);
 }
+
+/* ===== PAPRIKA LUXURY PRODUCT EXPERIENCE ===== */
+
+.product-detail {
+  background:
+    radial-gradient(circle at top right, rgba(198, 155, 80, 0.12), transparent 35%),
+    linear-gradient(145deg, #fffdf9, #f7ecdf);
+  border: 1px solid #dfc18c;
+  box-shadow:
+    0 18px 45px rgba(75, 25, 20, 0.10),
+    inset 0 0 0 5px rgba(255, 255, 255, 0.55);
+}
+
+.product-info-card {
+  position: relative;
+  overflow: hidden;
+  padding: 42px;
+  background: linear-gradient(155deg, #ffffff, #fffaf3);
+  border: 1px solid #ead7b9;
+  border-radius: 28px;
+  box-shadow: 0 15px 40px rgba(75, 25, 20, 0.08);
+}
+
+.product-info-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #c69b50, #641d20, #c69b50);
+}
+
+.product-brand-label {
+  padding: 9px 20px;
+  background: linear-gradient(135deg, #76252a, #421316);
+  border: 1px solid #d5b16c;
+  box-shadow: 0 5px 15px rgba(75, 25, 20, 0.15);
+  letter-spacing: 2.5px;
+}
+
+.product-info-card h2 {
+  font-size: 34px;
+  line-height: 1.8;
+  text-shadow: 0 2px 8px rgba(100, 29, 32, 0.08);
+}
+
+.product-description {
+  padding: 12px 16px;
+  background: #fff8ee;
+  border-right: 3px solid #c69b50;
+  border-radius: 10px;
+}
+
+.product-features {
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.product-feature {
+  min-height: 105px;
+  justify-content: center;
+  background: linear-gradient(145deg, #fffaf2, #f8eddf);
+  border: 1px solid #e7d2ae;
+  border-radius: 20px;
+  box-shadow: 0 5px 14px rgba(80, 30, 20, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(80, 30, 20, 0.10);
+}
+
+.product-feature span {
+  font-size: 30px;
+}
+
+.product-feature strong {
+  font-size: 13px;
+}
+
+.product-price-card {
+  background: linear-gradient(135deg, #fff8e9, #f2dfbd);
+  border: 1px solid #d9b879;
+  box-shadow: inset 0 1px 0 #fff, 0 8px 20px rgba(80, 30, 20, 0.06);
+}
+
+.product-price-card strong {
+  font-size: 20px;
+}
+
+.product-detail-content .selected-price {
+  color: #fff5e5;
+  background: linear-gradient(135deg, #76252a, #421316);
+  border: 1px solid #d5b16c;
+  border-radius: 16px;
+  padding: 19px;
+  font-size: 19px;
+  box-shadow: 0 8px 20px rgba(75, 25, 20, 0.16);
+}
+
+.purchase-options {
+  background: linear-gradient(145deg, #fffaf2, #f7ecdf);
+  border: 1px solid #dfc18c;
+  border-radius: 20px;
+  box-shadow: 0 7px 20px rgba(80, 30, 20, 0.06);
+}
+
+.purchase-options button {
+  min-height: 50px;
+  background: linear-gradient(135deg, #8b3034, #4a1519);
+  border: 1px solid #d5b16c;
+  border-radius: 14px;
+  box-shadow: 0 7px 18px rgba(75, 25, 20, 0.18);
+}
+
+.purchase-options button:hover {
+  background: linear-gradient(135deg, #bd9148, #896020);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.sandwich-options {
+  border: 1px solid #dfc18c;
+  box-shadow: 0 8px 22px rgba(80, 30, 20, 0.07);
+}
+
+.sandwich-options select {
+  max-width: 100%;
+  min-height: 50px;
+}
+
+@media (max-width: 600px) {
+  .product-info-card {
+    padding: 30px 17px;
+    border-radius: 22px;
+  }
+
+  .product-info-card h2 {
+    font-size: 27px;
+  }
+
+  .product-features {
+    gap: 8px;
+  }
+
+  .product-feature {
+    min-height: 95px;
+    padding: 12px 5px;
+  }
+
+  .product-price-card strong {
+    font-size: 18px;
+  }
+}
