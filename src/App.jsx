@@ -413,6 +413,7 @@ setQuantity(1);
           <a href="#about">درباره ما</a>
           <a href="#loyalty">باشگاه مشتریان</a>
           <a href="#loyalty-faq">سؤالات متداول</a>
+<a href="#paprika-contests">🏆 مسابقات پاپریکا</a>
         </nav>
        <button
   className="cart"
@@ -1189,7 +1190,28 @@ setShowHamburgerMenu(false);
     </div>
   </div>
 </section>
+<section className="paprika-contests" id="paprika-contests">
+  <div className="contest-decoration">🏆</div>
 
+  <span className="contest-label">یک اتفاق هیجان‌انگیز در راه است</span>
+
+  <h2>مسابقات پاپریکا</h2>
+
+  <div className="contest-coming-soon">
+    به‌زودی...
+  </div>
+
+  <p>
+    خودتان را برای مسابقات جذاب، چالش‌های هیجان‌انگیز
+    و جوایز ویژه پاپریکا آماده کنید!
+  </p>
+
+  <div className="contest-footer">
+    <span>🌶️</span>
+    منتظر سورپرایزهای پاپریکا باشید
+    <span>❤️</span>
+  </div>
+</section>
 <section className="products" id="products">
   <div className="section-heading">
     <span>پیشنهادهای پاپریکا</span>
