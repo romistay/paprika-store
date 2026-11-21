@@ -114,7 +114,7 @@ const coldCutProducts = [
   { id: 11, name: "ژامبون کرات", weight: "۵۰۰ گرم", price: 950000 },
   { id: 12, name: "پپرونی", weight: "۵۰۰ گرم", price: 920000 },
 ];
-const hotDogProducts = [
+const sausageProducts = [
   { id: 1, name: "هات‌داگ مرغ", weight: "۵۰۰ گرم", price: 655000 },
   { id: 2, name: "هات‌داگ شکاری", weight: "۵۰۰ گرم", price: 695000 },
   { id: 3, name: "هات‌داگ گوشت", weight: "۵۰۰ گرم", price: 895000 },
@@ -287,20 +287,21 @@ const addToCart = () => {
 const productPrice =
   selectedProduct.category === "kebab" ||
   selectedProduct.category === "coldcut" ||
-  selectedProduct.category === "hotdog"
+  selectedProduct.category === "sausage"
     ? selectedProduct.price
     : selectedProduct.id === 6
     ? selectedProduct.price
     : selectedProduct.id === 5
     ? sandwichPrices[selectedFlavor][selectedWeight]
     : 0;
-  const newItem = {
+
+const newItem = {
   ...selectedProduct,
   flavor: selectedProduct.id === 5 ? selectedFlavor : "",
   weight:
     selectedProduct.category === "kebab" ||
     selectedProduct.category === "coldcut" ||
-    selectedProduct.category === "hotdog"
+    selectedProduct.category === "sausage"
       ? selectedProduct.weight
       : selectedProduct.id === 5
       ? selectedWeight
@@ -310,6 +311,7 @@ const productPrice =
   price: productPrice,
   quantity: quantity,
 };
+
 setCart((prevCart) => [...prevCart, newItem]);
 setIsCartOpen(true);
 setSelectedProduct(null);
@@ -631,7 +633,7 @@ setShowHotDogMenu(false);
 )}
 {showHotDogMenu && (
   <div className="sandwich-flavor-grid">
-    {hotDogProducts.map((item) => (
+    {sausageProducts.map((item) => (
       <button
         key={item.id}
         onClick={() => {
