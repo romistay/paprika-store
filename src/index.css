@@ -5195,3 +5195,111 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     min-height: auto;
   }
 }
+
+/* ===== PAPRIKA CONTEST COMPACT DESIGN ===== */
+
+.paprika-contests {
+  padding: 35px 20px !important;
+}
+
+.contest-main-heading {
+  margin-bottom: 25px;
+}
+
+.paprika-contests h2 {
+  font-size: 26px;
+}
+
+.contest-cards {
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.contest-card {
+  padding: 22px 16px;
+}
+
+.contest-card-icon {
+  width: 58px;
+  height: 58px;
+  font-size: 29px;
+  margin-bottom: 12px;
+}
+
+.contest-card h3 {
+  font-size: 15px;
+}
+
+.contest-card p {
+  font-size: 12px;
+  min-height: 65px;
+}
+
+.grand-contest-poster {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 30px 22px;
+}
+
+.grand-trophy {
+  font-size: 55px;
+  margin: 5px auto 12px;
+}
+
+.grand-contest-poster h2 {
+  font-size: 27px;
+}
+
+.grand-contest-poster h3 {
+  font-size: 16px;
+}
+
+.grand-contest-poster p {
+  font-size: 13px;
+  margin: 14px auto;
+}
+
+.contest-prizes-section,
+.contest-challenges {
+  max-width: 950px;
+  margin: 35px auto 25px;
+}
+
+.contest-prizes-grid,
+.contest-challenges-grid {
+  gap: 15px;
+}
+
+.contest-prize-card,
+.contest-challenge-card {
+  padding: 22px 15px;
+}
+
+.contest-prize-icon,
+.challenge-icon {
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.contest-prize-card h3,
+.contest-challenge-card h3 {
+  font-size: 16px;
+}
+
+.contest-prize-card p,
+.contest-challenge-card p {
+  font-size: 12px;
+  min-height: 55px;
+}
+
+.contest-prizes-heading h2,
+.contest-challenges-heading h2 {
+  font-size: 23px;
+}
+
+.contest-footer {
+  margin-top: 20px;
+  font-size: 12px;
+}
