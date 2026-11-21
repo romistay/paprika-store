@@ -1076,8 +1076,11 @@ setShowHamburgerMenu(false);
     </div>
   </div>
 
-<input
-  type="text"
+  <div className="loyalty-demo">
+    <h3>آزمایش باشگاه مشتریان</h3>
+
+    <input
+      type="text"
   inputMode="numeric"
   value={demoAnnualSpend.toLocaleString("en-US")}
   onChange={(e) => {
