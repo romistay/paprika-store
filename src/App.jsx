@@ -1282,19 +1282,61 @@ setShowHamburgerMenu(false);
       <span>تاریخ شروع مسابقه متعاقباً اعلام خواهد شد.</span>
     </div>
 
-    <div className="grand-poster-bottom">
-      PAPRIKA • TASTE THE EXCITEMENT
+
+  <div className="grand-poster-bottom">
+    PAPRIKA • TASTE THE EXCITEMENT
+  </div>
+
+</div>
+
+<div className="contest-prizes-section">
+
+  <div className="contest-prizes-heading">
+    <span>✨ جوایز هیجان‌انگیز</span>
+    <h2>شگفتانه‌هایی در انتظار شماست</h2>
+    <p>
+      برندگان مسابقات پاپریکا، منتظر سورپرایزهای ویژه باشند!
+    </p>
+  </div>
+
+  <div className="contest-prizes-grid">
+
+    <div className="contest-prize-card">
+      <div className="contest-prize-icon">👑</div>
+      <span>جایزه اول</span>
+      <h3>جایزه ویژه</h3>
+      <p>یک سورپرایز خاص برای برنده خوش‌شانس</p>
+      <div className="prize-ribbon">SPECIAL GIFT</div>
+    </div>
+
+    <div className="contest-prize-card featured-prize">
+      <div className="contest-prize-icon">🏆</div>
+      <span>جایزه دوم</span>
+      <h3>جایزه ارزشمند</h3>
+      <p>هدیه‌ای جذاب برای یکی از برگزیدگان</p>
+      <div className="prize-ribbon">GOLDEN PRIZE</div>
+    </div>
+
+    <div className="contest-prize-card">
+      <div className="contest-prize-icon">🎁</div>
+      <span>جایزه سوم</span>
+      <h3>سورپرایز پاپریکا</h3>
+      <p>یک هدیه دوست‌داشتنی از خانواده پاپریکا</p>
+      <div className="prize-ribbon">PAPRIKA GIFT</div>
     </div>
 
   </div>
 
-  <div className="contest-footer">
-    <span>🎁</span>
-    <strong>هیجان، رقابت و سورپرایزهای ویژه در راه است!</strong>
-    <span>❤️</span>
-  </div>
+</div>
+
+<div className="contest-footer">
+  <span>🎁</span>
+  <strong>هیجان، رقابت و سورپرایزهای ویژه در راه است!</strong>
+  <span>❤️</span>
+</div>
 
 </section>
+
 
 
 <section className="reviews" id="reviews">
