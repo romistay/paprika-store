@@ -2863,3 +2863,126 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     font-size: 18px;
   }
 }
+
+/* ===== PAPRIKA PREMIUM PURCHASE BUTTON ===== */
+
+.purchase-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 28px;
+  padding: 22px;
+}
+
+.purchase-options label {
+  color: #641d20;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.purchase-options input {
+  width: 85px;
+  height: 48px;
+  padding: 5px 10px;
+  border: 1px solid #d5b16c;
+  border-radius: 12px;
+  background: #fff;
+  color: #641d20;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  outline: none;
+}
+
+.purchase-options input:focus {
+  border-color: #641d20;
+  box-shadow: 0 0 0 3px rgba(198, 155, 80, 0.18);
+}
+
+.purchase-options button {
+  position: relative;
+  min-width: 230px;
+  padding: 15px 25px;
+  color: #fff8e9;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.purchase-options button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(75, 25, 20, 0.25);
+}
+
+.purchase-options button:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+  .purchase-options {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 17px 12px;
+  }
+
+  .purchase-options input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .purchase-options button {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* ===== PAPRIKA PRODUCT FEATURE DETAILS ===== */
+
+.product-features {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.product-feature {
+  position: relative;
+  overflow: hidden;
+  min-height: 115px;
+  box-sizing: border-box;
+}
+
+.product-feature::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c69b50, transparent);
+  opacity: 0.7;
+}
+
+.product-feature span {
+  filter: drop-shadow(0 3px 4px rgba(100, 29, 32, 0.12));
+}
+
+.product-feature strong {
+  line-height: 1.8;
+}
+
+@media (max-width: 420px) {
+  .product-features {
+    grid-template-columns: 1fr;
+  }
+
+  .product-feature {
+    min-height: 75px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 14px;
+  }
+}
