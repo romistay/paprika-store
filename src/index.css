@@ -3919,3 +3919,49 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
 .product-card button:active {
   transform: translateY(0) scale(.98);
 }
+
+/* ===== PAPRIKA PREMIUM CATEGORY CARDS ===== */
+
+.category-card {
+  background: linear-gradient(145deg, #ffffff, #fff7eb);
+  border: 1px solid #e8d2ad;
+  border-radius: 22px;
+  box-shadow: 0 9px 25px rgba(100, 29, 32, .07);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-7px);
+  border-color: #d9ad61;
+  box-shadow: 0 15px 32px rgba(100, 29, 32, .14);
+}
+
+.category-card h3 {
+  color: #762027;
+  font-weight: 900;
+  transition: color .3s ease;
+}
+
+.category-card:hover h3 {
+  color: #b17a28;
+}
+
+/* ===== PAPRIKA CATEGORY ICONS ===== */
+
+.category-icon {
+  background: linear-gradient(145deg, #fff0d8, #f8dfb5);
+  border: 1px solid #e5c994;
+  border-radius: 23px;
+  box-shadow: 0 6px 15px rgba(145, 91, 24, .09);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.category-card:hover .category-icon {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 9px 20px rgba(145, 91, 24, .16);
+}
+
+.category-card h3 {
+  color: #762027;
+  font-weight: 900;
+}
