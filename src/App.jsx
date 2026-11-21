@@ -558,7 +558,7 @@ setQuantity(1);
 </section>
 )}
     
-{(showKebabMenu || showFrozenMenu || showColdCutMenu || showHotDogMenu) && (
+{(showKebabMenu || showFrozenMenu || showColdCutMenu || showHotDogMenu || showHamburgerMenu) && (
   <section className="sandwich-menu-panel">
     <button
       className="sandwich-back-button"
@@ -566,7 +566,8 @@ setQuantity(1);
 setShowKebabMenu(false);
 setShowFrozenMenu(false);
 setShowColdCutMenu(false);
-setShowHotDogMenu(false);        
+setShowHotDogMenu(false);
+setShowHamburgerMenu(false);        
       }}
     >
       <span>←</span>
