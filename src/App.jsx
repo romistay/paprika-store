@@ -300,8 +300,45 @@ const [showFrozenMenu, setShowFrozenMenu] = React.useState(false);
   const [customerAddress, setCustomerAddress] = React.useState("");
   const [isWhatsAppOpened, setIsWhatsAppOpened] = React.useState(false);
   const [isInPersonDelivery, setIsInPersonDelivery] = React.useState(false);
-  const [quantity, setQuantity] = React.useState(1);
+ 
 
+const [quantity, setQuantity] = React.useState(1);
+
+const [demoAnnualSpend, setDemoAnnualSpend] = React.useState(0);
+
+const loyaltyLevel =
+  demoAnnualSpend >= 200000000
+    ? "طلایی"
+    : demoAnnualSpend >= 150000000
+    ? "نقره‌ای"
+    : demoAnnualSpend >= 100000000
+    ? "فیروزه‌ای"
+    : "هنوز عضو نشده";
+
+const loyaltyDiscount =
+  demoAnnualSpend >= 200000000
+    ? 20
+    : demoAnnualSpend >= 150000000
+    ? 15
+    : demoAnnualSpend >= 100000000
+    ? 10
+    : 0;
+
+const nextLoyaltyTarget =
+  demoAnnualSpend >= 200000000
+    ? 200000000
+    : demoAnnualSpend >= 150000000
+    ? 200000000
+    : demoAnnualSpend >= 100000000
+    ? 150000000
+    : 100000000;
+
+const remainingToNextLevel = Math.max(
+  0,
+  nextLoyaltyTarget - demoAnnualSpend
+);
+
+const [demoAnnualSpend, setDemoAnnualSpend] = React.useState(0);
 const addToCart = () => {
   if (!selectedProduct) return;
 
@@ -361,6 +398,7 @@ setQuantity(1);
           <a href="#categories">دسته‌بندی محصولات</a>
           <a href="#products">فروشگاه</a>
           <a href="#about">درباره ما</a>
+          <a href="#loyalty">باشگاه مشتریان</a>
         </nav>
        <button
   className="cart"
@@ -997,6 +1035,56 @@ setShowHamburgerMenu(false);
 </>
 )}
 
+
+<section className="loyalty-section" id="loyalty">
+  <div className="section-heading">
+    <span>باشگاه مشتریان پاپریکا</span>
+    <h2>وفاداری شما، هدیه ما</h2>
+    <p>با خرید بیشتر، تخفیف ویژه‌تری دریافت کنید.</p>
+  </div>
+
+  <div className="loyalty-cards">
+    <div className="loyalty-card turquoise">
+      <h3>عضویت فیروزه‌ای</h3>
+      <strong>۱۰٪ تخفیف</strong>
+      <p>با خرید ۱۰۰ میلیون تومان</p>
+    </div>
+
+    <div className="loyalty-card silver">
+      <h3>عضویت نقره‌ای</h3>
+      <strong>۱۵٪ تخفیف</strong>
+      <p>با خرید ۱۵۰ میلیون تومان</p>
+    </div>
+
+    <div className="loyalty-card gold">
+      <h3>عضویت طلایی</h3>
+      <strong>۲۰٪ تخفیف</strong>
+      <p>با خرید ۲۰۰ میلیون تومان</p>
+    </div>
+  </div>
+
+  <div className="loyalty-demo">
+    <h3>آزمایش باشگاه مشتریان</h3>
+    <label>مجموع خرید سالانه مشتری (تومان)</label>
+    <input
+      type="number"
+      min="0"
+      value={demoAnnualSpend}
+      onChange={(e) => setDemoAnnualSpend(Math.max(0, Number(e.target.value)))}
+      placeholder="مبلغ خرید را وارد کنید"
+    />
+
+    <p>سطح عضویت: <strong>{loyaltyLevel}</strong></p>
+    <p>تخفیف فعلی: <strong>{loyaltyDiscount}٪</strong></p>
+
+    {demoAnnualSpend < 200000000 && (
+      <p>
+        باقی‌مانده تا سطح بعدی:{" "}
+        <strong>{remainingToNextLevel.toLocaleString("fa-IR")} تومان</strong>
+      </p>
+    )}
+  </div>
+</section>
 
 <section className="products" id="products">
           <div className="section-heading">
