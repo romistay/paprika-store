@@ -312,6 +312,24 @@ const wheelPrizes = [
   "یک شانس دوباره",
 ];
 
+const galleryImages = [
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.55.17.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.55.27.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.55.37.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.55.48.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.56.03.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.56.15.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.56.23.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.56.34.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.56.45.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.56.58.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.57.11.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.57.20.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.57.33.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.57.43.jpeg",
+  "/paprika-store/images/gallery/WhatsApp Image 2026-11-21 at 19.57.51.jpeg",
+];
+
 const spinWheel = () => {
   if (isWheelSpinning) return;
 
@@ -1790,7 +1808,58 @@ setSubmittedReviews((prev) => [
 </button>
 </div>
 )}
+<section className="paprika-gallery" id="paprika-gallery">
 
+  <div className="gallery-heading">
+    <span>PAPRIKA PHOTO GALLERY</span>
+    <h2>گالری هنری پاپریکا</h2>
+    <p>
+      گوشه‌ای از هنر، کیفیت و عشق ما به طعم‌های خوشمزه
+    </p>
+  </div>
+
+  <div className="gallery-grid">
+    {galleryImages.map((image, index) => (
+      <div
+        className="gallery-item"
+        key={index}
+        onClick={() => setSelectedGalleryImage(image)}
+      >
+        <img
+          src={image}
+          alt={`نمونه کار پاپریکا ${index + 1}`}
+          loading="lazy"
+        />
+        <div className="gallery-overlay">
+          <span>مشاهده تصویر</span>
+          <strong>+</strong>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  {selectedGalleryImage && (
+    <div
+      className="gallery-lightbox"
+      onClick={() => setSelectedGalleryImage(null)}
+    >
+      <button
+        type="button"
+        className="gallery-close"
+        onClick={() => setSelectedGalleryImage(null)}
+      >
+        ×
+      </button>
+
+      <img
+        src={selectedGalleryImage}
+        alt="تصویر بزرگ نمونه کار پاپریکا"
+        onClick={(event) => event.stopPropagation()}
+      />
+    </div>
+  )}
+
+</section>
            <section className="about" id="about">
   <h2>پاپریکا؛ انتخاب خوشمزه شما</h2>
 
