@@ -472,12 +472,54 @@ setQuantity(1);
   ✏️ ویرایش سبد خرید
 </button>
 
-  <button
-    className="checkout-button"
-    onClick={() => alert("به‌زودی امکان ثبت سفارش فعال می‌شود.")}
-  >
-    ثبت سفارش ←
-  </button>
+
+<button
+  className="checkout-button"
+  onClick={() => {
+    if (!customerName.trim() || !customerPhone.trim()) {
+      alert("لطفاً نام و شماره موبایل خود را وارد کنید.");
+      return;
+    }
+
+    if (!isInPersonDelivery && !customerAddress.trim()) {
+      alert("لطفاً آدرس محل تحویل را وارد کنید.");
+      return;
+    }
+
+    const totalPrice = cart.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+
+    const productsText = cart.map((item, index) =>
+      `${index + 1}. ${item.name}
+تعداد: ${item.quantity}
+${item.flavor ? `طعم: ${item.flavor}\n` : ""}${item.weight ? `وزن: ${item.weight}\n` : ""}قیمت: ${(item.price * item.quantity).toLocaleString("fa-IR")} تومان`
+    ).join("\n\n");
+
+    const message = `سلام، سفارش جدید از فروشگاه پاپریکا 🌭
+
+نام مشتری: ${customerName}
+شماره موبایل: ${customerPhone}
+
+محصولات سفارش:
+${productsText}
+
+مبلغ کل: ${totalPrice.toLocaleString("fa-IR")} تومان
+
+نحوه تحویل: ${isInPersonDelivery ? "تحویل حضوری" : "ارسال به آدرس"}
+${isInPersonDelivery ? "" : `آدرس: ${customerAddress}`}`;
+
+    const whatsappUrl =
+      "https://wa.me/989044431358?text=" +
+      encodeURIComponent(message);
+
+    window.open(whatsappUrl, "_blank");
+  }}
+>
+  ثبت سفارش ←
+</button>
+
 </div>
 
 
