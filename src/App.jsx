@@ -338,7 +338,6 @@ const remainingToNextLevel = Math.max(
   nextLoyaltyTarget - demoAnnualSpend
 );
 
-const [demoAnnualSpend, setDemoAnnualSpend] = React.useState(0);
 const addToCart = () => {
   if (!selectedProduct) return;
 
