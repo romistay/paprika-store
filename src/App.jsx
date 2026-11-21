@@ -655,53 +655,36 @@ setShowHamburgerMenu(false);
       بازگشت به محصولات
     </button>
 
- <div className="sandwich-menu-banner">
-{showKebabMenu ? (
-  <img
-    src="/paprika-store/Persian%20Kebab%20Loghmeh%20Feast.png"
-    alt="Persian Kebab Loghmeh Feast"
-  />
-) : showHotDogMenu ? (
-  <img
-    src="/paprika-store/paprika-hotdog-banner.png.png"
-    alt="بنر انواع سوسیس پاپریکا"
-  />
-) : showColdCutMenu ? (
-  <img
-    src="/paprika-store/paprika-coldcut-banner.png.png"
-    alt="پاپریکا؛ طعم تازه و باکیفیت"
-  />
-) : (
-  <>
-    <h2>محصولات فریزری پاپریکا</h2>
-    <p>محصولات باکیفیت پاپریکا</p>
-  </>
-)}
-    </div>
-{showKebabMenu && (
-  <div className="sandwich-flavor-grid">
-    {kebabProducts.map((item) => (
-      <button
-        key={item.id}
-        onClick={() => {
-          setSelectedProduct({
-            ...item,
-            id: 100 + item.id,
-            category: "kebab",
-            image: "/paprika-store/topimage-classic-hamburger-2019m04-800x534-curiosa-min.jpg",
-            description: "کباب لقمه باکیفیت پاپریکا",
-          });
-          setQuantity(1);
-          setShowKebabMenu(false);
-        }}
-      >
-        <span className="flavor-title">{item.name}</span>
-        <span className="flavor-description">{item.weight}</span>
-        <span>{item.price.toLocaleString("fa-IR")} تومان</span>
-      </button>
-    ))}
-  </div>
-)}
+
+<div className="sandwich-menu-banner">
+  {showKebabMenu ? (
+    <img
+      src="/paprika-store/Persian%20Kebab%20Loghmeh%20Feast.png"
+      alt="بنر کباب لقمه پاپریکا"
+    />
+  ) : showHotDogMenu ? (
+    <img
+      src="/paprika-store/paprika-hotdog-banner.png.png"
+      alt="بنر انواع سوسیس پاپریکا"
+    />
+  ) : showColdCutMenu ? (
+    <img
+      src="/paprika-store/paprika-coldcut-banner.png.png"
+      alt="بنر انواع کالباس پاپریکا"
+    />
+  ) : showHamburgerMenu ? (
+    <img
+      src="/paprika-store/Besharat-Burger-06.jpg"
+      alt="بنر همبرگر پاپریکا"
+    />
+  ) : (
+    <>
+      <h2>محصولات فریزری پاپریکا</h2>
+      <p>محصولات باکیفیت پاپریکا</p>
+    </>
+  )}
+</div>
+
 
 {showHamburgerMenu && (
   <div className="sandwich-flavor-grid">
