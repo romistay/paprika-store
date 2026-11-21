@@ -737,87 +737,118 @@ setShowHamburgerMenu(false);
   </section>
 )}
 
+
 {selectedProduct && (
   <section className="product-detail">
-    <button onClick={() => setSelectedProduct(null)}>
+    <button
+      className="product-back-button"
+      onClick={() => setSelectedProduct(null)}
+    >
       ← بازگشت به محصولات
     </button>
 
     <div className="product-detail-content">
-      <img
-        src={selectedProduct.image}
-        alt={selectedProduct.name}
-      />
+      <div className="product-info-card">
+        <div className="product-brand-label">PAPRIKA STORE</div>
 
-     
-<div>
-  <h2>{selectedProduct.name}</h2>
-  <p>{selectedProduct.description}</p>
-<div className="purchase-options">
-  <label>تعداد:</label>
-  <input
-    type="number"
-    min="1"
-    value={quantity}
-    onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))}
-  />
+        <h2>{selectedProduct.name}</h2>
 
-  <button onClick={addToCart}>
-    🛒 افزودن به سبد خرید
-  </button>
-</div>
-  {selectedProduct.id === 5 && (
-    <div className="sandwich-options">
-      <h3>انتخاب طعم ساندویچ</h3>
-      <select
-        value={selectedFlavor}
-        onChange={(e) => setSelectedFlavor(e.target.value)}
-      >
-        <option value="">طعم موردنظر را انتخاب کنید</option>
-        {sandwichFlavors.map((flavor) => (
-          <option key={flavor} value={flavor}>
-            {flavor}
-          </option>
-        ))}
-      </select>
+        <p className="product-description">
+          {selectedProduct.description}
+        </p>
 
-      <h3>انتخاب وزن</h3>
-      <select
-        value={selectedWeight}
-        onChange={(e) => setSelectedWeight(e.target.value)}
-      >
-        <option value="">وزن موردنظر را انتخاب کنید</option>
-        {sandwichWeights.map((weight) => (
-          <option key={weight} value={weight}>
-            {weight}
-          </option>
-        ))}
-      </select>
+        <div className="product-features">
+          <div className="product-feature">
+            <span>📦</span>
+            <strong>بسته‌بندی محصول</strong>
+          </div>
+          <div className="product-feature">
+            <span>🛒</span>
+            <strong>خرید آسان</strong>
+          </div>
+          <div className="product-feature">
+            <span>🌶️</span>
+            <strong>انتخاب پاپریکا</strong>
+          </div>
+        </div>
+
+        {(selectedProduct.category === "kebab" ||
+          selectedProduct.category === "coldcut" ||
+          selectedProduct.category === "sausage" ||
+          selectedProduct.category === "hamburger" ||
+          selectedProduct.category === "frozen") && (
+          <div className="product-price-card">
+            <div>
+              <span>وزن محصول</span>
+              <strong>{selectedProduct.weight}</strong>
+            </div>
+            <div>
+              <span>قیمت محصول</span>
+              <strong>
+                {selectedProduct.price.toLocaleString("fa-IR")} تومان
+              </strong>
+            </div>
+          </div>
+        )}
+
+        {selectedProduct.id === 5 && (
+          <div className="sandwich-options">
+            <h3>انتخاب طعم ساندویچ</h3>
+            <select
+              value={selectedFlavor}
+              onChange={(e) => setSelectedFlavor(e.target.value)}
+            >
+              <option value="">طعم موردنظر را انتخاب کنید</option>
+              {sandwichFlavors.map((flavor) => (
+                <option key={flavor} value={flavor}>
+                  {flavor}
+                </option>
+              ))}
+            </select>
+
+            <h3>انتخاب وزن</h3>
+            <select
+              value={selectedWeight}
+              onChange={(e) => setSelectedWeight(e.target.value)}
+            >
+              <option value="">وزن موردنظر را انتخاب کنید</option>
+              {sandwichWeights.map((weight) => (
+                <option key={weight} value={weight}>
+                  {weight}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+
+        {selectedFlavor && selectedWeight && (
+          <p className="selected-price">
+            قیمت:{" "}
+            {sandwichPrices[selectedFlavor][selectedWeight].toLocaleString("fa-IR")}
+            {" "}تومان
+          </p>
+        )}
+
+        <div className="purchase-options">
+          <label>تعداد موردنظر:</label>
+          <input
+            type="number"
+            min="1"
+            value={quantity}
+            onChange={(e) =>
+              setQuantity(Math.max(1, Number(e.target.value)))
+            }
+          />
+
+          <button onClick={addToCart}>
+            🛒 افزودن به سبد خرید
+          </button>
+        </div>
+      </div>
     </div>
-  )}
-  {selectedFlavor && selectedWeight && (
-  <p className="selected-price">
-    قیمت:{" "}
-    {sandwichPrices[selectedFlavor][selectedWeight].toLocaleString("fa-IR")}
-    {" "}تومان
-  </p>
+  </section>
 )}
-</div>
-  </div>
 
-{(selectedProduct.category === "kebab" ||
-  selectedProduct.category === "coldcut" ||
-  selectedProduct.category === "sausage" ||
-  selectedProduct.category === "hamburger") && (
-  <p className="selected-price">
-    وزن: {selectedProduct.weight}
-    {" "} | قیمت:{" "}
-    {selectedProduct.price.toLocaleString("fa-IR")}
-    {" "}تومان
-  </p>
-)}
-</section>
-)}
 
 {!selectedProduct &&
  !showSandwichMenu &&
