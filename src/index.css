@@ -3761,3 +3761,108 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     font-size: 15px;
   }
 }
+
+/* ===== PAPRIKA PREMIUM PRODUCT CARDS ===== */
+
+.product-card {
+  position: relative;
+  padding: 18px;
+  text-align: center;
+  background: linear-gradient(145deg, #ffffff, #fff9ef);
+  border: 1px solid #ead5b4;
+  border-radius: 24px;
+  box-shadow: 0 10px 28px rgba(70, 30, 25, 0.07);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-7px);
+  border-color: #d5aa62;
+  box-shadow: 0 17px 35px rgba(100, 29, 32, .14);
+}
+
+.product-image {
+  width: 100%;
+  height: 230px;
+  margin: 0 0 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff7ef;
+  border: 1px solid #f0dfc5;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .45s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.07);
+}
+
+.product-card h3 {
+  color: #641d20;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.9;
+}
+
+.product-card .gholwich-details {
+  padding: 10px;
+  margin-top: 12px;
+  background: #fff1d9;
+  border: 1px solid #e5c994;
+  border-radius: 14px;
+  color: #762b20;
+}
+
+.product-card .gholwich-details span {
+  font-weight: 900;
+}
+
+.product-card .gholwich-details p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+/* ===== PAPRIKA RESPONSIVE PRODUCT GRID ===== */
+
+@media (max-width: 1000px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .product-image {
+    height: 170px;
+  }
+
+  .product-card {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .product-grid {
+    gap: 10px;
+  }
+
+  .product-image {
+    height: 140px;
+  }
+
+  .product-card h3 {
+    font-size: 14px;
+  }
+}
