@@ -115,7 +115,23 @@ const coldCutProducts = [
   { id: 11, name: "ژامبون کرات", weight: "۵۰۰ گرم", price: 950000 },
   { id: 12, name: "پپرونی", weight: "۵۰۰ گرم", price: 920000 },
 ];
-
+const hotDogProducts = [
+  { id: 1, name: "هات‌داگ مرغ", weight: "۵۰۰ گرم", price: 655000 },
+  { id: 2, name: "هات‌داگ شکاری", weight: "۵۰۰ گرم", price: 695000 },
+  { id: 3, name: "هات‌داگ گوشت", weight: "۵۰۰ گرم", price: 895000 },
+  { id: 4, name: "هات‌داگ بره", weight: "۵۰۰ گرم", price: 995000 },
+  { id: 5, name: "هات‌داگ سوجوک", weight: "۵۰۰ گرم", price: 1320000 },
+  { id: 6, name: "هات‌داگ چیک هات", weight: "۵۰۰ گرم", price: 685000 },
+  { id: 7, name: "هات‌داگ کره‌ای", weight: "۵۰۰ گرم", price: 715000 },
+  { id: 8, name: "هات‌داگ پنیری", weight: "۵۰۰ گرم", price: 745000 },
+  { id: 9, name: "هات‌داگ شترمرغ", weight: "۵۰۰ گرم", price: 865000 },
+  { id: 10, name: "هات‌داگ بوقلمون", weight: "۵۰۰ گرم", price: 775000 },
+  { id: 11, name: "هات‌داگ اینجوی ویژه", weight: "۵۰۰ گرم", price: 800000 },
+  { id: 12, name: "هات‌داگ ویژه پنیری", weight: "۵۰۰ گرم", price: 830000 },
+  { id: 13, name: "هات‌داگ چیلی", weight: "۵۰۰ گرم", price: 710000 },
+  { id: 14, name: "کوکتل مرغ دودی", weight: "۵۰۰ گرم", price: 690000 },
+  { id: 15, name: "کوکتل میکس", weight: "۵۰۰ گرم", price: 770000 },
+];
 const sandwichFlavors = [
   "مارتادلا",
   "مارتادلا ویژه",
@@ -271,20 +287,21 @@ const addToCart = () => {
 
 const productPrice =
   selectedProduct.category === "kebab" ||
-  selectedProduct.category === "coldcut"
+  selectedProduct.category === "coldcut" ||
+  selectedProduct.category === "hotdog"
     ? selectedProduct.price
     : selectedProduct.id === 6
     ? selectedProduct.price
     : selectedProduct.id === 5
     ? sandwichPrices[selectedFlavor][selectedWeight]
     : 0;
-
- const newItem = {
+  const newItem = {
   ...selectedProduct,
   flavor: selectedProduct.id === 5 ? selectedFlavor : "",
   weight:
     selectedProduct.category === "kebab" ||
-    selectedProduct.category === "coldcut"
+    selectedProduct.category === "coldcut" ||
+    selectedProduct.category === "hotdog"
       ? selectedProduct.weight
       : selectedProduct.id === 5
       ? selectedWeight
@@ -294,7 +311,6 @@ const productPrice =
   price: productPrice,
   quantity: quantity,
 };
-
 setCart((prevCart) => [...prevCart, newItem]);
 setIsCartOpen(true);
 setSelectedProduct(null);
@@ -614,7 +630,30 @@ setShowHotDogMenu(false);
     ))}
   </div>
 )}
-
+{showHotDogMenu && (
+  <div className="sandwich-flavor-grid">
+    {hotDogProducts.map((item) => (
+      <button
+        key={item.id}
+        onClick={() => {
+          setSelectedProduct({
+            ...item,
+            id: 300 + item.id,
+            category: "hotdog",
+            image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.06%281%29.jpeg",
+            description: "هات‌داگ باکیفیت پاپریکا",
+          });
+          setQuantity(1);
+          setShowHotDogMenu(false);
+        }}
+      >
+        <span className="flavor-title">{item.name}</span>
+        <span className="flavor-description">{item.weight}</span>
+        <span>{item.price.toLocaleString("fa-IR")} تومان</span>
+      </button>
+    ))}
+  </div>
+)}
   </section>
 )}
 
@@ -685,8 +724,9 @@ setShowHotDogMenu(false);
 )}
 </div>
   </div>
-    {(selectedProduct.category === "kebab" ||
-  selectedProduct.category === "coldcut") && (
+{(selectedProduct.category === "kebab" ||
+  selectedProduct.category === "coldcut" ||
+  selectedProduct.category === "hotdog") && (
   <p className="selected-price">
     وزن: {selectedProduct.weight}
     {" "} | قیمت:{" "}
