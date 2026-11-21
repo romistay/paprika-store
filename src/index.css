@@ -5064,3 +5064,134 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     padding: 27px 18px;
   }
 }
+
+/* ===== PAPRIKA PREMIUM CHALLENGES ===== */
+
+.contest-challenges {
+  max-width: 1100px;
+  margin: 55px auto 35px;
+  padding: 25px 10px;
+}
+
+.contest-challenges-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.contest-challenges-heading > span {
+  color: #e9c77f;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.contest-challenges-heading h2 {
+  color: #fff0cf;
+  font-size: 27px;
+  font-weight: 900;
+  margin: 13px 0;
+}
+
+.contest-challenges-heading p {
+  color: #f5dfc5;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.contest-challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.contest-challenge-card {
+  position: relative;
+  padding: 30px 22px;
+  text-align: center;
+  border: 1px solid #c99b4c;
+  border-radius: 23px;
+  background: linear-gradient(145deg, #fffaf0, #f1dfbd);
+  box-shadow: 0 12px 28px rgba(20, 5, 5, .2);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.contest-challenge-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, .3);
+}
+
+.challenge-icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 18px;
+  border: 1px solid #d5ac63;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #fff0c9, #e5bd70);
+  font-size: 36px;
+  box-shadow: 0 7px 17px rgba(130, 83, 20, .16);
+}
+
+.contest-challenge-card > span {
+  color: #a47732;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.contest-challenge-card h3 {
+  color: #641d20;
+  font-size: 18px;
+  font-weight: 900;
+  margin: 13px 0;
+}
+
+.contest-challenge-card p {
+  color: #76543d;
+  font-size: 13px;
+  line-height: 2.2;
+  min-height: 85px;
+}
+
+.challenge-status {
+  display: inline-block;
+  margin-top: 13px;
+  padding: 8px 25px;
+  color: #fff1d6;
+  background: linear-gradient(135deg, #641d20, #922f32);
+  border: 1px solid #d9ad61;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+@media (max-width: 850px) {
+  .contest-challenges-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .contest-challenges {
+    margin: 35px auto;
+    padding: 15px 5px;
+  }
+
+  .contest-challenges-heading h2 {
+    font-size: 22px;
+  }
+
+  .contest-challenges-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contest-challenge-card {
+    padding: 26px 18px;
+  }
+
+  .contest-challenge-card p {
+    min-height: auto;
+  }
+}
