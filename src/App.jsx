@@ -1459,6 +1459,12 @@ setSubmittedReviews((prev) => [
     </a>
   </div>
 
+<div className="footer-developer">
+  <span>طراحی و توسعه وب‌سایت</span>
+  <strong>جواد جمعه‌زاده</strong>
+  <p>با عشق و خلاقیت برای خانواده پاپریکا ❤️</p>
+</div>
+
   <small>تمام حقوق برای فروشگاه پاپریکا محفوظ است.</small>
 </footer>
 
