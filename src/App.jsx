@@ -3,7 +3,6 @@ const categories = [
   { icon: "🌭", title: "انواع سوسیس", subtitle: "طعم‌های خوشمزه و متنوع" },
   { icon: "🥩", title: "انواع کالباس", subtitle: "تازه و باکیفیت" },
   { icon: "🍔", title: "همبرگر", subtitle: "لذیذ و آماده طبخ" },
-  { icon: "🌮", title: "هات‌داگ", subtitle: "انتخابی خوشمزه" },
   { icon: "🥪", title: "ساندویچ سرد", subtitle: "ساندویچ‌های تازه و خوشمزه" },
   { icon: "🍢", title: "کباب لقمه", subtitle: "انواع کباب لقمه پاپریکا" },
   { icon: "❄️", title: "محصولات فریزری", subtitle: "محصولات آماده و باکیفیت" },
@@ -567,8 +566,7 @@ setShowHotDogMenu(false);
 ) : showHotDogMenu ? (
   <img
     src="/paprika-store/paprika-hotdog-banner.png.png"
-    alt="بنر هات‌داگ پاپریکا"
-  />
+    alt="بنر انواع سوسیس پاپریکا"
 ) : showColdCutMenu ? (
   <img
    src="/paprika-store/paprika-coldcut-banner.png.png"
@@ -639,9 +637,9 @@ setShowHotDogMenu(false);
           setSelectedProduct({
             ...item,
             id: 300 + item.id,
-            category: "hotdog",
+            category: "sausage",
             image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.06%281%29.jpeg",
-            description: "هات‌داگ باکیفیت پاپریکا",
+           description: "انواع سوسیس باکیفیت پاپریکا",
           });
           setQuantity(1);
           setShowHotDogMenu(false);
@@ -726,7 +724,7 @@ setShowHotDogMenu(false);
   </div>
 {(selectedProduct.category === "kebab" ||
   selectedProduct.category === "coldcut" ||
-  selectedProduct.category === "hotdog") && (
+  selectedProduct.category === "sausage") && (
   <p className="selected-price">
     وزن: {selectedProduct.weight}
     {" "} | قیمت:{" "}
@@ -768,7 +766,7 @@ onClick={() => {
   setShowFrozenMenu(false);
   setSelectedProduct(null);
   setQuantity(1);
- } else if (item.title === "هات‌داگ") {
+} else if (item.title === "انواع سوسیس") {
   setShowHotDogMenu(true);
   setShowKebabMenu(false);
   setShowColdCutMenu(false);
