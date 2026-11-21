@@ -4926,3 +4926,141 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     font-size: 19px;
   }
 }
+
+/* ===== PAPRIKA LUXURY PRIZE SHOWCASE ===== */
+
+.contest-prizes-section {
+  max-width: 1100px;
+  margin: 55px auto 35px;
+  padding: 25px 10px;
+}
+
+.contest-prizes-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.contest-prizes-heading > span {
+  color: #f0d18b;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.contest-prizes-heading h2 {
+  color: #ffe5ae;
+  font-size: 27px;
+  font-weight: 900;
+  margin: 13px 0;
+}
+
+.contest-prizes-heading p {
+  color: #fff0d9;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.contest-prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.contest-prize-card {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 18px;
+  text-align: center;
+  border: 1px solid #e5bd6e;
+  border-radius: 23px;
+  background: linear-gradient(145deg, #fff5dc, #e9c77f);
+  box-shadow: 0 12px 28px rgba(25, 5, 5, .2);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.contest-prize-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, .3);
+}
+
+.contest-prize-icon {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 18px;
+  border: 1px solid #c59643;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #fffdf3, #e7bd67);
+  font-size: 39px;
+  box-shadow: 0 7px 17px rgba(130, 83, 20, .2);
+}
+
+.contest-prize-card > span {
+  color: #98702e;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.contest-prize-card h3 {
+  color: #641d20;
+  font-size: 20px;
+  font-weight: 900;
+  margin: 12px 0;
+}
+
+.contest-prize-card p {
+  color: #755331;
+  font-size: 13px;
+  line-height: 2.1;
+  min-height: 55px;
+}
+
+.prize-ribbon {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 17px;
+  color: #ffe7b2;
+  background: linear-gradient(135deg, #671a20, #921f2b);
+  border: 1px solid #c99b4c;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.featured-prize {
+  background: linear-gradient(145deg, #fff0c5, #d5a84f);
+  border: 2px solid #ffe1a0;
+  box-shadow: 0 14px 35px rgba(218, 170, 76, .25);
+}
+
+.featured-prize .contest-prize-icon {
+  transform: scale(1.08);
+}
+
+@media (max-width: 850px) {
+  .contest-prizes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .contest-prizes-section {
+    margin: 35px auto;
+    padding: 15px 5px;
+  }
+
+  .contest-prizes-heading h2 {
+    font-size: 22px;
+  }
+
+  .contest-prizes-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contest-prize-card {
+    padding: 27px 18px;
+  }
+}
