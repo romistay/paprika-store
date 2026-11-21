@@ -300,8 +300,41 @@ const [showFrozenMenu, setShowFrozenMenu] = React.useState(false);
   const [customerAddress, setCustomerAddress] = React.useState("");
   const [isWhatsAppOpened, setIsWhatsAppOpened] = React.useState(false);
   const [isInPersonDelivery, setIsInPersonDelivery] = React.useState(false);
- 
+ const [wheelRotation, setWheelRotation] = React.useState(0);
+const [wheelResult, setWheelResult] = React.useState("");
+const [isWheelSpinning, setIsWheelSpinning] = React.useState(false);
+const wheelPrizes = [
+  "۵٪ تخفیف خرید",
+  "۱۰٪ تخفیف خرید",
+  "۱۵٪ تخفیف خرید",
+  "ارسال رایگان",
+  "یک هدیه خوشمزه",
+  "یک شانس دوباره",
+];
 
+const spinWheel = () => {
+  if (isWheelSpinning) return;
+
+  setIsWheelSpinning(true);
+  setWheelResult("");
+
+  const prizeIndex = Math.floor(Math.random() * wheelPrizes.length);
+  const selectedPrize = wheelPrizes[prizeIndex];
+
+  const segmentAngle = 360 / wheelPrizes.length;
+  const targetAngle = 360 - (prizeIndex * segmentAngle + segmentAngle / 2);
+  const extraSpins = 360 * 5;
+
+  setWheelRotation((previous) => {
+    const currentRotation = previous % 360;
+    return previous + extraSpins + targetAngle - currentRotation;
+  });
+
+  setTimeout(() => {
+    setWheelResult(selectedPrize);
+    setIsWheelSpinning(false);
+  }, 4500);
+};
 const [quantity, setQuantity] = React.useState(1);
 
 const [demoAnnualSpend, setDemoAnnualSpend] = React.useState(0);
@@ -1242,6 +1275,72 @@ setShowHamburgerMenu(false);
 
 </section>
 
+
+<section className="paprika-wheel-section" id="paprika-wheel">
+
+  <div className="wheel-heading">
+    <span>🎁 PAPRIKA GOLDEN CHANCE</span>
+    <h2>گردونه شانس پاپریکا</h2>
+    <p>
+      بچرخون، هیجان رو تجربه کن و ببین چه هدیه‌ای در انتظارت هست!
+    </p>
+  </div>
+
+  <div className="wheel-game">
+
+    <div className="wheel-pointer">▼</div>
+
+    <div
+      className="wheel-outer"
+      style={{
+        transform: `rotate(${wheelRotation}deg)`,
+        transition: isWheelSpinning
+          ? "transform 4.5s cubic-bezier(0.15, 0.65, 0.12, 1)"
+          : "none",
+      }}
+    >
+      <div className="wheel-face">
+        {wheelPrizes.map((prize, index) => (
+          <div
+            className="wheel-prize-label"
+            key={index}
+            style={{
+              transform: `translate(-50%, -50%) rotate(${index * 60 + 30}deg) translateY(-105px)`,
+            }}
+          >
+            {prize}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div className="wheel-center">P</div>
+
+  </div>
+
+  <button
+    type="button"
+    className="wheel-spin-button"
+    onClick={spinWheel}
+    disabled={isWheelSpinning}
+  >
+    {isWheelSpinning ? "در حال چرخش..." : "🎡 شانس خودت رو امتحان کن"}
+  </button>
+
+  {wheelResult && (
+    <div className="wheel-result">
+      <span>🎉</span>
+      <h3>تبریک! نتیجه گردونه تو:</h3>
+      <strong>{wheelResult}</strong>
+      <p>از همراهی تو با خانواده پاپریکا سپاسگزاریم ❤️</p>
+    </div>
+  )}
+
+  <p className="wheel-note">
+    هر چرخش یک تجربه هیجان‌انگیز است!
+  </p>
+
+</section>
 
 <section className="loyalty-faq" id="loyalty-faq">
   <div className="loyalty-faq-heading">
