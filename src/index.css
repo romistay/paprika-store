@@ -4131,3 +4131,120 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     padding: 20px;
   }
 }
+
+/* ===== PAPRIKA PREMIUM LOYALTY BENEFITS ===== */
+
+.loyalty-benefits {
+  margin-top: 35px;
+  padding: 30px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #fffaf1, #fff1dc);
+  border: 1px solid #e8d2ad;
+  box-shadow: 0 10px 28px rgba(100, 29, 32, 0.07);
+}
+
+.loyalty-benefits-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.loyalty-benefits-heading span {
+  color: #b17a28;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.loyalty-benefits-heading h3 {
+  color: #641d20;
+  font-size: 23px;
+  font-weight: 900;
+  margin: 10px 0;
+}
+
+.loyalty-benefits-heading p {
+  color: #805b43;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.loyalty-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.loyalty-benefit-card {
+  padding: 25px 15px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #ead9bd;
+  border-radius: 20px;
+  box-shadow: 0 7px 20px rgba(70, 30, 25, 0.06);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.loyalty-benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 13px 27px rgba(100, 29, 32, 0.12);
+}
+
+.loyalty-benefit-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #fff0d8, #f5dfb9);
+  font-size: 27px;
+}
+
+.loyalty-benefit-card h4 {
+  color: #762027;
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.loyalty-benefit-card p {
+  color: #765c4d;
+  font-size: 13px;
+  line-height: 2;
+  margin: 0;
+}
+
+.loyalty-benefit-card.gold-benefit {
+  background: linear-gradient(145deg, #fff9e9, #ffedc5);
+  border: 2px solid #d9ad61;
+  box-shadow: 0 8px 23px rgba(145, 91, 24, 0.12);
+}
+
+.gold-benefit .loyalty-benefit-icon {
+  background: linear-gradient(145deg, #ffe8a8, #e8bd62);
+}
+
+.gold-benefit h4 {
+  color: #805414;
+}
+
+@media (max-width: 900px) {
+  .loyalty-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .loyalty-benefits {
+    padding: 22px 14px;
+  }
+
+  .loyalty-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .loyalty-benefits-heading h3 {
+    font-size: 20px;
+  }
+}
