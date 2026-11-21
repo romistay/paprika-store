@@ -2280,14 +2280,34 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   direction: rtl;
 }
 
+
+/* ===== PAPRIKA LUXURY MENU BANNER ===== */
 .sandwich-menu-banner {
+  position: relative;
   width: 100%;
-  margin: 25px 0 35px;
-  padding: 0;
+  margin: 30px 0 40px;
+  padding: 6px;
+  box-sizing: border-box;
   overflow: hidden;
-  border-radius: 24px;
-  background: #641d20;
-  box-shadow: 0 15px 35px rgba(80, 20, 20, 0.18);
+  border-radius: 27px;
+  background: linear-gradient(
+    135deg,
+    #d9ad61,
+    #fff0c9,
+    #a8752b,
+    #f3d99e
+  );
+  box-shadow:
+    0 15px 35px rgba(80, 20, 20, 0.16),
+    0 4px 12px rgba(145, 91, 24, 0.12);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.sandwich-menu-banner:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 42px rgba(80, 20, 20, 0.22),
+    0 7px 18px rgba(145, 91, 24, 0.18);
 }
 
 .sandwich-menu-banner img {
@@ -2296,8 +2316,9 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 21px;
 }
+
 
 .sandwich-menu-panel {
   width: 100%;
