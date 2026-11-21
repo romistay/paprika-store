@@ -412,6 +412,7 @@ setQuantity(1);
           <a href="#products">فروشگاه</a>
           <a href="#about">درباره ما</a>
           <a href="#loyalty">باشگاه مشتریان</a>
+          <a href="#loyalty-faq">سؤالات متداول</a>
         </nav>
        <button
   className="cart"
