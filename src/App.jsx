@@ -133,7 +133,20 @@ const sausageProducts = [
   { id: 16, name: "کودکان سویق‌دار مرغی", weight: "۵۰۰ گرم", price: 740000 },
   { id: 17, name: "کودکان سویق‌دار میکس پنیری", weight: "۵۰۰ گرم", price: 830000 },
 ];
-
+const frozenProducts = [
+  {
+    id: 1,
+    name: "ناگت مرغ",
+    weight: "۵۰۰ گرم",
+    price: 710000,
+  },
+  {
+    id: 2,
+    name: "فلافل",
+    weight: "۵۰۰ گرم",
+    price: 375000,
+  },
+];
 const hamburgerProducts = [
   { id: 1, name: "برگر مرغ ۹۰٪", weight: "۵۰۰ گرم", price: 645000 },
   { id: 2, name: "برگر مرغ دودی", weight: "۵۰۰ گرم", price: 690000 },
