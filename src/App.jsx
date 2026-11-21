@@ -1329,11 +1329,62 @@ setShowHamburgerMenu(false);
 
 </div>
 
-<div className="contest-footer">
-  <span>🎁</span>
-  <strong>هیجان، رقابت و سورپرایزهای ویژه در راه است!</strong>
-  <span>❤️</span>
-</div>
+
+  <div className="contest-challenges">
+
+    <div className="contest-challenges-heading">
+      <span>🎯 دنیای چالش‌های پاپریکا</span>
+      <h2>آماده‌ای خودت را به چالش بکشی؟</h2>
+      <p>
+        هر دوره یک رقابت تازه، یک تجربه متفاوت و کلی هیجان!
+      </p>
+    </div>
+
+    <div className="contest-challenges-grid">
+
+      <div className="contest-challenge-card">
+        <div className="challenge-icon">👅</div>
+        <span>CHALLENGE 01</span>
+        <h3>چالش حدس طعم</h3>
+        <p>
+          سرنخ‌ها را دنبال کن، طعم را حدس بزن
+          و شانس خودت را برای برنده‌شدن امتحان کن!
+        </p>
+        <div className="challenge-status">به‌زودی</div>
+      </div>
+
+      <div className="contest-challenge-card">
+        <div className="challenge-icon">🧠</div>
+        <span>CHALLENGE 02</span>
+        <h3>چالش شناخت محصولات</h3>
+        <p>
+          چقدر محصولات پاپریکا را می‌شناسی؟
+          دانسته‌هایت را در یک رقابت جذاب محک بزن.
+        </p>
+        <div className="challenge-status">به‌زودی</div>
+      </div>
+
+      <div className="contest-challenge-card">
+        <div className="challenge-icon">🎯</div>
+        <span>CHALLENGE 03</span>
+        <h3>چالش ویژه مشتریان</h3>
+        <p>
+          رقابت‌های اختصاصی برای اعضای خانواده پاپریکا
+          با سورپرایزهای دوست‌داشتنی.
+        </p>
+        <div className="challenge-status">به‌زودی</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div className="contest-footer">
+    <span>🎁</span>
+    <strong>هیجان، رقابت و سورپرایزهای ویژه در راه است!</strong>
+    <span>❤️</span>
+  </div>
+
 
 </section>
 
