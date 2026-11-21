@@ -3637,3 +3637,127 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     font-size: 18px;
   }
 }
+
+/* ===== PAPRIKA LUXURY CART - PRODUCT CARDS ===== */
+
+.cart-page .cart-item {
+  display: grid;
+  grid-template-columns: 115px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 22px;
+  background: linear-gradient(145deg, #ffffff, #fffaf2);
+  border: 1px solid #ead4ae;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(75, 35, 20, 0.07);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cart-page .cart-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(75, 35, 20, 0.12);
+}
+
+.cart-page .cart-item img {
+  width: 115px;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 17px;
+  border: 2px solid #f0dfc2;
+}
+
+.cart-page .cart-item-info {
+  min-width: 0;
+  text-align: right;
+}
+
+.cart-page .cart-item-info h3 {
+  margin: 0 0 10px;
+  color: #641d20;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.cart-page .cart-item-info p {
+  margin: 5px 0;
+  color: #72513d;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.cart-page .remove-cart-item {
+  align-self: center;
+  background: #fff0e9;
+  color: #a52e17;
+  border: 1px solid #edc3b2;
+  border-radius: 12px;
+  font-weight: 800;
+  transition: all .2s ease;
+}
+
+.cart-page .remove-cart-item:hover {
+  background: #a52e17;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .cart-page .cart-item {
+    grid-template-columns: 75px minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .cart-page .cart-item img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .cart-page .cart-item-info h3 {
+    font-size: 15px;
+  }
+
+  .cart-page .cart-item-info p {
+    font-size: 12px;
+  }
+
+  .cart-page .remove-cart-item {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
+
+/* ===== PAPRIKA LUXURY CART - TOTAL PRICE ===== */
+
+.cart-page .cart-total {
+  width: 100%;
+  max-width: 850px;
+  box-sizing: border-box;
+  margin: 25px auto;
+  padding: 20px 24px;
+  background: linear-gradient(120deg, #641d20, #a33329);
+  border: 1px solid #d9ad61;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(100, 29, 32, 0.18);
+  text-align: center;
+}
+
+.cart-page .cart-total h3 {
+  margin: 0;
+  color: #fff8e9;
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 2;
+}
+
+@media (max-width: 600px) {
+  .cart-page .cart-total {
+    padding: 16px 12px;
+  }
+
+  .cart-page .cart-total h3 {
+    font-size: 15px;
+  }
+}
