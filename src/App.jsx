@@ -130,6 +130,8 @@ const sausageProducts = [
   { id: 13, name: "هات‌داگ چیلی", weight: "۵۰۰ گرم", price: 710000 },
   { id: 14, name: "کوکتل مرغ دودی", weight: "۵۰۰ گرم", price: 690000 },
   { id: 15, name: "کوکتل میکس", weight: "۵۰۰ گرم", price: 770000 },
+  { id: 16, name: "کودکان سویق‌دار مرغی", weight: "۵۰۰ گرم", price: 740000 },
+  { id: 17, name: "کودکان سویق‌دار میکس پنیری", weight: "۵۰۰ گرم", price: 830000 },
 ];
 
 const hamburgerProducts = [
