@@ -4539,3 +4539,108 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     font-size: 13px;
   }
 }
+
+/* ===== PAPRIKA LUXURY CONTESTS SECTION ===== */
+
+.paprika-contests {
+  position: relative;
+  overflow: hidden;
+  margin: 45px 5%;
+  padding: 55px 25px;
+  text-align: center;
+  border: 2px solid #d9ad61;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #641d20, #842b2b, #4b1519);
+  box-shadow: 0 15px 38px rgba(100, 29, 32, 0.2);
+}
+
+.contest-decoration {
+  width: 85px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+  border: 2px solid #e8bd62;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #fff0c9, #d9ad61);
+  font-size: 43px;
+  box-shadow: 0 8px 22px rgba(217, 173, 97, 0.25);
+}
+
+.contest-label {
+  display: block;
+  color: #f3d99e;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.paprika-contests h2 {
+  color: #fff5df;
+  font-size: 32px;
+  font-weight: 900;
+  margin: 12px 0 22px;
+}
+
+.contest-coming-soon {
+  display: inline-block;
+  padding: 10px 35px;
+  border: 1px solid #e8bd62;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #f5dfad, #d9ad61);
+  color: #641d20;
+  font-size: 25px;
+  font-weight: 900;
+  box-shadow: 0 6px 18px rgba(217, 173, 97, 0.2);
+}
+
+.paprika-contests > p {
+  max-width: 650px;
+  margin: 25px auto;
+  color: #fff3df;
+  font-size: 16px;
+  line-height: 2.2;
+}
+
+.contest-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #f3d99e;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.contest-footer span {
+  font-size: 19px;
+}
+
+@media (max-width: 600px) {
+  .paprika-contests {
+    margin: 30px 4%;
+    padding: 38px 17px;
+    border-radius: 23px;
+  }
+
+  .paprika-contests h2 {
+    font-size: 24px;
+  }
+
+  .contest-decoration {
+    width: 72px;
+    height: 72px;
+    font-size: 36px;
+  }
+
+  .contest-coming-soon {
+    font-size: 21px;
+    padding: 9px 28px;
+  }
+
+  .paprika-contests > p {
+    font-size: 13px;
+  }
+}
