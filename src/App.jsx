@@ -565,10 +565,10 @@ setShowHotDogMenu(false);
     alt="Persian Kebab Loghmeh Feast"
   />
 ) : showHotDogMenu ? (
-  <>
-    <h2>هات‌داگ پاپریکا</h2>
-    <p>هات‌داگ‌های خوش‌طعم و باکیفیت پاپریکا</p>
-  </>
+  <img
+    src="/paprika-store/paprika-hotdog-banner.png.png"
+    alt="بنر هات‌داگ پاپریکا"
+  />
 ) : showColdCutMenu ? (
   <img
    src="/paprika-store/paprika-coldcut-banner.png.png"
