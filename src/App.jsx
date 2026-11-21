@@ -1111,6 +1111,22 @@ setShowHamburgerMenu(false);
   </div>
 </div>
 
+<div className="loyalty-period-info">
+  <div className="loyalty-period-icon">📅</div>
+  <div className="loyalty-period-content">
+    <h3>دوره محاسبه خرید و ارتقای عضویت</h3>
+    <p>
+      دوره محاسبه مجموع خرید هر عضو، از تاریخ اولین ثبت‌نام او در
+      باشگاه مشتریان پاپریکا آغاز می‌شود و به مدت یک سال کامل ادامه دارد.
+    </p>
+    <p>
+      با رسیدن به حدنصاب خرید هر سطح، عضویت شما بلافاصله ارتقا پیدا
+      می‌کند و تخفیف همان سطح در سفارش بعدی برای شما اعمال می‌شود.
+    </p>
+    <span>محاسبه خرید بر اساس سال عضویت شماست، نه سال شمسی.</span>
+  </div>
+</div>
+
 </section>
 
 <section className="products" id="products">
