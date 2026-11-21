@@ -131,6 +131,15 @@ const sausageProducts = [
   { id: 14, name: "کوکتل مرغ دودی", weight: "۵۰۰ گرم", price: 690000 },
   { id: 15, name: "کوکتل میکس", weight: "۵۰۰ گرم", price: 770000 },
 ];
+
+const hamburgerProducts = [
+  { id: 1, name: "برگر مرغ ۹۰٪", weight: "۵۰۰ گرم", price: 645000 },
+  { id: 2, name: "برگر مرغ دودی", weight: "۵۰۰ گرم", price: 690000 },
+  { id: 3, name: "برگر قفقازی", weight: "۵۰۰ گرم", price: 1100000 },
+  { id: 4, name: "برگر گوشت ۹۰٪", weight: "۵۰۰ گرم", price: 1350000 },
+  { id: 5, name: "برگر گوشت ۶۰٪", weight: "۵۰۰ گرم", price: 780000 },
+];
+
 const sandwichFlavors = [
   "مارتادلا",
   "مارتادلا ویژه",
@@ -265,6 +274,7 @@ const [submittedReviews, setSubmittedReviews] = React.useState([]);
   const [selectedWeight, setSelectedWeight] = React.useState("");
   const [showSandwichMenu, setShowSandwichMenu] = React.useState(false);
   const [showKebabMenu, setShowKebabMenu] = React.useState(false);
+  const [showHamburgerMenu, setShowHamburgerMenu] = React.useState(false);
   const [showColdCutMenu, setShowColdCutMenu] = React.useState(false);
   const [showHotDogMenu, setShowHotDogMenu] = React.useState(false);
 const [showFrozenMenu, setShowFrozenMenu] = React.useState(false);
@@ -284,10 +294,12 @@ const addToCart = () => {
     return;
   }
 
+
 const productPrice =
   selectedProduct.category === "kebab" ||
   selectedProduct.category === "coldcut" ||
-  selectedProduct.category === "sausage"
+  selectedProduct.category === "sausage" ||
+  selectedProduct.category === "hamburger"
     ? selectedProduct.price
     : selectedProduct.id === 6
     ? selectedProduct.price
@@ -301,7 +313,8 @@ const newItem = {
   weight:
     selectedProduct.category === "kebab" ||
     selectedProduct.category === "coldcut" ||
-    selectedProduct.category === "sausage"
+    selectedProduct.category === "sausage" ||
+    selectedProduct.category === "hamburger"
       ? selectedProduct.weight
       : selectedProduct.id === 5
       ? selectedWeight
@@ -311,6 +324,7 @@ const newItem = {
   price: productPrice,
   quantity: quantity,
 };
+
 
 setCart((prevCart) => [...prevCart, newItem]);
 setIsCartOpen(true);
@@ -607,6 +621,31 @@ setShowHotDogMenu(false);
   </div>
 )}
 
+{showHamburgerMenu && (
+  <div className="sandwich-flavor-grid">
+    {hamburgerProducts.map((item) => (
+      <button
+        key={item.id}
+        onClick={() => {
+          setSelectedProduct({
+            ...item,
+            id: 200 + item.id,
+            category: "hamburger",
+            image: "/paprika-store/topimage-classic-hamburger-2019m04-800x534-curiosa-min.jpg",
+            description: "همبرگر باکیفیت پاپریکا",
+          });
+          setQuantity(1);
+          setShowHamburgerMenu(false);
+        }}
+      >
+        <span className="flavor-title">{item.name}</span>
+        <span className="flavor-description">{item.weight}</span>
+        <span>{item.price.toLocaleString("fa-IR")} تومان</span>
+      </button>
+    ))}
+  </div>
+)}
+
 {showColdCutMenu && (
   <div className="sandwich-flavor-grid">
     {coldCutProducts.map((item) => (
@@ -727,7 +766,8 @@ setShowHotDogMenu(false);
   </div>
 {(selectedProduct.category === "kebab" ||
   selectedProduct.category === "coldcut" ||
-  selectedProduct.category === "sausage") && (
+  selectedProduct.category === "sausage" ||
+  selectedProduct.category === "hamburger") && (
   <p className="selected-price">
     وزن: {selectedProduct.weight}
     {" "} | قیمت:{" "}
@@ -737,7 +777,7 @@ setShowHotDogMenu(false);
 )}
 </section>
 )}
- {!selectedProduct && !showSandwichMenu && !showKebabMenu && !showFrozenMenu && !showColdCutMenu && !showHotDogMenu && (
+!selectedProduct && !showSandwichMenu && !showKebabMenu && !showFrozenMenu && !showColdCutMenu && !showHotDogMenu && !showHamburgerMenu
   <>
         <section className="hero">
               <div className="hero-art"></div>
@@ -784,9 +824,19 @@ onClick={() => {
     setSelectedProduct(null);
     setQuantity(1);
   }
+else if (item.title === "همبرگر") {
+  setShowHamburgerMenu(true);
+  setShowKebabMenu(false);
+  setShowFrozenMenu(false);
+  setShowColdCutMenu(false);
+  setShowSandwichMenu(false);
+  setShowHotDogMenu(false);
+  setSelectedProduct(null);
+  setQuantity(1);
+}
 }}
 style={{
-  cursor: ["ساندویچ سرد", "کباب لقمه", "محصولات فریزری"].includes(item.title)
+  cursor: ["ساندویچ سرد", "کباب لقمه", "محصولات فریزری", "همبرگر"].includes(item.title)
     ? "pointer"
     : "default",
 }}
