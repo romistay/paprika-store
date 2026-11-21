@@ -1131,6 +1131,7 @@ setShowHamburgerMenu(false);
 
 </section>
 
+
 <section className="referral-section" id="referral">
 
   <div className="referral-heading">
@@ -1150,17 +1151,59 @@ setShowHamburgerMenu(false);
       <p>شماره دوستت را وارد کن و لینک فروشگاه پاپریکا را برایش بفرست.</p>
 
       <input
+        id="referral-phone"
         type="tel"
         placeholder="شماره موبایل دوستت"
         className="referral-phone"
         dir="ltr"
+        maxLength="15"
       />
 
-      <button type="button" className="referral-whatsapp">
+      <button
+        type="button"
+        className="referral-whatsapp"
+        onClick={() => {
+          const input = document.getElementById("referral-phone");
+          let phone = input.value.replace(/\D/g, "");
+
+          if (phone.startsWith("0")) phone = "98" + phone.slice(1);
+          else if (phone.startsWith("9")) phone = "98" + phone;
+
+          if (!/^989\d{9}$/.test(phone)) {
+            alert("لطفاً شماره موبایل معتبر وارد کن.");
+            return;
+          }
+
+          const link = window.location.origin + window.location.pathname;
+          const message = `سلام! 🌹 دوست دارم تو هم با خانواده پاپریکا آشنا بشی. از این لینک وارد فروشگاه شو:\n${link}`;
+
+          window.open(
+            `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
+            "_blank"
+          );
+        }}
+      >
         دعوت از طریق واتساپ
       </button>
 
-      <button type="button" className="referral-sms">
+      <button
+        type="button"
+        className="referral-sms"
+        onClick={() => {
+          const input = document.getElementById("referral-phone");
+          let phone = input.value.replace(/\D/g, "");
+
+          if (!/^09\d{9}$/.test(phone)) {
+            alert("لطفاً شماره موبایل معتبر وارد کن.");
+            return;
+          }
+
+          const link = window.location.origin + window.location.pathname;
+          const message = `سلام! 🌹 به خانواده پاپریکا دعوتی. از این لینک وارد فروشگاه شو: ${link}`;
+
+          window.location.href = `sms:${phone}?body=${encodeURIComponent(message)}`;
+        }}
+      >
         دعوت از طریق پیامک
       </button>
     </div>
@@ -1170,11 +1213,22 @@ setShowHamburgerMenu(false);
       <h3>کد معرف اختصاصی تو</h3>
       <p>کد معرفت را برای دوستانت بفرست تا هنگام خرید از آن استفاده کنند.</p>
 
-      <div className="referral-code">
+      <div className="referral-code" id="referral-code">
         PAPRIKA-XXXX
       </div>
 
-      <button type="button" className="referral-copy">
+      <button
+        type="button"
+        className="referral-copy"
+        onClick={async () => {
+          try {
+            await navigator.clipboard.writeText("PAPRIKA-XXXX");
+            alert("کد معرف کپی شد! 🎁");
+          } catch (error) {
+            alert("کپی خودکار امکان‌پذیر نبود.");
+          }
+        }}
+      >
         کپی کد معرف
       </button>
     </div>
@@ -1187,6 +1241,7 @@ setShowHamburgerMenu(false);
   </div>
 
 </section>
+
 
 <section className="loyalty-faq" id="loyalty-faq">
   <div className="loyalty-faq-heading">
