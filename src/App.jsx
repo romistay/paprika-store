@@ -567,9 +567,10 @@ setShowHotDogMenu(false);
   <img
     src="/paprika-store/paprika-hotdog-banner.png.png"
     alt="بنر انواع سوسیس پاپریکا"
+  />
 ) : showColdCutMenu ? (
   <img
-   src="/paprika-store/paprika-coldcut-banner.png.png"
+    src="/paprika-store/paprika-coldcut-banner.png.png"
     alt="پاپریکا؛ طعم تازه و باکیفیت"
   />
 ) : (
