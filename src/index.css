@@ -3986,3 +3986,148 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   color: #762027;
   font-weight: 900;
 }
+
+/* ===== PAPRIKA PREMIUM LOYALTY CLUB ===== */
+
+.loyalty-section {
+  padding: 55px 25px;
+  margin: 45px 0;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #fffaf1, #ffffff, #fff4e3);
+  border: 1px solid #ead5b4;
+  box-shadow: 0 12px 35px rgba(100, 29, 32, 0.07);
+}
+
+.loyalty-section .section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.loyalty-section .section-heading span {
+  color: #b17a28;
+  font-weight: 900;
+}
+
+.loyalty-section .section-heading h2 {
+  color: #641d20;
+  font-weight: 900;
+}
+
+.loyalty-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+.loyalty-card {
+  padding: 30px 18px;
+  text-align: center;
+  border-radius: 23px;
+  transition: transform .3s ease, box-shadow .3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+}
+
+.loyalty-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 17px 32px rgba(0, 0, 0, .13);
+}
+
+.loyalty-card h3 {
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.loyalty-card strong {
+  display: block;
+  font-size: 30px;
+  margin: 18px 0;
+  font-weight: 900;
+}
+
+.loyalty-card p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.loyalty-card.turquoise {
+  background: linear-gradient(145deg, #d9f5f1, #8bd5cd);
+  color: #075e59;
+  border: 2px solid #55bdb2;
+}
+
+.loyalty-card.silver {
+  background: linear-gradient(145deg, #ffffff, #d8dce2);
+  color: #4d5663;
+  border: 2px solid #aeb6c1;
+}
+
+.loyalty-card.gold {
+  background: linear-gradient(145deg, #fff4d5, #e8bd62);
+  color: #79500d;
+  border: 2px solid #c99a3e;
+}
+
+.loyalty-demo {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #ead5b4;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(70, 30, 25, .06);
+}
+
+.loyalty-demo h3 {
+  color: #641d20;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.loyalty-demo label {
+  display: block;
+  margin-bottom: 10px;
+  color: #762027;
+  font-weight: 800;
+}
+
+.loyalty-demo input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dfc59c;
+  border-radius: 13px;
+  font-family: inherit;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.loyalty-demo input:focus {
+  border-color: #b17a28;
+  box-shadow: 0 0 0 3px rgba(177, 122, 40, .12);
+}
+
+.loyalty-demo p {
+  margin-top: 18px;
+  color: #641d20;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .loyalty-section {
+    padding: 35px 15px;
+  }
+
+  .loyalty-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .loyalty-card {
+    padding: 24px 15px;
+  }
+
+  .loyalty-demo {
+    padding: 20px;
+  }
+}
