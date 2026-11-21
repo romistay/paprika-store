@@ -1131,6 +1131,63 @@ setShowHamburgerMenu(false);
 
 </section>
 
+<section className="referral-section" id="referral">
+
+  <div className="referral-heading">
+    <span>🎁 PAPRIKA FRIENDS CLUB</span>
+    <h2>دوستت رو دعوت کن، هدیه بگیر!</h2>
+    <p>
+      دوستانت را به خانواده پاپریکا دعوت کن.
+      با خرید موفق آن‌ها، هدیه و امتیاز باشگاه مشتریان دریافت کن.
+    </p>
+  </div>
+
+  <div className="referral-content">
+
+    <div className="referral-card">
+      <div className="referral-icon">📱</div>
+      <h3>دعوت با شماره موبایل</h3>
+      <p>شماره دوستت را وارد کن و لینک فروشگاه پاپریکا را برایش بفرست.</p>
+
+      <input
+        type="tel"
+        placeholder="شماره موبایل دوستت"
+        className="referral-phone"
+        dir="ltr"
+      />
+
+      <button type="button" className="referral-whatsapp">
+        دعوت از طریق واتساپ
+      </button>
+
+      <button type="button" className="referral-sms">
+        دعوت از طریق پیامک
+      </button>
+    </div>
+
+    <div className="referral-card referral-code-card">
+      <div className="referral-icon">🎟️</div>
+      <h3>کد معرف اختصاصی تو</h3>
+      <p>کد معرفت را برای دوستانت بفرست تا هنگام خرید از آن استفاده کنند.</p>
+
+      <div className="referral-code">
+        PAPRIKA-XXXX
+      </div>
+
+      <button type="button" className="referral-copy">
+        کپی کد معرف
+      </button>
+    </div>
+
+  </div>
+
+  <div className="referral-reward">
+    <span>🏆</span>
+    <strong>هر خرید موفق با کد معرف تو، یک هدیه و امتیاز بیشتر برای تو!</strong>
+  </div>
+
+</section>
+
 <section className="loyalty-faq" id="loyalty-faq">
   <div className="loyalty-faq-heading">
     <span>پاسخ به پرسش‌های شما</span>
