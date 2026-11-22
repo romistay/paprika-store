@@ -762,10 +762,74 @@ setShowHamburgerMenu(false);
     </button>
 
 
-<div className="sandwich-menu-banner">
-  <h2>محصولات فریزری پاپریکا</h2>
-  <p>محصولات باکیفیت پاپریکا</p>
-</div>
+{showColdCutMenu && (
+  <div className="sandwich-menu-banner sandwich-text-banner">
+    <div className="sandwich-banner-content">
+      <span className="sandwich-banner-label">PAPRIKA SPECIAL</span>
+      <h2>انواع کالباس پاپریکا</h2>
+      <p>طعم دلپذیر و کیفیتی که در هر لقمه احساس می‌کنید</p>
+      <span className="sandwich-banner-decoration">🥩</span>
+    </div>
+  </div>
+)}
+
+{showFrozenMenu && (
+  <div className="sandwich-menu-banner sandwich-text-banner">
+    <div className="sandwich-banner-content">
+      <span className="sandwich-banner-label">PAPRIKA SPECIAL</span>
+      <h2>محصولات فریزری پاپریکا</h2>
+      <p>محصولات آماده و باکیفیت برای تجربه یک غذای خوشمزه</p>
+      <span className="sandwich-banner-decoration">❄️</span>
+    </div>
+  </div>
+)}
+
+{showHamburgerMenu && (
+  <div className="sandwich-menu-banner sandwich-text-banner">
+    <div className="sandwich-banner-content">
+      <span className="sandwich-banner-label">PAPRIKA SPECIAL</span>
+      <h2>همبرگر پاپریکا</h2>
+      <p>لذیذ، باکیفیت و آماده برای یک وعده خوشمزه</p>
+      <span className="sandwich-banner-decoration">🍔</span>
+    </div>
+  </div>
+)}
+
+{showKebabMenu && (
+  <div className="sandwich-menu-banner sandwich-text-banner">
+    <div className="sandwich-banner-content">
+      <span className="sandwich-banner-label">PAPRIKA SPECIAL</span>
+      <h2>انواع کباب لقمه پاپریکا</h2>
+      <p>طعمی اصیل، کیفیتی ممتاز و لذتی فراموش‌نشدنی</p>
+      <span className="sandwich-banner-decoration">🍢</span>
+    </div>
+  </div>
+)}
+
+{showKebabMenu && (
+  <div className="sandwich-flavor-grid">
+    {kebabProducts.map((item) => (
+      <button
+        key={item.id}
+        onClick={() => {
+          setSelectedProduct({
+            ...item,
+            id: 100 + item.id,
+            category: "kebab",
+            image: "/paprika-store/Besharat-Burger-06.jpg",
+            description: "انواع کباب لقمه باکیفیت پاپریکا",
+          });
+          setQuantity(1);
+          setShowKebabMenu(false);
+        }}
+      >
+        <span className="flavor-title">{item.name}</span>
+        <span className="flavor-description">{item.weight}</span>
+        <span>{item.price.toLocaleString("fa-IR")} تومان</span>
+      </button>
+    ))}
+  </div>
+)}
 
 {showHamburgerMenu && (
   <div className="sandwich-flavor-grid">
@@ -789,6 +853,17 @@ setShowHamburgerMenu(false);
         <span>{item.price.toLocaleString("fa-IR")} تومان</span>
       </button>
     ))}
+  </div>
+)}
+
+{showHotDogMenu && (
+  <div className="sandwich-menu-banner sandwich-text-banner">
+    <div className="sandwich-banner-content">
+      <span className="sandwich-banner-label">PAPRIKA SPECIAL</span>
+      <h2>انواع سوسیس پاپریکا</h2>
+      <p>تنوعی از طعم‌های خوشمزه با کیفیتی متفاوت</p>
+      <span className="sandwich-banner-decoration">🌭</span>
+    </div>
   </div>
 )}
 
@@ -816,7 +891,8 @@ setShowHamburgerMenu(false);
     ))}
   </div>
 )}
-   {showFrozenMenu && (
+
+{showFrozenMenu && (
   <div className="sandwich-flavor-grid">
     {frozenProducts.map((item) => (
       <button
@@ -839,7 +915,8 @@ setShowHamburgerMenu(false);
       </button>
     ))}
   </div>
-)} 
+)}
+
 {showHotDogMenu && (
   <div className="sandwich-flavor-grid">
     {sausageProducts.map((item) => (
@@ -851,7 +928,7 @@ setShowHamburgerMenu(false);
             id: 300 + item.id,
             category: "sausage",
             image: "/paprika-store/WhatsApp%20Image%202026-11-19%20at%2022.40.06%281%29.jpeg",
-           description: "انواع سوسیس باکیفیت پاپریکا",
+            description: "انواع سوسیس باکیفیت پاپریکا",
           });
           setQuantity(1);
           setShowHotDogMenu(false);
@@ -864,8 +941,10 @@ setShowHamburgerMenu(false);
     ))}
   </div>
 )}
-  </section>
+
+</section>
 )}
+
 
 
 {selectedProduct && (
