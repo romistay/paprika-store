@@ -251,7 +251,7 @@ pointer-events: none;
 
 .category-card p {
   color: #8b7770;
-  font-size: 13px;
+  font-size: 19px;
   line-height: 1.9;
   margin: 0;
 }
@@ -426,16 +426,15 @@ footer small {
   }
 
   .header nav {
-    gap: 14px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
- .header nav a {
+.header nav a {
   font-size: 20px;
   font-weight: 800;
 }
-
   .cart {
     padding: 13px 19px;
     font-size: 15px;
@@ -478,9 +477,9 @@ footer small {
   }
 
   .header nav a {
-    font-size: 13px;
-    white-space: nowrap;
-  }
+  font-size: 14px;
+  white-space: nowrap;
+}
 
   .logo img {
     height: 48px;
@@ -1544,16 +1543,17 @@ footer small {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 25px;
-  padding: 12px 5%;
+  gap: 28px;
+  padding: 17px 5%;
+  min-height: 105px;
   background: linear-gradient(110deg, #4a160f, #7d2518, #4a160f);
   border-bottom: 3px solid #d9a441;
   box-shadow: 0 5px 22px rgba(50, 15, 8, 0.2);
 }
 
 .header .logo img {
-  width: 85px;
-  height: 65px;
+  width: 105px;
+  height: 78px;
   object-fit: contain;
   border-radius: 12px;
 }
@@ -1562,15 +1562,16 @@ footer small {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
 }
 
 .header nav a {
   color: #fff5e5;
   text-decoration: none;
   font-family: 'Vazirmatn', Tahoma, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: 800;
+  white-space: nowrap;
   transition: 0.3s ease;
 }
 
@@ -1585,9 +1586,9 @@ footer small {
   color: #542013;
   border: none;
   border-radius: 14px;
-  padding: 12px 19px;
+  padding: 16px 23px;
   font-family: 'Vazirmatn', Tahoma, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 900;
   cursor: pointer;
   transition: 0.3s ease;
@@ -1597,7 +1598,6 @@ footer small {
   transform: translateY(-3px);
   box-shadow: 0 7px 18px rgba(0, 0, 0, 0.2);
 }
-
 .header .cart-count {
   display: inline-flex;
   align-items: center;
@@ -1632,14 +1632,14 @@ footer small {
     gap: 15px;
   }
 
-  .header nav a {
-    font-size: 12px;
-  }
+.header nav {
+  gap: 30px;
+}
 
   .header .cart {
-    padding: 10px 13px;
-    font-size: 12px;
-  }
+  padding: 15px 23px;
+  font-size: 16px;
+}
 }
 
 /* PAPRIKA PREMIUM HERO */
