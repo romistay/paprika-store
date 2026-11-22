@@ -5952,3 +5952,146 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     font-size: 38px;
   }
 }
+
+/* PAPRIKA - Luxury Category Cards */
+
+.categories {
+  padding: 65px 20px;
+  background: linear-gradient(180deg, #fffaf8 0%, #ffffff 100%);
+}
+
+.categories .section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.categories .section-heading span {
+  display: inline-block;
+  color: #bd2635;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.categories .section-heading h2 {
+  color: #65101b;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 205px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(145deg, #ffffff, #fff7f4);
+  border: 1px solid #f0d8d5;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(100, 15, 25, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #8e101c, #e64a42, #d6a45c);
+}
+
+.category-card:hover {
+  transform: translateY(-9px);
+  border-color: #c52d3c;
+  box-shadow: 0 16px 35px rgba(150, 20, 35, 0.15);
+}
+
+.category-icon {
+  width: 78px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fff0e9, #ffe0d8);
+  box-shadow: inset 0 0 0 1px rgba(190, 40, 50, 0.12);
+  font-size: 39px;
+  margin-bottom: 17px;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+  transform: scale(1.12) rotate(-5deg);
+}
+
+.category-card h3 {
+  color: #761421;
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0 0 10px;
+}
+
+.category-card p {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .category-card {
+    min-height: 190px;
+    padding: 23px 12px;
+  }
+
+  .categories .section-heading h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 450px) {
+  .category-grid {
+    gap: 12px;
+  }
+
+  .category-card {
+    min-height: 175px;
+    border-radius: 17px;
+    padding: 20px 8px;
+  }
+
+  .category-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 32px;
+    margin-bottom: 13px;
+  }
+
+  .category-card h3 {
+    font-size: 16px;
+  }
+
+  .category-card p {
+    font-size: 11px;
+  }
+}
