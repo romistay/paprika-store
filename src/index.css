@@ -2310,7 +2310,7 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   .sandwich-flavor-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
+}
   
 
 .sandwich-flavor-grid {
