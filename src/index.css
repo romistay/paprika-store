@@ -3918,14 +3918,16 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     height: 170px;
   }
 
- .product-card {
-  padding: 11px;
-  border-radius: 18px;
-}
-.product-card strong {
-  font-size: 14px;
-  margin: 10px 0;
-  line-height: 1.7;
+  .product-card {
+    padding: 11px;
+    border-radius: 18px;
+  }
+
+  .product-card strong {
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 1.7;
+  }
 }
 @media (max-width: 420px) {
   .product-grid {
