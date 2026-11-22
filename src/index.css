@@ -6352,3 +6352,53 @@ pointer-events: none;
   z-index: 5;
   cursor: pointer;
 }
+/* PAPRIKA QUANTITY CONTROL */
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0 18px;
+}
+
+.quantity-control button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d9a65a;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fff2d8, #f4dfb5);
+  color: #641d20;
+  font-size: 25px;
+  font-weight: 900;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.quantity-control input {
+  width: 65px;
+  height: 44px;
+  text-align: center;
+  border: 1px solid #ead8bd;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 800;
+}
+@media (max-width: 700px) {
+  .quantity-control {
+    gap: 16px;
+    margin: 15px 0 20px;
+  }
+
+  .quantity-control button {
+    width: 48px;
+    height: 48px;
+    font-size: 27px;
+  }
+
+  .quantity-control input {
+    width: 70px;
+    height: 48px;
+    font-size: 18px;
+  }
+}
