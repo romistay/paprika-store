@@ -279,7 +279,7 @@ const sandwichPrices = {
 
 export default function App() {
   const [showReviewForm, setShowReviewForm] = React.useState(false);
-
+const [selectedGalleryImage, setSelectedGalleryImage] = React.useState(null);
   const [reviewName, setReviewName] = React.useState("");
   const [reviewRating, setReviewRating] = React.useState("");
   const [reviewText, setReviewText] = React.useState("");
