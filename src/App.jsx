@@ -1039,21 +1039,38 @@ setShowHamburgerMenu(false);
           </p>
         )}
 
-        <div className="purchase-options">
-          <label>تعداد موردنظر:</label>
-          <input
-            type="number"
-            min="1"
-            value={quantity}
-            onChange={(e) =>
-              setQuantity(Math.max(1, Number(e.target.value)))
-            }
-          />
+   <div className="purchase-options">
+  <label>تعداد موردنظر:</label>
 
-          <button onClick={addToCart}>
-            🛒 افزودن به سبد خرید
-          </button>
-        </div>
+  <div className="quantity-control">
+    <button
+      type="button"
+      onClick={() => setQuantity(prev => Math.max(1, Number(prev) - 1))}
+    >
+      −
+    </button>
+
+    <input
+      type="number"
+      min="1"
+      value={quantity}
+      onChange={(e) =>
+        setQuantity(Math.max(1, Number(e.target.value)))
+      }
+    />
+
+    <button
+      type="button"
+      onClick={() => setQuantity(prev => Number(prev) + 1)}
+    >
+      +
+    </button>
+  </div>
+
+  <button onClick={addToCart}>
+    🛒 افزودن به سبد خرید
+  </button>
+</div>
       </div>
     </div>
   </section>
