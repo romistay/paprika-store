@@ -779,7 +779,7 @@ setShowHamburgerMenu(false);
     />
   ) : showHamburgerMenu ? (
     <img
-      src="/paprika-store/Besharat-Burger-06.jpg"
+      src="/paprika-store/paprika-hamburger-banner.png.png"
       alt="بنر همبرگر پاپریکا"
     />
   ) : (
@@ -1092,16 +1092,7 @@ setShowHamburgerMenu(false);
                 : "default",
             }}
           >
-           {item.title === "همبرگر" ? (
-  <img
-    className="category-banner"
-   src="/paprika-store/paprika-hamburger-banner.png.png"
-    alt="همبرگر پاپریکا"
-  />
-) : (
-  <span className="category-icon">{item.icon}</span>
-)}
-
+          <span className="category-icon">{item.icon}</span>
   <h3>{item.title}</h3>
   <p>{item.subtitle}</p>
 </div>
