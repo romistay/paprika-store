@@ -762,34 +762,9 @@ setShowHamburgerMenu(false);
 
 
 <div className="sandwich-menu-banner">
-  {showKebabMenu ? (
-    <img
-      src="/paprika-store/Persian%20Kebab%20Loghmeh%20Feast.png"
-      alt="بنر کباب لقمه پاپریکا"
-    />
-  ) : showHotDogMenu ? (
-    <img
-      src="/paprika-store/paprika-hotdog-banner.png.png"
-      alt="بنر انواع سوسیس پاپریکا"
-    />
-  ) : showColdCutMenu ? (
-    <img
-      src="/paprika-store/paprika-coldcut-banner.png.png"
-      alt="بنر انواع کالباس پاپریکا"
-    />
-  ) : showHamburgerMenu ? (
-    <img
-      src="/paprika-store/paprika-hamburger-banner.png.png"
-      alt="بنر همبرگر پاپریکا"
-    />
-  ) : (
-    <>
-      <h2>محصولات فریزری پاپریکا</h2>
-      <p>محصولات باکیفیت پاپریکا</p>
-    </>
-  )}
+  <h2>محصولات فریزری پاپریکا</h2>
+  <p>محصولات باکیفیت پاپریکا</p>
 </div>
-
 
 {showHamburgerMenu && (
   <div className="sandwich-flavor-grid">
