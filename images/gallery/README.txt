@@ -1,1 +1,0 @@
-Paprika Gallery Images
