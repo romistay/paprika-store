@@ -1012,9 +1012,7 @@ setShowHamburgerMenu(false);
  !showHotDogMenu &&
  !showHamburgerMenu && (
   <>
-    <section className="hero">
-      <div className="hero-art"></div>
-    </section>
+    
 
     <section className="categories" id="categories">
       <div className="section-heading">
