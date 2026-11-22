@@ -6390,6 +6390,12 @@ pointer-events: none;
     margin: 15px 0 20px;
   }
 
+ @media (max-width: 700px) {
+  .quantity-control {
+    gap: 16px;
+    margin: 15px 0 20px;
+  }
+
   .quantity-control button {
     display: flex;
     align-items: center;
@@ -6404,7 +6410,7 @@ pointer-events: none;
     height: 48px;
     font-size: 27px;
   }
-}
+
   .quantity-control input {
     width: 70px;
     height: 48px;
