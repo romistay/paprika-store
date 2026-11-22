@@ -6095,3 +6095,36 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     font-size: 11px;
   }
 }
+
+/* PAPRIKA - Coming Soon Category */
+
+.category-card {
+  position: relative;
+}
+
+.coming-soon-label {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 6px 20px;
+  border-radius: 30px;
+  color: #fff;
+  background: linear-gradient(135deg, #9b702f, #d5ad65);
+  font-size: 12px;
+  font-weight: 900;
+  box-shadow: 0 4px 12px rgba(160, 115, 45, 0.2);
+  letter-spacing: 0.3px;
+}
+
+.category-card:has(.coming-soon-label) {
+  border: 1px dashed #c9a15c;
+  background: linear-gradient(145deg, #fffdf8, #fff5e4);
+}
+
+.category-card:has(.coming-soon-label) .category-icon {
+  background: linear-gradient(145deg, #fff2d8, #f5dfb2);
+}
+
+.category-card:has(.coming-soon-label):hover {
+  border-color: #bd9147;
+  box-shadow: 0 16px 35px rgba(160, 115, 45, 0.16);
+}
