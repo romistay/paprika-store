@@ -5843,3 +5843,112 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   }
 }
 /* PAPRIKA HAMBURGER CATEGORY BANNER */
+
+/* طراحی لوکس بنرهای پاپریکا */
+
+.sandwich-text-banner {
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 25px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 210, 140, 0.18), transparent 30%),
+    radial-gradient(circle at 85% 80%, rgba(255, 255, 255, 0.10), transparent 35%),
+    linear-gradient(125deg, #580912, #a51025 48%, #e13b36);
+  box-shadow:
+    0 15px 35px rgba(100, 0, 15, 0.25),
+    inset 0 0 0 1px rgba(255, 220, 170, 0.35);
+  color: #fff;
+  margin: 30px 0;
+}
+
+.sandwich-text-banner::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(255, 220, 170, 0.22);
+  border-radius: 50%;
+  top: -115px;
+  right: -65px;
+}
+
+.sandwich-text-banner::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(255, 220, 170, 0.18);
+  border-radius: 50%;
+  bottom: -100px;
+  left: -50px;
+}
+
+.sandwich-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+}
+
+.sandwich-banner-label {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 5px;
+  font-weight: 900;
+  color: #ffd99a;
+  padding: 9px 20px;
+  border: 1px solid rgba(255, 217, 154, 0.55);
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.sandwich-banner-content h2 {
+  font-size: 34px;
+  font-weight: 900;
+  color: #fff;
+  margin: 0 0 17px;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+.sandwich-banner-content p {
+  font-size: 16px;
+  line-height: 2.2;
+  color: #fff0df;
+  margin: 0;
+}
+
+.sandwich-banner-decoration {
+  display: block;
+  font-size: 48px;
+  margin-top: 18px;
+  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.25));
+}
+
+@media (max-width: 700px) {
+  .sandwich-text-banner {
+    min-height: 210px;
+    padding: 30px 16px;
+    border-radius: 18px;
+  }
+
+  .sandwich-banner-content h2 {
+    font-size: 24px;
+  }
+
+  .sandwich-banner-content p {
+    font-size: 13px;
+  }
+
+  .sandwich-banner-label {
+    font-size: 10px;
+  }
+
+  .sandwich-banner-decoration {
+    font-size: 38px;
+  }
+}
