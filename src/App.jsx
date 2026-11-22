@@ -1081,7 +1081,7 @@ setShowHamburgerMenu(false);
     aria-label="وارد فروشگاه شوید"
   />
 </section>
-    <section className="categories" id="categories">
+  <section className="categories" id="products">
       <div className="section-heading">
         <span>انتخاب خوشمزه تو</span>
         <h2>دسته‌بندی محصولات</h2>
