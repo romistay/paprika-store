@@ -714,13 +714,10 @@ if (whatsappWindow) {
   بازگشت به محصولات
 </button>
     
-   <div className="sandwich-menu-banner">
-  <img
-    src="/paprika-store/paprika-sandwich-banner.png.png"
-    alt="بنر تبلیغاتی ساندویچ‌های سرد پاپریکا"
-  />
+<div className="sandwich-menu-banner">
+  <h2>ساندویچ‌های سرد پاپریکا</h2>
+  <p>ترکیبی از طعم، تازگی و کیفیت؛ لذت یک ساندویچ خوشمزه در هر لقمه</p>
 </div>
-
 
 
 <div className="sandwich-flavor-grid">
