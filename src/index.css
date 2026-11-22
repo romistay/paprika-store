@@ -5953,56 +5953,69 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   }
 }
 
-/* PAPRIKA - Luxury Category Cards */
+
+/* =====================================
+   PAPRIKA - PREMIUM LUXURY CATEGORIES
+===================================== */
 
 .categories {
-  padding: 65px 20px;
-  background: linear-gradient(180deg, #fffaf8 0%, #ffffff 100%);
+  position: relative;
+  padding: 80px 20px;
+  background:
+    radial-gradient(ellipse at top, rgba(222, 190, 145, 0.13), transparent 55%),
+    linear-gradient(180deg, #fffaf6 0%, #fff 100%);
 }
 
 .categories .section-heading {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .categories .section-heading span {
   display: inline-block;
-  color: #bd2635;
+  color: #b58a4a;
   font-size: 14px;
-  font-weight: 800;
-  margin-bottom: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  margin-bottom: 13px;
 }
 
 .categories .section-heading h2 {
-  color: #65101b;
-  font-size: 32px;
+  color: #64101c;
+  font-size: 34px;
   font-weight: 900;
+  margin: 0;
 }
 
 .category-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 25px;
-  max-width: 1150px;
+  gap: 27px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
 .category-card {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
-  min-height: 205px;
-  padding: 30px 20px;
+  min-height: 225px;
+  padding: 32px 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(145deg, #ffffff, #fff7f4);
-  border: 1px solid #f0d8d5;
-  border-radius: 22px;
-  box-shadow: 0 8px 25px rgba(100, 15, 25, 0.07);
-  transition: transform 0.3s ease, box-shadow 0.3s ease,
-    border-color 0.3s ease;
+  background: linear-gradient(145deg, #ffffff 0%, #fffaf5 100%);
+  border: 1px solid #ead9bd;
+  border-radius: 25px;
+  box-shadow:
+    0 8px 22px rgba(75, 20, 25, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .category-card::before {
@@ -6012,79 +6025,163 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   right: 0;
   width: 100%;
   height: 5px;
-  background: linear-gradient(90deg, #8e101c, #e64a42, #d6a45c);
+  background: linear-gradient(
+    90deg,
+    #70101c,
+    #b92736,
+    #d8b16b,
+    #b92736,
+    #70101c
+  );
+  z-index: -1;
+}
+
+.category-card::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  top: -85px;
+  left: -65px;
+  background: rgba(207, 170, 105, 0.09);
+  z-index: -1;
+  transition: transform 0.4s ease;
 }
 
 .category-card:hover {
-  transform: translateY(-9px);
-  border-color: #c52d3c;
-  box-shadow: 0 16px 35px rgba(150, 20, 35, 0.15);
+  transform: translateY(-10px);
+  border-color: #c49a58;
+  box-shadow:
+    0 20px 42px rgba(100, 16, 28, 0.13),
+    0 5px 15px rgba(191, 150, 83, 0.12);
+}
+
+.category-card:hover::after {
+  transform: scale(1.7);
 }
 
 .category-icon {
-  width: 78px;
-  height: 78px;
+  width: 86px;
+  height: 86px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(145deg, #fff0e9, #ffe0d8);
-  box-shadow: inset 0 0 0 1px rgba(190, 40, 50, 0.12);
-  font-size: 39px;
-  margin-bottom: 17px;
-  transition: transform 0.3s ease;
+  background: linear-gradient(145deg, #fff4e7, #f7e5ce);
+  border: 1px solid #ead2ac;
+  box-shadow:
+    0 6px 16px rgba(143, 94, 44, 0.10),
+    inset 0 2px 5px rgba(255, 255, 255, 0.9);
+  font-size: 42px;
+  margin-bottom: 19px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .category-card:hover .category-icon {
-  transform: scale(1.12) rotate(-5deg);
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 9px 22px rgba(143, 94, 44, 0.17);
 }
 
 .category-card h3 {
-  color: #761421;
-  font-size: 20px;
+  color: #711522;
+  font-size: 21px;
   font-weight: 900;
   margin: 0 0 10px;
 }
 
 .category-card p {
-  color: #777;
+  color: #77706b;
   font-size: 13px;
   line-height: 1.9;
   margin: 0;
 }
 
+/* Coming Soon - Piroshki */
+
+.category-card:has(.coming-soon-label) {
+  border: 1px dashed #c6a05f;
+  background: linear-gradient(145deg, #fffdf8, #fff5e5);
+}
+
+.category-card:has(.coming-soon-label)::before {
+  background: linear-gradient(90deg, #a47b3e, #e2c17f, #a47b3e);
+}
+
+.category-card:has(.coming-soon-label) .category-icon {
+  background: linear-gradient(145deg, #fff3d9, #f0dbad);
+  border-color: #dfc38b;
+}
+
+.coming-soon-label {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 7px 22px;
+  border-radius: 30px;
+  color: #fff;
+  background: linear-gradient(135deg, #99702f, #d5ad65);
+  font-size: 12px;
+  font-weight: 900;
+  box-shadow: 0 5px 13px rgba(160, 115, 45, 0.22);
+}
+
+.category-card:has(.coming-soon-label):hover {
+  border-color: #bd9147;
+  box-shadow: 0 18px 38px rgba(160, 115, 45, 0.16);
+}
+
+/* Tablet */
+
 @media (max-width: 800px) {
+  .categories {
+    padding: 60px 16px;
+  }
+
   .category-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    gap: 18px;
   }
 
   .category-card {
-    min-height: 190px;
-    padding: 23px 12px;
+    min-height: 205px;
+    padding: 25px 14px;
   }
 
   .categories .section-heading h2 {
-    font-size: 26px;
+    font-size: 28px;
   }
 }
 
+/* Mobile */
+
 @media (max-width: 450px) {
+  .categories {
+    padding: 48px 13px;
+  }
+
+  .categories .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .categories .section-heading h2 {
+    font-size: 24px;
+  }
+
   .category-grid {
-    gap: 12px;
+    gap: 13px;
   }
 
   .category-card {
-    min-height: 175px;
-    border-radius: 17px;
-    padding: 20px 8px;
+    min-height: 185px;
+    border-radius: 19px;
+    padding: 21px 9px;
   }
 
   .category-icon {
-    width: 65px;
-    height: 65px;
-    font-size: 32px;
-    margin-bottom: 13px;
+    width: 67px;
+    height: 67px;
+    font-size: 33px;
+    margin-bottom: 14px;
   }
 
   .category-card h3 {
@@ -6094,37 +6191,9 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   .category-card p {
     font-size: 11px;
   }
-}
 
-/* PAPRIKA - Coming Soon Category */
-
-.category-card {
-  position: relative;
-}
-
-.coming-soon-label {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 6px 20px;
-  border-radius: 30px;
-  color: #fff;
-  background: linear-gradient(135deg, #9b702f, #d5ad65);
-  font-size: 12px;
-  font-weight: 900;
-  box-shadow: 0 4px 12px rgba(160, 115, 45, 0.2);
-  letter-spacing: 0.3px;
-}
-
-.category-card:has(.coming-soon-label) {
-  border: 1px dashed #c9a15c;
-  background: linear-gradient(145deg, #fffdf8, #fff5e4);
-}
-
-.category-card:has(.coming-soon-label) .category-icon {
-  background: linear-gradient(145deg, #fff2d8, #f5dfb2);
-}
-
-.category-card:has(.coming-soon-label):hover {
-  border-color: #bd9147;
-  box-shadow: 0 16px 35px rgba(160, 115, 45, 0.16);
+  .coming-soon-label {
+    font-size: 11px;
+    padding: 6px 17px;
+  }
 }
