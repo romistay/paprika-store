@@ -221,12 +221,12 @@ pointer-events: none;
 }
 
 .category-icon {
-  width: 82px;
-  height: 82px;
+  width: 72px;
+  height: 72px;
   margin: 0 auto 18px;
   display: grid;
   place-items: center;
-  border-radius: 25px;
+ border-radius: 22px;
   background: linear-gradient(145deg, #fff0e8, #ffe0d5);
   border: 1px solid rgba(190, 130, 90, 0.22);
   box-shadow:
@@ -251,7 +251,7 @@ pointer-events: none;
 
 .category-card p {
   color: #8b7770;
-  font-size: 19px;
+ font-size: 13px;
   line-height: 1.9;
   margin: 0;
 }
@@ -523,9 +523,8 @@ footer small {
     gap: 13px;
   }
 
-  .category-card {
-    padding: 22px 8px;
-  }
+
+  
 
   .category-card h3,
   .product-card h3 {
@@ -3980,16 +3979,18 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   transform: translateY(0) scale(.98);
 }
 
-/* ===== PAPRIKA PREMIUM CATEGORY CARDS ===== */
 
+/* PREMIUM CATEGORY CARDS */
 .category-card {
-  background: linear-gradient(145deg, #ffffff, #fff7eb);
-  border: 1px solid #e8d2ad;
-  border-radius: 22px;
-  box-shadow: 0 9px 25px rgba(100, 29, 32, .07);
-  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  position: relative;
+  padding: 30px 14px;
+  background: linear-gradient(145deg, #ffffff, #fff8ed);
+  border: 1px solid #ead9c2;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(74, 22, 15, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
 }
-
 .category-card:hover {
   transform: translateY(-7px);
   border-color: #d9ad61;
@@ -4009,21 +4010,23 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
 /* ===== PAPRIKA CATEGORY ICONS ===== */
 
 .category-icon {
-  background: linear-gradient(145deg, #fff0d8, #f8dfb5);
-  border: 1px solid #e5c994;
-  border-radius: 23px;
-  box-shadow: 0 6px 15px rgba(145, 91, 24, .09);
-  transition: transform .3s ease, box-shadow .3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 16px;
+  background: linear-gradient(145deg, #fff0d2, #f5d69c);
+  border: 2px solid #e8c27b;
+  border-radius: 50%;
+  font-size: 35px;
+  box-shadow: 0 5px 14px rgba(150, 95, 25, 0.12);
+  transition: all 0.3s ease;
 }
 
 .category-card:hover .category-icon {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 9px 20px rgba(145, 91, 24, .16);
-}
-
-.category-card h3 {
-  color: #762027;
-  font-weight: 900;
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 7px 18px rgba(150, 95, 25, 0.2);
 }
 
 /* ===== PAPRIKA PREMIUM LOYALTY CLUB ===== */
@@ -6063,9 +6066,9 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 27px;
   max-width: 1180px;
-  margin: 0 auto;
+  margin: 30px auto 0;
+  align-items: stretch;
 }
-
 .category-card {
   position: relative;
   isolation: isolate;
