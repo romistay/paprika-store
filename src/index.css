@@ -6278,6 +6278,7 @@ pointer-events: none;
 }
 /* PAPRIKA HERO BANNER */
 .paprika-hero {
+  position: relative;
   width: 92%;
   max-width: 1450px;
   margin: 30px auto 45px;
@@ -6286,21 +6287,23 @@ pointer-events: none;
   box-shadow: 0 15px 40px rgba(74, 22, 15, 0.18);
 }
 
-.paprika-hero a {
-  display: block;
-  width: 100%;
-}
-
 .paprika-hero img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: contain;
-  transition: transform 0.4s ease;
 }
 
-.paprika-hero a:hover img {
-  transform: scale(1.015);
+/* REAL CLICKABLE BUTTON AREA */
+.paprika-hero-cta {
+  position: absolute;
+  right: 8%;
+  bottom: 17%;
+  width: 24%;
+  height: 16%;
+  display: block;
+  z-index: 5;
+  cursor: pointer;
 }
 
 /* MOBILE HERO BANNER */
@@ -6310,4 +6313,22 @@ pointer-events: none;
     margin: 15px auto 25px;
     border-radius: 14px;
   }
+
+  .paprika-hero-cta {
+    right: 8%;
+    bottom: 17%;
+    width: 24%;
+    height: 16%;
+  }
+}
+/* REAL CLICKABLE HERO BUTTON */
+.paprika-hero-cta {
+  position: absolute;
+  right: 8%;
+  bottom: 17%;
+  width: 24%;
+  height: 16%;
+  display: block;
+  z-index: 5;
+  cursor: pointer;
 }
