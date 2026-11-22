@@ -6391,11 +6391,20 @@ pointer-events: none;
   }
 
   .quantity-control button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 5;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     width: 48px;
     height: 48px;
     font-size: 27px;
   }
-
+}
   .quantity-control input {
     width: 70px;
     height: 48px;
