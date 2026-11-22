@@ -1146,9 +1146,15 @@ setShowHamburgerMenu(false);
                 : "default",
             }}
           >
-          <span className="category-icon">{item.icon}</span>
-  <h3>{item.title}</h3>
-  <p>{item.subtitle}</p>
+         <span className="category-icon">{item.icon}</span>
+
+<h3>{item.title}</h3>
+
+<p>{item.subtitle}</p>
+
+{item.title === "پیراشکی" && (
+  <span className="coming-soon-label">به‌زودی</span>
+)}
 </div>
         ))}
       </div>
