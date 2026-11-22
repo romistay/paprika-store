@@ -1069,7 +1069,14 @@ setShowHamburgerMenu(false);
  !showHamburgerMenu && (
   <>
     
-
+<section className="paprika-hero">
+  <a href="#products">
+    <img
+      src="/paprika-store/پاپریکا؛ طعم واقعی کیفیت.png"
+      alt="پاپریکا؛ طعم واقعی کیفیت"
+    />
+  </a>
+</section>
     <section className="categories" id="categories">
       <div className="section-heading">
         <span>انتخاب خوشمزه تو</span>
