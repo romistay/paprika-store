@@ -205,7 +205,8 @@ button {
 .category-card::before {
   content: "";
   position: absolute;
-  z-index: -1;
+ z-index: 0;
+pointer-events: none;
   top: 0;
   right: 0;
   width: 100%;
@@ -216,7 +217,8 @@ button {
 .category-card::after {
   content: "";
   position: absolute;
-  z-index: -1;
+ z-index: 0;
+pointer-events: none;
   width: 150px;
   height: 150px;
   left: -65px;
@@ -6106,7 +6108,8 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
     #b92736,
     #70101c
   );
-  z-index: -1;
+ z-index: 0;
+pointer-events: none;
 }
 
 .category-card::after {
@@ -6118,10 +6121,17 @@ box-shadow: 0 14px 28px rgba(80, 50, 30, 0.10);
   top: -85px;
   left: -65px;
   background: rgba(207, 170, 105, 0.09);
-  z-index: -1;
+ z-index: 0;
+pointer-events: none;
   transition: transform 0.4s ease;
 }
-
+.category-icon,
+.category-card h3,
+.category-card p,
+.coming-soon-label {
+  position: relative;
+  z-index: 1;
+}
 .category-card:hover {
   transform: translateY(-10px);
   border-color: #c49a58;
