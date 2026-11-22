@@ -714,9 +714,13 @@ if (whatsappWindow) {
   بازگشت به محصولات
 </button>
     
-<div className="sandwich-menu-banner">
-  <h2>ساندویچ‌های سرد پاپریکا</h2>
-  <p>ترکیبی از طعم، تازگی و کیفیت؛ لذت یک ساندویچ خوشمزه در هر لقمه</p>
+<div className="sandwich-menu-banner sandwich-text-banner">
+  <div className="sandwich-banner-content">
+    <span className="sandwich-banner-label">PAPRIKA SPECIAL</span>
+    <h2>ساندویچ‌های سرد پاپریکا</h2>
+    <p>ترکیبی از طعم، تازگی و کیفیت؛ لذت یک ساندویچ خوشمزه در هر لقمه</p>
+    <span className="sandwich-banner-decoration">🥪</span>
+  </div>
 </div>
 
 
