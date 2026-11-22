@@ -1070,12 +1070,16 @@ setShowHamburgerMenu(false);
   <>
     
 <section className="paprika-hero">
-  <a href="#products">
-    <img
-      src="/paprika-store/پاپریکا؛ طعم واقعی کیفیت.png"
-      alt="پاپریکا؛ طعم واقعی کیفیت"
-    />
-  </a>
+  <img
+    src="/paprika-store/پاپریکا؛ طعم واقعی کیفیت.png"
+    alt="پاپریکا؛ طعم واقعی کیفیت"
+  />
+
+  <a
+    className="paprika-hero-cta"
+    href="#products"
+    aria-label="وارد فروشگاه شوید"
+  />
 </section>
     <section className="categories" id="categories">
       <div className="section-heading">
