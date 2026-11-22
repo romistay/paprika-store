@@ -1095,7 +1095,7 @@ setShowHamburgerMenu(false);
            {item.title === "همبرگر" ? (
   <img
     className="category-banner"
-    src="/paprika-store/paprika-hamburger-banner.png"
+   src="/paprika-store/paprika-hamburger-banner.png.png"
     alt="همبرگر پاپریکا"
   />
 ) : (
