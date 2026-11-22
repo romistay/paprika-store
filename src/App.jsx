@@ -463,7 +463,8 @@ setQuantity(1);
           <a href="#products">فروشگاه</a>
           <a href="#about">درباره ما</a>
           <a href="#loyalty">باشگاه مشتریان</a>
-          <a href="#loyalty-faq">سؤالات متداول</a>
+<a href="#loyalty-faq">سؤالات متداول</a>
+<a href="#paprika-gallery">گالری تصاویر</a>
 <a href="#paprika-contests">🏆 مسابقات پاپریکا</a>
         </nav>
        <button
