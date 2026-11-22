@@ -1092,20 +1092,15 @@ setShowHamburgerMenu(false);
                 : "default",
             }}
           >
-            {item.title === "همبرگر" ? (
+           {item.title === "همبرگر" ? (
   <img
- <div className="category-card"
-  ...
->
-  {item.title === "همبرگر" ? (
-    <img
-      className="category-banner"
-      src="/paprika-store/paprika-hamburger-banner.png"
-      alt="همبرگر پاپریکا"
-    />
-  ) : (
-    <span className="category-icon">{item.icon}</span>
-  )}
+    className="category-banner"
+    src="/paprika-store/paprika-hamburger-banner.png"
+    alt="همبرگر پاپریکا"
+  />
+) : (
+  <span className="category-icon">{item.icon}</span>
+)}
 
   <h3>{item.title}</h3>
   <p>{item.subtitle}</p>
