@@ -1,4 +1,5 @@
 import React from "react";
+
 const categories = [
   { icon: "🌭", title: "انواع سوسیس", subtitle: "طعم‌های خوشمزه و متنوع" },
   { icon: "🥩", title: "انواع کالباس", subtitle: "تازه و باکیفیت" },
@@ -6,8 +7,8 @@ const categories = [
   { icon: "🥪", title: "ساندویچ سرد", subtitle: "ساندویچ‌های تازه و خوشمزه" },
   { icon: "🍢", title: "کباب لقمه", subtitle: "انواع کباب لقمه پاپریکا" },
   { icon: "❄️", title: "محصولات فریزری", subtitle: "محصولات آماده و باکیفیت" },
+  { icon: "🥟", title: "پیراشکی", subtitle: "به‌زودی در پاپریکا" },
 ];
-
 
 
 
